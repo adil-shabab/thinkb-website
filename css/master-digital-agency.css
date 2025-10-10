@@ -8035,116 +8035,204 @@ section {
     background-color: var(--primary);
     width: 30px;
 }
+
+/* ===============================
+   🌟 SERVICES SECTION BASE
+================================= */
 .service-area {
-    background-color: #faf8f7;
+  background-color: #faf8f7;
+  position: relative;
+  overflow: hidden;
 }
+
 .dark .service-area {
-    background-color: #171717;
+  background-color: #171717;
 }
+
+/* Top wrapper — heading + intro */
 .service-area .service-top-wrapper {
-    padding-bottom: 80px;
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  padding-bottom: 80px;
+  align-items: flex-start;
 }
-.service-area .service-top-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 520px;
-}
+
 @media only screen and (max-width: 991px) {
-    .service-area .service-top-wrapper {
-        grid-template-columns: 1fr;
-    }
+  .service-area .service-top-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
+
 .service-area .service-top-wrapper .text {
-    padding-bottom: 31px;
+  padding-bottom: 31px;
 }
+
 @media only screen and (max-width: 991px) {
-    .service-area .service-top-wrapper .text {
-        padding-bottom: 10px;
-    }
+  .service-area .service-top-wrapper .text {
+    padding-bottom: 10px;
+  }
 }
+
 .service-area .wc-btn-underline {
-    color: var(--primary);
-    text-transform: capitalize;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 2px;
+  color: var(--primary);
+  text-transform: capitalize;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
 }
+
+/* ===============================
+   🧭 SERVICES HORIZONTAL SCROLL
+================================= */
+
+/* Wrapper to control scroll area */
 .service-area .services-wrapper-box {
-    overflow: hidden;
+  overflow: hidden; /* important to hide horizontal overflow */
+  position: relative;
 }
+
+/* Horizontal grid scroll */
 .service-area .services-grid.services__section {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 25%;
-    gap: 50px;
-    margin: 0 -70px;
-    will-change: transform;
-    scrollbar-width: none;    /* ✅ Firefox hide scrollbar */
+  display: grid;
+  grid-auto-flow: column;         /* make grid flow horizontally */
+  grid-auto-columns: 25%;         /* 4 cards per view on desktop */
+  gap: 25px;
+  margin: 0;
+  will-change: transform;
+  scrollbar-width: none;          /* Firefox hide scrollbar */
 }
 
 .service-area .services-grid.services__section::-webkit-scrollbar {
-    display: none;            /* ✅ Chrome / Safari hide scrollbar */
+  display: none;                  /* Chrome / Safari hide scrollbar */
 }
 
-
+/* Responsive breakpoints for number of cards per view */
 @media only screen and (max-width: 1399px) {
-    .service-area .services-grid {
-        margin: 0 -30px;
-    }
+  .service-area .services-grid.services__section {
+    grid-auto-columns: 25%; /* still 4 per view on slightly smaller screens */
+  }
 }
+
 @media only screen and (max-width: 1199px) {
-  .service-area .services-grid {
-    grid-auto-columns: 33.33%; /* 3 per view on tablets */
+  .service-area .services-grid.services__section {
+    grid-auto-columns: 33.33%; /* 3 cards per view */
   }
 }
 
 @media only screen and (max-width: 991px) {
-  .service-area .services-grid {
-    grid-auto-columns: 50%; /* 2 per view on mobile landscape */
+  .service-area .services-grid.services__section {
+    grid-auto-columns: 50%; /* 2 cards per view */
   }
 }
 
 @media only screen and (max-width: 575px) {
-  .service-area .services-grid {
-    grid-auto-columns: 100%; /* 1 per view on mobile portrait */
+  .service-area .services-grid.services__section {
+    grid-auto-columns: 100%; /* 1 card per view */
   }
 }
 
+/* ===============================
+   🧱 SERVICE ITEM STYLING
+================================= */
+
+.service-area .service__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .service-area .service-item {
-    padding: 0 70px;
-    border-inline-start: 1px solid #ece7e4;
+  padding: 25px 40px;
+  border-inline-start: 1px solid #ece7e4;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 .dark .service-area .service-item {
-    border-color: #272727;
+  border-color: #272727;
 }
+
 @media only screen and (max-width: 1399px) {
-    .service-area .service-item {
-        padding: 0 30px;
-    }
+  .service-area .service-item {
+    padding: 0 30px;
+  }
 }
+
 .service-area .service-item .icon {
-    padding-bottom: 48px;
+  padding-bottom: 48px;
 }
+
+.service-area .service-item .icon img {
+  max-width: 60px;
+  height: auto;
+  display: block;
+}
+
 @media only screen and (max-width: 1199px) {
-    .service-area .service-item .icon {
-        padding-bottom: 25px;
-    }
-}
-.service-area .service-item .title {
+  .service-area .service-item .icon {
     padding-bottom: 25px;
-    font-size: 30px;
+  }
 }
+
+.service-area .service-item .title {
+  padding-bottom: 25px;
+  font-size: 30px;
+  line-height: 1.3;
+  color: #000;
+}
+
+.dark .service-area .service-item .title {
+  color: #fff;
+}
+
 @media only screen and (max-width: 1919px) {
-    .service-area .service-item .title {
-        font-size: 24px;
-    }
+  .service-area .service-item .title {
+    font-size: 24px;
+  }
 }
+
+.service-area .service-item .service-features {
+  padding: 0;
+  margin: 0;
+}
+
 .service-area .service-item .service-features li {
-    font-size: 18px;
-    color: var(--secondary);
-    font-weight: 300;
-    padding-bottom: 15px;
-    list-style: disc;
-    list-style-position: inside;
+  font-size: 18px;
+  color: var(--secondary);
+  font-weight: 300;
+  padding-bottom: 15px;
+  list-style: disc;
+  list-style-position: inside;
 }
+
+.dark .service-area .service-item .service-features li {
+  color: #bfbfbf;
+}
+
+.service-area .service-item .service-features li:last-child {
+  padding-bottom: 0;
+}
+
+/* ===============================
+   🪄 ANIMATION STATES (OPTIONAL)
+================================= */
+
+/* Subtle scale effect while scrolling */
+.service-area .service__item {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.service-area .service__item.is-active {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.service-area .service__item:not(.is-active) {
+  opacity: 0.8;
+}
+
+
 .awards-area {
     position: relative;
     z-index: 1;
@@ -8863,4 +8951,492 @@ section {
 .ft__description{
     color: rgb(172, 172, 172);
     margin-top: 32px;
+}
+.fz___60{
+    font-size: 60px;
+}
+.client-area .client-box img.show-light{
+  filter: grayscale(100%);
+}
+.client-area .client-box img.show-light:hover{
+  filter: grayscale(0%);
+}
+
+
+
+/* ===============================
+   AWARDS SECTION STYLING
+================================ */
+.awards-area {
+  position: relative;
+  padding: 80px 0;
+  color: #fff;
+  overflow: hidden;
+}
+
+.awards-area .area-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+}
+.awards-area .area-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+.awards-area .area-bg .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.4) 100%);
+}
+
+.awards-area-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.awards-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* ===============================
+   VIDEO WRAPPER
+================================ */
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-thumb {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.4s ease;
+}
+.video-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.video-thumb:hover {
+  transform: scale(1.03);
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: #000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+.play-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ===============================
+   TESTIMONIAL CAROUSEL
+================================ */
+.testimonial-carousel {
+  position: relative;
+  width: 100%;
+  padding: 30px;
+}
+
+.testimonial-item {
+  text-align: left;
+}
+.testimonial-text {
+  font-size: 20px;
+  color: rgb(224, 224, 224);
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.testimonial-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.testimonial-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+.testimonial-meta h5 {
+  font-size: 22px;
+  font-family: var(--font_recoleta);
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: rgb(224, 224, 224);
+}
+.testimonial-meta span {
+  font-size: 16px;
+  color: rgb(224, 224, 224);
+  opacity: 0.8;
+}
+
+/* Swiper buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: var(--primary);
+}
+.testimonial-carousel .swiper-button-next, .swiper-button-prev{
+    right: 58px;
+    bottom: 0px;
+    top: unset;
+    left: unset;
+    background: var(--action);
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 5px;
+}
+.testimonial-carousel .swiper-button-next, .swiper-button-next{
+    right: 0px;
+    bottom: 0px;
+    top: unset;
+    left: unset;
+    background: var(--action);
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 5px;
+}
+.testimonial-carousel .swiper-button-next:after, .swiper-button-prev:after{
+    font-size: 20px;
+}
+/* ===============================
+   Responsive
+================================ */
+@media (max-width: 991px) {
+  .awards-title {
+    font-size: 26px;
+  }
+  .testimonial-text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .awards-area {
+    padding: 60px 0;
+  }
+  .video-wrapper {
+    margin-bottom: 40px;
+  }
+}
+
+.section_testimonial_title{
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-align: center;
+    color: white;
+    font-family: var(--font_recoleta);
+}
+.quote__icon{
+    position: absolute;
+    right: 0px;
+    width: 80px;
+}
+.testimonial-carousel{
+    margin-top: 30px;
+}
+.testimonial-carousel .swiper-button-next:hover, .swiper-button-prev:hover{
+    color: white;
+}
+
+
+
+.portfolio___section {
+  background-color: black;
+  padding: 80px 0px;
+}
+
+.portfolio___section .flex__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 15px;
+}
+
+/* Base box */
+.portfolio___section .flex__box .p__box {
+  position: relative;
+  flex: 0 0 23%; /* using flex-basis instead of width */
+  min-height: 450px;
+  background: linear-gradient(to bottom, rgba(89, 86, 125, .6) 0%, rgba(233, 174, 213, .6) 100%);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: flex-basis 0.5s ease;
+}
+
+/* Expand hovered box */
+.portfolio___section .flex__box .p__box:hover {
+  flex: 0 0 50%;
+}
+
+/* Shrink only the other boxes when one is hovered */
+.portfolio___section .flex__box:has(.p__box:hover) .p__box:not(:hover) {
+  flex: 0 0 15%;
+}
+
+/* IMAGE BOX */
+.portfolio___section .flex__box .p__box .img__box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+.portfolio___section h3{
+    color: white;
+    font-family: var(--font_recoleta);
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.portfolio___section .flex__box .p__box .img__box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.portfolio___section .flex__box .p__box .img__box h4 {
+  position: absolute;
+  color: white;
+  font-size: 28px;
+  top: 25px;
+  left: 25px;
+}
+
+/* TEXT BOX */
+.portfolio___section .flex__box .p__box .txt__box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+  background: linear-gradient(to bottom, rgba(89, 86, 125, .85), rgba(233, 174, 213, .85));
+  z-index: 2;
+}
+
+/* On hover fade in text and fade out image */
+.portfolio___section .flex__box .p__box:hover .txt__box {
+  opacity: 1;
+  visibility: visible;
+}
+
+.portfolio___section .flex__box .p__box:hover .img__box {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* TEXT BOX CONTENT */
+.portfolio___section .txt__box .flex__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portfolio___section .txt__box .flex__content .txt_section {
+  width: 48%;
+}
+
+.portfolio___section .txt__box .flex__content .txt_section h5 {
+  color: white;
+  font-size: 25px;
+  font-family: var(--font_recoleta);
+}
+
+.portfolio___section .txt__box .flex__content .txt_section h6 {
+  color: white;
+  margin-top: 15px;
+  font-size: 20px;
+  font-family: var(--font_recoleta);
+}
+
+.portfolio___section .txt__box .flex__content .txt_section p {
+  color: white;
+  font-size: 17px;
+  font-family: var(--font_kanit);
+  margin-top: 15px;
+}
+
+.portfolio___section .txt__box a button {
+  background: #f7f7f7;
+  color: black;
+  padding: 13px 20px;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 25px;
+  font-size: 16px;
+  right: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.portfolio___section .txt__box .flex__content .img__section {
+  width: 50%;
+}
+
+.portfolio___section .txt__box .flex__content .img__section img {
+  width: 100%;
+}
+
+.mt___4 {
+  margin-top: 35px;
+}
+.read_m_btn{
+    margin-top: 25px;
+    background: black;
+    width: fit-content;
+    padding: 10px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.5s ease;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border-radius: 25px;
+    color: white;
+}
+
+.read_m_btn:hover{
+    background: rgb(231, 231, 231);
+    color: black;
+}
+.padding___30_50{
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+
+.contact___form{
+    padding: 80px 0px;
+}
+.contact___form .left__section span{
+    font-size: 18px;
+    font-family: var(--font_recoleta);
+}
+.contact___form .left__section h3{
+    font-family: var(--font_recoleta);
+    font-size: 40px;
+    margin: 15px 0px;
+}
+.contact___form .left__section p{
+    font-family: var(--font_kanit);
+    font-size: 18px;
+    font-weight: 400;
+}
+.contact___form .left__section .flex__box{
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+    align-items: stretch;
+}
+.contact___form .left__section .flex__box .bx{
+    margin-bottom: 30px;
+}
+.contact___form .left__section .flex__box .bx h6{
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: var(--font_recoleta);
+}
+.contact___form .left__section .flex__box .bx a{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--font_kanit);
+}
+.contact___form .left__section .flex__box .bx_location .bx .icons{
+    display: flex;
+    gap: 15px;
+}
+.contact___form .left__section .flex__box .bx_location .bx .icons i{
+    font-size: 22px;
+}
+.contact___form .right__section form{
+    padding: 35px;
+    border-radius: 15px;
+    background-color: rgba(224, 224, 224, 0.658);
+}
+.contact___form .right__section form{
+    padding: 35px;
+    border-radius: 15px;
+    background-color: rgba(224, 224, 224, 0.658);
+}
+.contact___form .right__section form h5{
+    font-size: 30px;
+    font-family: var(--font_recoleta);
+}
+.contact___form .right__section form input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(29, 29, 29);
+    padding: 10px 0px;
+    height: unset;
+    line-height: unset;
+    margin-bottom: 15px;
+}
+.contact___form .right__section form textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(29, 29, 29);
+    padding: 10px 0px;
+    height: unset;
+    line-height: unset;
+    margin-bottom: 15px;
+}
+.contact___form .right__section form button{
+    background-color: black;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    transition: 0.5s ease-in;
+    border: 1px solid black;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 25px;
+}
+.contact___form .right__section form button:hover{
+    background-color: rgba(235, 235, 235, 0.699);
+    color: black;
 }
