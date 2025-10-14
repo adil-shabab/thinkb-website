@@ -9452,7 +9452,7 @@ section {
 }
  
 .breadcrumb__section h4{
-    font-size: 50px;
+    font-size: 60px;
     font-family: var(--font_recoleta);
     text-align: center;
 }
@@ -9463,3 +9463,45 @@ section {
 
 
  
+.about_us_page{
+    padding: 60px 0px;
+}
+.about_us_page h4{
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-family: var(--font_recoleta);
+}
+.about_us_page p{
+    font-size: 18px;
+    font-family: var(--font_kanit);
+}
+.about_us_page ul{
+    list-style: circle !important;
+    padding-left: 20px;
+}
+.about_us_page ul li{
+    font-size: 18px;
+    margin-bottom: 10px;
+    list-style: circle !important;
+    font-family: var(--font_kanit);
+}
+.about_us_page .img_flex_box{
+    display: flex;
+    justify-content: space-between;
+}
+.about_us_page .img_flex_box img{
+    width: 49%;
+}
+.elementor-1234 .elementor-element.elementor-element-c71dcc0 .hero__images .hero__image{
+    margin-top: 0px;
+}
+.elementor-1234 .elementor-element.elementor-element-572d490{
+    min-height: unset;
+    padding-top: 50px;
+    background: rgba(246, 246, 246, 0.496);
+    padding-bottom: 50px;
+    --min-height: unset;
+}
+.elementor-1234 .elementor-element.elementor-element-8f09076 .elementor-heading-title{
+    margin-top: 70px;
+}
