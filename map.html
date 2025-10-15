@@ -8,298 +8,321 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <style>
-        #map {
-            height: 400px;
-            width: 100%;
-            filter: brightness(1.5);
-            /* Enhances brightness for whiter streets */
-        }
+    #map {
+      height: 500px;
+      width: 100%;
+      filter: brightness(1.5);
+      margin: 0px !important;
+      padding: 0px !important;
+    }
 
-        .white-pin {
-            color: white;
-            font-size: 30px;
-            text-align: center;
-            line-height: 24px;
-        }
+    .white-pin {
+      color: white;
+      font-size: 30px;
+      text-align: center;
+      line-height: 24px;
+    }
 
-        .leaflet-touch .leaflet-bar {
-            border: 1px solid white;
-            background-clip: padding-box;
-        }
+    .leaflet-touch .leaflet-bar {
+      border: 1px solid white !important;
+      background-clip: padding-box !important;
+      position: relative !important;
+      top: 412px !important;
+    }
 
-        .leaflet-touch .leaflet-bar a:first-child {
-            border-top-left-radius: 3px;
-            border-top-right-radius: 3px;
-            border-bottom: 1px solid white;
-            background: black;
-            color: white;
-        }
+    .leaflet-touch .leaflet-bar a:first-child {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border-bottom: 1px solid white;
+      background: black;
+      color: white;
+    }
 
-        .leaflet-touch .leaflet-bar a:last-child {
-            border-top-left-radius: 3px;
-            border-top-right-radius: 3px;
-            background: black;
-            color: white;
-        }
+    .leaflet-touch .leaflet-bar a:last-child {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      background: black;
+      color: white;
+    }
 
-        /* Google Maps button styles */
-        .google-maps-control {
-            background: black;
-            border: 1px solid white;
-            border-radius: 2px;
-            margin-top: 5px;
-        }
+    .contact__address__container {
+      position: absolute !important;
+      top: 12% !important;
+      transform: translateY(-50%) !important;
+      z-index: 10 !important;
+      border: 1px solid white !important;
+      border-radius: 8px !important;
+      padding: 6px !important;
+      margin-left: 10px !important;
+      background-color: black !important;
+    }
 
-        .google-maps-control a {
-            color: white;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            padding: 5px 10px;
-            display: block;
-            text-align: center;
-        }
+    .contact__address__container p {
 
-        .google-maps-control a:hover {
-            background: #333;
-        }
+      color: white !important;
+      margin-bottom: 0px !important;
+    }
 
+    .contact__us__heading {
+      position: absolute;
+      top: 80%;
+      left: 16%;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
 
-        .dropdown {
-            width: 100%;
-            position: relative;
-        }
+    .contact__us__heading h2 {
+      color: white !important;
+      font-size: 48px !important;
 
-        .dropdown-toggle {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 15px;
-            border-bottom: 1px solid #ccc;
-            background: #fff;
-            cursor: pointer;
-            transition: none !important;
-        }
+    }
 
-        /* .dropdown-toggle:hover {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0,123,255,0.3);
-  } */
+    /* Google Maps button styles */
+    .google-maps-control {
+      background: black;
+      border: 1px solid white !important;
+      border-radius: 8px !important;
+      margin-top: 48px !important;
+    }
 
-        .dropdown-toggle span {
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
+    .google-maps-control a {
+      color: white !important;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      padding: 5px 10px;
+      display: block;
+      text-align: center;
+    }
 
-        .dropdown-menu {
-            position: absolute;
-            top: 110%;
-            left: 0;
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background: #fff;
-            max-height: 150px;
-            overflow-y: auto;
-            display: none;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            z-index: 10;
-        }
-
-        .dropdown-menu input {
-            width: fit-content !important;
-            margin-bottom: 0px !important;
-        }
-
-        .dropdown-menu label {
-            display: flex;
-            align-items: center;
-            padding: 12px 24px;
-            gap: 10px;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .dropdown-menu label:hover {
-            background: black;
-            color: white;
-        }
-
-        .dropdown-menu input[type="checkbox"] {
-            margin-right: 10px;
-            width: 20px !important;
-            height: 20px !important;
-            cursor: pointer !important;
-        }
-
-        .dropdown-menu input[type="checkbox"]:checked {
-            accent-color: black;
-            outline: 1.5px solid white;
-            border-radius: 4px !important;
-        }
+    .google-maps-control a:hover {
+      background: #333;
+    }
 
 
-        .selected-items {
-            margin-top: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
+    .dropdown {
+      width: 100%;
+      position: relative;
+    }
 
-        .selected-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            background: black;
-            color: #fff;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 13px;
-        }
+    .dropdown-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      border-bottom: 1px solid #ccc;
+      background: #fff;
+      cursor: pointer;
+      transition: none !important;
+    }
 
-        .selected-item i {
-            cursor: pointer;
-        }
+    .dropdown-toggle span {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
 
-        /* ✅ Custom Scrollbar */
-        .dropdown-menu::-webkit-scrollbar {
-            width: 8px;
-        }
+    .dropdown-menu {
+      position: absolute;
+      top: 110%;
+      left: 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+      max-height: 150px;
+      overflow-y: auto;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
 
-        .dropdown-menu::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
+    .dropdown-menu input {
+      width: fit-content !important;
+      margin-bottom: 0px !important;
+    }
 
-        .dropdown-menu::-webkit-scrollbar-thumb {
-            background: #555;
-            border-radius: 10px;
-        }
+    .dropdown-menu label {
+      display: flex;
+      align-items: center;
+      padding: 12px 24px;
+      gap: 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
 
-        .dropdown-menu::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
+    .dropdown-menu label:hover {
+      background: black;
+      color: white;
+    }
 
-        .dropdown-option input[type="checkbox"]:checked {
-            background-color: #000;
-            /* ← change this to black */
-            border-color: #000;
-            /* optional: also make border black */
-        }
+    .dropdown-menu input[type="checkbox"] {
+      margin-right: 10px;
+      width: 20px !important;
+      height: 20px !important;
+      cursor: pointer !important;
+    }
+
+    .dropdown-menu input[type="checkbox"]:checked {
+      accent-color: black;
+      outline: 1.5px solid white;
+      border-radius: 4px !important;
+    }
 
 
-        /* Contact section over map */
-        .contact-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 8%;
-            z-index: 10;
-        }
+    .selected-items {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
 
-        .contact-left {
-            flex: 1;
-        }
+    .selected-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: black;
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
 
-        .contact-left h1 {
-            font-size: 64px;
-            font-weight: 600;
-            color: white;
-        }
+    .selected-item i {
+      cursor: pointer;
+    }
 
-        /* Form floating card */
-        .contact-form {
-            background: #fff;
-            color: #000;
-            width: 25%;
-            padding: 30px;
-            border-radius: 4px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-            position: relative;
-            left: 64%;
-        }
+    /* ✅ Custom Scrollbar */
+    .dropdown-menu::-webkit-scrollbar {
+      width: 8px;
+    }
 
-        .contact-form h3 {
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            font-size: 16px;
-            letter-spacing: 1px;
-        }
+    .dropdown-menu::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
 
-        .contact-form input,
-        .contact-form select,
-        .contact-form textarea {
-            width: 100%;
-            border: none;
-            border-bottom: 1px solid #ccc;
-            padding: 10px 0;
-            margin-bottom: 18px;
-            font-size: 18px;
-            background: transparent;
-            outline: none;
-        }
+    .dropdown-menu::-webkit-scrollbar-thumb {
+      background: #555;
+      border-radius: 10px;
+    }
 
-        .contact-form select[multiple] {
-            height: 80px;
-        }
+    .dropdown-menu::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
 
-        .contact-form button {
-            position: relative;
-            background: #333;
-            color: #fff;
-            border: none;
-            padding: 16px 32px;
-            border-radius: 4px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s;
-            float: right;
-            left: 42px;
-            margin-top: 16px;
-        }
+    /* Contact section over map */
+    .contact-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 8%;
+      z-index: 10;
+    }
 
-        .contact-form button:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
-        }
+    .contact-left {
+      flex: 1;
+    }
 
-        footer {
-            background: #000;
-            color: #fff;
-            padding: 60px 10%;
-            display: flex;
-            justify-content: space-between;
-        }
+    .contact-left h1 {
+      font-size: 64px;
+      font-weight: 600;
+      color: white;
+    }
 
-        .footer-section {
-            width: 40%;
-        }
+    /* Form floating card */
+    .contact____form {
+      background: #fff;
+      color: #000;
+      width: 32%;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      position: relative;
+      left: 64%;
+    }
 
-        .footer-section h4 {
-            font-weight: 500;
-            margin-bottom: 10px;
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
+    .contact____form h3 {
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
 
-        .footer-section p {
-            margin: 0;
-            font-size: 14px;
-            line-height: 1.6;
-            color: #aaa;
-        }
+    .contact____form input,
+    .contact____form select,
+    .contact____form textarea {
+      width: 100%;
+      border: none !important;
+      border-bottom: 1px solid #ccc !important;
+      padding: 10px 0;
+      margin-bottom: 18px;
+      font-size: 18px;
+      background: transparent !important;
+      outline: none;
+    }
 
-        .footer-section p a,
-        .footer-section a {
-            text-decoration: none;
-            color: #aaa;
-        }
-    </style>
+    .contact____form select[multiple] {
+      height: 80px;
+    }
+
+    .contact____form button {
+      position: relative;
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 16px 32px;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s;
+      float: right;
+      left: 42px;
+      margin-top: 16px;
+    }
+
+    .contact____form button:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
+      border-radius: 8px;
+    }
+
+    .contact___footer {
+      background: #000;
+      color: #fff;
+      padding: 60px 10%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer____section {
+      width: 40%;
+    }
+
+    .footer____section h4 {
+      font-weight: 500;
+      margin-bottom: 10px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .footer____section p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #aaa;
+    }
+
+    .footer____section p a,
+    .footer____section a {
+      text-decoration: none;
+      color: #aaa;
+    }
+  </style>
 </head>
 
 <body>
@@ -308,9 +331,20 @@
 
             <!-- MAP -->
             <div id="map" style="position: relative; z-index: 1;height: 500px;"></div>
+            <div class="contact__address__container">
+                <p>
+                    thinkB Creative Agency,<br />
+                    204, 2nd Cross Rd, East of NGEF Layout, Kasturi Nagar,<br />
+                    Bengaluru, Karnataka 560043
+                </p>
+            </div>
+            <div class="contact__us__heading">
+                <h2>Contact us</h2>
+            </div>
 
             <!-- FORM ABOVE MAP -->
-            <div class="contact-form" style="position: absolute; top: 42%; transform: translateY(-50%); z-index: 10;">
+            <div class="contact____form"
+                style="position: absolute; top: 42%; transform: translateY(-50%); z-index: 10;">
                 <h3>Get in touch</h3>
                 <form>
                     <input type="text" placeholder="Full Name" required />
@@ -340,31 +374,6 @@
             </div>
         </div>
 
-
-
-
-
-
-
-
-        <!-- Footer -->
-        <footer>
-            <div class="footer-section">
-                <h4>OUR ADDRESS</h4>
-                <a href="https://maps.app.goo.gl/JKbcifvFvaAUkkDa6" target="_blank">
-                    thinkB Creative Agency,<br />
-                    204, 2nd Cross Rd, East of NGEF Layout, Kasturi Nagar,<br />
-                    Bengaluru, Karnataka 560043
-                </a>
-            </div>
-            <div class="footer-section">
-                <h4>OUR CONTACTS</h4>
-                <p>
-                    <a href="mailto:hello@thinkB.com">hello@thinkB.com</a><br />
-                    <a href="tel:+79008007060">+7 900 800 70 60</a>
-                </p>
-            </div>
-        </footer>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -372,7 +381,7 @@
         // Initialize the map centered on the provided coordinates, with attribution disabled
         var map = L.map('map', {
             attributionControl: false // Removes the attribution label
-        }).setView([13.002686105427477, 77.66139089321865], 15); // Coordinates for thinkB Creative Agency, zoom level 15
+        }).setView([13.002686105427477, 77.66139089321865], 16); // Coordinates for thinkB Creative Agency, zoom level 16
 
         // Add CartoDB Dark Matter tiles for black background with white streets
         L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
