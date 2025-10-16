@@ -93,7 +93,7 @@
       border: 1px solid white !important;
       border-radius: 8px !important;
       padding: 6px !important;
-      margin-left: 10px !important;
+      margin: 10px !important;
       background-color: black !important;
     }
 
@@ -129,7 +129,7 @@
       background: black;
       border: 1px solid white !important;
       border-radius: 8px !important;
-      margin-top: 48px !important;
+      margin-top: 64px !important;
     }
 
     .google-maps-control a {
@@ -157,11 +157,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 15px;
+      padding: 10px 0 !important;
       border-bottom: 1px solid #ccc;
       background: #fff;
       cursor: pointer;
       transition: none !important;
+      margin-bottom: 18px;
     }
 
     .dropdown-toggle::after {
@@ -311,7 +312,7 @@
       width: 100%;
       border: none !important;
       border-bottom: 1px solid #ccc !important;
-      padding: 10px 0;
+      padding: 10px 0 !important;
       margin-bottom: 18px;
       font-size: 18px;
       background: transparent !important;
@@ -425,7 +426,7 @@
       }
 
       .contact__address__container {
-        top: 158% !important;
+        top: 154.5% !important;
       }
 
       .contact____form {
@@ -444,12 +445,12 @@
       .contact____form button {
         position: relative;
         float: none;
-        left: 42px;
+        left: 0px !important;
         margin-top: 0px;
       }
 
       .google-maps-control {
-        margin-top: 50px !important;
+        margin-top: 64px !important;
       }
 
     }
@@ -476,6 +477,14 @@
         z-index: 1;
         height: 530px !important;
       }
+
+      #dropdownIcon {
+        font-size: 20px !important;
+      }
+
+      .google-maps-control {
+        margin-top: 68px !important;
+      }
     }
 
     @media (max-width: 767px) {
@@ -488,6 +497,11 @@
       .contact__banner__content {
         min-width: 100%;
       }
+
+
+      #dropdownIcon {
+        font-size: 20px !important;
+      }
     }
 
 
@@ -496,6 +510,10 @@
         position: relative;
         bottom: 224px;
         left: -400px;
+      }
+
+      .contact__address__container {
+        top: 149.5% !important;
       }
 
       .contact__video__container video {
@@ -510,10 +528,6 @@
         font-size: 16px !important;
       }
 
-      .contact__address__container {
-        top: 152% !important;
-      }
-
       .google-maps-control {
         margin-top: 30px !important;
         margin-left: 12px !important;
@@ -523,6 +537,9 @@
         margin: 12px !important;
       }
 
+      #dropdownIcon {
+        font-size: 18px !important;
+      }
 
     }
 
@@ -534,7 +551,7 @@
       }
 
       .contact__address__container {
-        top: 156% !important;
+        top: 150.5% !important;
       }
 
       .contact__banner__content h2 {
@@ -557,6 +574,10 @@
 
       .contact__address__container {
         margin: 12px !important;
+      }
+
+      #dropdownIcon {
+        font-size: 18px !important;
       }
     }
 
@@ -569,7 +590,7 @@
       }
 
       .contact__address__container {
-        top: 156% !important;
+        top: 150.5% !important;
       }
 
       .contact__banner__content h2 {
@@ -592,6 +613,10 @@
 
       .contact__address__container {
         margin: 12px !important;
+      }
+
+      #dropdownIcon {
+        font-size: 16px !important;
       }
     }
 
@@ -612,7 +637,7 @@
       }
 
       .contact__address__container {
-        top: 157.5% !important;
+        top: 152.5% !important;
       }
 
       .contact__banner__content p {
@@ -624,12 +649,16 @@
       }
 
       .google-maps-control {
-        margin-top: 70px !important;
+        margin-top: 72px !important;
         margin-left: 12px !important;
       }
 
       .contact__address__container {
         margin: 12px !important;
+      }
+
+      #dropdownIcon {
+        font-size: 16px !important;
       }
     }
   </style>
@@ -786,7 +815,7 @@
                     </div>
                   </div>
                   <div class="contact__video__container">
-                    <video width="640" height="500" autoplay muted loop>
+                    <video id="myVideo" width="640" height="500" autoplay muted loop>
                       <source src="./assets/images/contact us/phone-animation.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
@@ -814,10 +843,10 @@
                   <input type="email" placeholder="Email ID" required />
                   <input type="text" placeholder="Phone Number" required />
                   <input type="text" placeholder="Company" required />
-                  <label for="industry" style="font-size:13px;color:#555;">Looking for Industry</label>
+                  <!-- <label for="industry" style="font-size:13px;color:#555;">Looking for Industry</label> -->
                   <div class="dropdown">
                     <div class="dropdown-toggle" id="dropdownToggle">
-                      <span>Select your industry</span>
+                      <span>Looking for Industry</span>
                       <i class="fa-solid fa-chevron-down" id="dropdownIcon"></i>
                     </div>
                     <div class="dropdown-menu" id="dropdownMenu">
@@ -1067,6 +1096,22 @@
         selectedItemsContainer.appendChild(span);
       });
     }
+  </script>
+
+  <script>
+    // Select the video element
+    const video = document.getElementById('myVideo');
+
+    // Set playback speed (e.g., 0.5 for half speed, 1 for normal speed, 2 for double speed)
+    video.playbackRate = 0.5; // This will play the video at half speed
+
+    // Optionally, you can use a function to control the speed dynamically
+    function setSpeed(speed) {
+      video.playbackRate = speed;
+    }
+
+    // Example usage to set speed to 0.8 (80% normal speed)
+    setSpeed(0.5);
   </script>
 
 
