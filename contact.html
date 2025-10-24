@@ -51,6 +51,7 @@
     #map {
       height: 500px;
       width: 100%;
+      position: relative;
       filter: brightness(1.5);
       margin: 0px !important;
       padding: 0px !important;
@@ -101,6 +102,14 @@
 
       color: white !important;
       margin-bottom: 0px !important;
+    }
+
+    .black__box{
+  position: relative;
+    height: 13px;
+    background-color: #121212;
+    z-index: 1;
+    bottom: 2px;
     }
 
     .contact__us__heading {
@@ -187,7 +196,7 @@
       overflow-y: auto;
       display: none;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      z-index: 10;
+      z-index: 1000;
     }
 
     .dropdown-menu input {
@@ -222,28 +231,6 @@
       border-radius: 4px !important;
     }
 
-
-    .selected-items {
-      margin-top: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .selected-item {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      background: black;
-      color: #fff;
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 13px;
-    }
-
-    .selected-item i {
-      cursor: pointer;
-    }
 
     /* ✅ Custom Scrollbar */
     .dropdown-menu::-webkit-scrollbar {
@@ -846,7 +833,7 @@
                   <!-- <label for="industry" style="font-size:13px;color:#555;">Looking for Industry</label> -->
                   <div class="dropdown">
                     <div class="dropdown-toggle" id="dropdownToggle">
-                      <span>Looking for Industry</span>
+                      <span id="dropdownSelected">Looking for Industry</span>
                       <i class="fa-solid fa-chevron-down" id="dropdownIcon"></i>
                     </div>
                     <div class="dropdown-menu" id="dropdownMenu">
@@ -857,6 +844,7 @@
                       <label><input type="checkbox" value="Graphic Design"> Graphic Design</label>
                     </div>
                   </div>
+
 
                   <div class="selected-items" id="selectedItems"></div>
                   <textarea placeholder="Message / Comment" rows="3"></textarea>
@@ -879,6 +867,7 @@
             <div class="contact__us__heading">
               <h2>Contact us</h2>
             </div>
+             <div class="black__box"></div>
 
           </div>
 
@@ -1050,53 +1039,51 @@
   </script>
 
   <script>
-    const dropdownToggle = document.getElementById('dropdownToggle');
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    const dropdownIcon = document.getElementById('dropdownIcon');
-    const selectedItemsContainer = document.getElementById('selectedItems');
+    const toggle = document.getElementById('dropdownToggle');
+    const menu = document.getElementById('dropdownMenu');
+    const selectedText = document.getElementById('dropdownSelected');
 
-    dropdownToggle.addEventListener('click', () => {
-      const isOpen = dropdownMenu.style.display === 'block';
-      dropdownMenu.style.display = isOpen ? 'none' : 'block';
-      dropdownIcon.classList.toggle('fa-chevron-down', isOpen);
-      dropdownIcon.classList.toggle('fa-chevron-up', !isOpen);
+    // toggle visibility
+    toggle.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     });
 
+    // close when clicking outside
     document.addEventListener('click', (e) => {
-      if (!e.target.closest('.dropdown')) {
-        dropdownMenu.style.display = 'none';
-        dropdownIcon.classList.add('fa-chevron-down');
-        dropdownIcon.classList.remove('fa-chevron-up');
+      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = 'none';
       }
     });
 
-    const checkboxes = dropdownMenu.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(cb => cb.addEventListener('change', updateSelectedItems));
+    // prevent scrolling the page while scrolling inside dropdown
+    menu.addEventListener('wheel', function (e) {
+      const delta = e.deltaY;
+      const up = delta < 0;
+      const down = delta > 0;
+      const atTop = this.scrollTop === 0;
+      const atBottom = this.scrollHeight - this.scrollTop === this.clientHeight;
 
-    function updateSelectedItems() {
-      selectedItemsContainer.innerHTML = '';
-      const selected = Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value);
+      // Only prevent page scroll if at boundaries
+      if ((up && atTop) || (down && atBottom)) {
+        e.preventDefault();
+      }
 
-      dropdownToggle.querySelector('span').textContent = selected.length ? selected.join(', ') : 'Select options';
+      // Ensure dropdown scrolls smoothly
+      e.stopPropagation();
+    }, { passive: false });
 
-      selected.forEach(value => {
-        const span = document.createElement('span');
-        span.className = 'selected-item';
-        span.textContent = value;
-
-        const removeIcon = document.createElement('i');
-        removeIcon.className = 'fa-solid fa-xmark';
-        removeIcon.addEventListener('click', () => {
-          const cb = Array.from(checkboxes).find(c => c.value === value);
-          if (cb) cb.checked = false;
-          updateSelectedItems();
-        });
-
-        span.appendChild(removeIcon);
-        selectedItemsContainer.appendChild(span);
+    // handle checkbox selections
+    const checkboxes = menu.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const selected = Array.from(checkboxes)
+          .filter(c => c.checked)
+          .map(c => c.value);
+        selectedText.textContent = selected.length ? selected.join(', ') : 'Looking for Industry';
       });
-    }
+    });
   </script>
+
 
   <script>
     // Select the video element
