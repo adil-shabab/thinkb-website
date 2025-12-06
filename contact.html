@@ -1,66 +1,664 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ThinkB — Best branding agency for startups in Bangalore.</title>
-    <meta
-      name="description"
-      content="Discover the top branding agency in Bangalore for startups! At our branding agency, we specialize in providing innovative solutions tailored for emerging businesses. Let us elevate your brand's identity, visibility, and impact in the competitive market. Trust our experienced team to craft compelling brand strategies that resonate with your audience. Get started today with the leading branding agency for startups!"
-    />
-    <meta
-      property="og:title"
-      content="ThinkB — Best branding agency for startups in Bangalore."
-    />
-    <meta
-      property="og:description"
-      content="Discover the top branding agency in Bangalore for startups! At our branding agency, we specialize in providing innovative solutions tailored for emerging businesses. Let us elevate your brand's identity, visibility, and impact in the competitive market. Trust our experienced team to craft compelling brand strategies that resonate with your audience. Get started today with the leading branding agency for startups!"
-    />
-    <meta
-      property="og:image"
-      content="assets/images/logo-dark.svg"
-    />
-    <meta property="og:site_name" content="ThinkB.Agency" />
-    <meta property="og:locale" content="en" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="twitter:title"
-      content="ThinkB — Best branding agency for startups in Bangalore."
-    />
-    <meta
-      property="twitter:description"
-      content="Discover the top branding agency in Bangalore for startups! At our branding agency, we specialize in providing innovative solutions tailored for emerging businesses. Let us elevate your brand's identity, visibility, and impact in the competitive market. Trust our experienced team to craft compelling brand strategies that resonate with your audience. Get started today with the leading branding agency for startups!"
-    />
-    <meta
-      property="twitter:image"
-      content="assets/images/favicon.png"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="google" content="notranslate" />
-    <meta property="og:locale" content="en" />
-    <link rel="canonical" href="https://www.thinkb.agency/" />
-    <link
-      rel="icon"
-      href="../assets/images/favicon.png"
-      type=""
-    />
+  <meta name="description"
+    content="Discover the top branding agency in Bangalore for startups! At our branding agency, we specialize in providing innovative solutions tailored for emerging businesses. Let us elevate your brand's identity, visibility, and impact in the competitive market. Trust our experienced team to craft compelling brand strategies that resonate with your audience. Get started today with the leading branding agency for startups!" />
+  <meta property="og:title" content="ThinkB — Best branding agency for startups in Bangalore." />
+  <meta property="og:description"
+    content="Discover the top branding agency in Bangalore for startups! At our branding agency, we specialize in providing innovative solutions tailored for emerging businesses. Let us elevate your brand's identity, visibility, and impact in the competitive market. Trust our experienced team to craft compelling brand strategies that resonate with your audience. Get started today with the leading branding agency for startups!" />
+  <meta property="og:image" content="assets/images/logo-dark.svg" />
+  <meta property="og:site_name" content="ThinkB.Agency" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:type" content="website" />
+  <meta property="twitter:title" content="ThinkB — Best branding agency for startups in Bangalore." />
+  <meta property="twitter:description"
+    content="Discover the top branding agency in Bangalore for startups! At our branding agency, we specialize in providing innovative solutions tailored for emerging businesses. Let us elevate your brand's identity, visibility, and impact in the competitive market. Trust our experienced team to craft compelling brand strategies that resonate with your audience. Get started today with the leading branding agency for startups!" />
+  <meta property="twitter:image" content="assets/images/favicon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="google" content="notranslate" />
+  <meta property="og:locale" content="en" />
+  <link rel="canonical" href="https://www.thinkb.agency/" />
+  <link rel="icon" href="../assets/images/favicon.png" type="" />
 
   <!-- Fav Icon -->
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
 
-    <!-- All CSS files -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/all.min.css">
-    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../css/magnific-popup.css">
-    <link rel="stylesheet" href="../css/master-digital-agency.css">
+  <!-- All CSS files -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/all.min.css">
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <link rel="stylesheet" href="../css/master-digital-agency.css">
 
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/swiper-bundle.css">
-    <link rel="stylesheet" href="../css/magnific-popup.css">
-    <link rel="stylesheet" href="../css/font-awesome-pro.css">
-    <link rel="stylesheet" href="../css/spacing.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <!-- CSS here -->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/swiper-bundle.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <link rel="stylesheet" href="../css/font-awesome-pro.css">
+  <link rel="stylesheet" href="../css/spacing.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+
+
+
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
+      position: relative;
+      filter: brightness(1.5);
+      margin: 0px !important;
+      padding: 0px !important;
+    }
+
+    .white-pin {
+      color: white;
+      font-size: 30px;
+      text-align: center;
+      line-height: 24px;
+    }
+
+    .leaflet-touch .leaflet-bar {
+      border: 1px solid white !important;
+      background-clip: padding-box !important;
+      position: relative !important;
+      top: 410px !important;
+    }
+
+    .leaflet-touch .leaflet-bar a:first-child {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border-bottom: 1px solid white;
+      background: black;
+      color: white;
+    }
+
+    .leaflet-touch .leaflet-bar a:last-child {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      background: black;
+      color: white;
+    }
+
+    .contact__address__container {
+      position: absolute !important;
+      top: 12% !important;
+      transform: translateY(-50%) !important;
+      z-index: 10 !important;
+      border: 1px solid white !important;
+      border-radius: 8px !important;
+      padding: 6px !important;
+      margin: 10px !important;
+      background-color: black !important;
+    }
+
+    .contact__address__container p {
+
+      color: white !important;
+      margin-bottom: 0px !important;
+      font-size: 14px;
+    }
+
+    .black__box {
+      position: relative;
+      height: 13px;
+      background-color: #121212;
+      z-index: 1;
+      bottom: 2px;
+    }
+
+    .contact__us__heading {
+      position: absolute;
+      top: 80%;
+      left: 16%;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+
+    .contact__us__heading h2 {
+      color: white !important;
+      font-size: 48px !important;
+      background: none !important;
+
+    }
+
+    .contact__video__container {
+      position: relative;
+      bottom: 150px;
+      left: 180px;
+    }
+
+    /* Google Maps button styles */
+    .google-maps-control {
+      background: black;
+      border: 1px solid white !important;
+      border-radius: 8px !important;
+      margin-top: 54px !important;
+    }
+
+    .google-maps-control a {
+      color: white !important;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      padding: 5px 10px;
+      display: block;
+      text-align: center;
+    }
+
+    .google-maps-control a:hover {
+      background: #333;
+      border-radius: 8px !important;
+    }
+
+
+    .dropdown {
+      width: 100%;
+      position: relative;
+    }
+
+    .dropdown-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0 !important;
+      border-bottom: 1px solid #ccc;
+      background: #fff;
+      cursor: pointer;
+      transition: none !important;
+      margin-bottom: 18px;
+    }
+
+    .dropdown-toggle::after {
+      display: none !important;
+    }
+
+    .dropdown-toggle span {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 110%;
+      left: 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+      max-height: 150px;
+      overflow-y: auto;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .dropdown-menu input {
+      width: fit-content !important;
+      margin-bottom: 0px !important;
+    }
+
+    .dropdown-menu label {
+      display: flex;
+      align-items: center;
+      padding: 12px 24px;
+      gap: 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .dropdown-menu label:hover {
+      background: black;
+      color: white;
+    }
+
+    .dropdown-menu input[type="checkbox"] {
+      margin-right: 10px;
+      width: 20px !important;
+      height: 20px !important;
+      cursor: pointer !important;
+    }
+
+    .dropdown-menu input[type="checkbox"]:checked {
+      accent-color: black;
+      outline: 1.5px solid white;
+      border-radius: 4px !important;
+    }
+
+
+    /* ✅ Custom Scrollbar */
+    .dropdown-menu::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .dropdown-menu::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .dropdown-menu::-webkit-scrollbar-thumb {
+      background: #555;
+      border-radius: 10px;
+    }
+
+    .dropdown-menu::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    /* Contact section over map */
+    .contact-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 8%;
+      z-index: 10;
+    }
+
+    .contact-left {
+      flex: 1;
+    }
+
+    .contact-left h1 {
+      font-size: 64px;
+      font-weight: 600;
+      color: white;
+    }
+
+    /* Form floating card */
+    .contact____form {
+      background: #fff;
+      color: #000;
+      width: 32%;
+      padding: 30px;
+      border-radius: 8px;
+      position: relative;
+      left: 64%;
+    }
+
+    .contact____form h3 {
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    .contact____form input,
+    .contact____form select,
+    .contact____form textarea {
+      width: 100%;
+      border: none !important;
+      border-bottom: 1px solid #ccc !important;
+      padding: 10px 0 !important;
+      margin-bottom: 18px;
+      font-size: 18px;
+      background: transparent !important;
+      outline: none;
+    }
+
+    .contact____form select[multiple] {
+      height: 80px;
+    }
+
+    .contact____form button {
+      position: relative;
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 16px 32px;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s;
+      float: right;
+      left: 42px;
+      margin-top: 16px;
+    }
+
+    .contact____form button:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
+      border-radius: 8px;
+    }
+
+    .contact___footer {
+      background: #000;
+      color: #fff;
+      padding: 60px 10%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer____section {
+      width: 40%;
+    }
+
+    .footer____section h4 {
+      font-weight: 500;
+      margin-bottom: 10px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .footer____section p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #aaa;
+    }
+
+    .footer____section p a,
+    .footer____section a {
+      text-decoration: none;
+      color: #aaa;
+    }
+
+
+
+
+    @media (max-width: 1400px) {
+      .contact__video__container {
+        position: relative;
+        bottom: 150px;
+        left: 8px;
+      }
+
+      .contact__banner__content h2 {
+        font-size: 100px !important;
+        padding-top: 80px !important;
+      }
+
+      .contact__banner__content {
+        min-width: 600px;
+      }
+
+      .contact____form {
+        width: 34%;
+        left: 64%;
+      }
+
+    }
+
+    @media (max-width: 1199px) {
+
+      .contact__banner__content {
+        z-index: 1000;
+      }
+
+      .contact__video__container {
+        position: relative;
+        bottom: 150px;
+        left: -210px;
+      }
+
+      .fa-solid,
+      .fas {
+        font-weight: 900;
+        font-size: 34px !important;
+      }
+
+      #map {
+        position: relative;
+        z-index: 1;
+        height: 530px !important;
+      }
+
+      .contact__address__container {
+        top: 154.5% !important;
+      }
+
+      .contact____form {
+        position: unset !important;
+        transform: none !important;
+      }
+
+      .contact__us__heading {
+        top: 220%;
+      }
+
+      .contact____form {
+        width: 100%;
+      }
+
+      .contact____form button {
+        position: relative;
+        float: none;
+        left: 0px !important;
+        margin-top: 0px;
+      }
+
+      .google-maps-control {
+        margin-top: 54px !important;
+      }
+
+    }
+
+
+
+
+    @media (max-width: 991px) {
+
+      .contact__banner__content {
+        z-index: 1000;
+      }
+
+      .contact__video__container {
+        position: relative;
+        bottom: 236px;
+        left: -330px;
+      }
+
+
+
+      #map {
+        position: relative;
+        z-index: 1;
+        height: 530px !important;
+      }
+
+      #dropdownIcon {
+        font-size: 20px !important;
+      }
+
+      .google-maps-control {
+        margin-top: 60px !important;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .contact__video__container {
+        position: relative;
+        bottom: 278px;
+        left: -450px;
+      }
+
+      .contact__banner__content {
+        min-width: 100%;
+      }
+
+
+      #dropdownIcon {
+        font-size: 20px !important;
+      }
+    }
+
+
+    @media (max-width: 600px) {
+      .contact__video__container {
+        position: relative;
+        bottom: 224px;
+        left: -400px;
+      }
+
+      .contact__address__container {
+        top: 149.5% !important;
+      }
+
+      .contact__video__container video {
+        height: 320px;
+      }
+
+      .contact__banner__content h2 {
+        font-size: 80px !important;
+      }
+
+      .contact__banner__content p {
+        font-size: 16px !important;
+      }
+
+      .google-maps-control {
+        margin-top: 30px !important;
+        margin-left: 12px !important;
+      }
+
+      .contact__address__container {
+        margin: 12px !important;
+      }
+
+      #dropdownIcon {
+        font-size: 18px !important;
+      }
+
+    }
+
+    @media (max-width: 490px) {
+      .contact__video__container {
+        position: relative;
+        bottom: 224px;
+        left: -400px;
+      }
+
+      .contact__address__container {
+        top: 150.5% !important;
+      }
+
+      .contact__banner__content h2 {
+        font-size: 48px !important;
+        padding-top: 80px !important;
+      }
+
+      .contact__banner__content p {
+        font-size: 16px !important;
+      }
+
+      .contact__banner__content {
+        min-width: 100%;
+      }
+
+      .google-maps-control {
+        margin-top: 32px !important;
+        margin-left: 12px !important;
+      }
+
+      .contact__address__container {
+        margin: 12px !important;
+      }
+
+      #dropdownIcon {
+        font-size: 18px !important;
+      }
+    }
+
+
+    @media (max-width: 400px) {
+      .contact__video__container {
+        position: relative;
+        bottom: 224px;
+        left: -400px;
+      }
+
+      .contact__address__container {
+        top: 150.5% !important;
+      }
+
+      .contact__banner__content h2 {
+        font-size: 48px !important;
+        padding-top: 80px !important;
+      }
+
+      .contact__banner__content p {
+        font-size: 16px !important;
+      }
+
+      .contact__banner__content {
+        min-width: 100%;
+      }
+
+      .google-maps-control {
+        margin-top: 42px !important;
+        margin-left: 12px !important;
+      }
+
+      .contact__address__container {
+        margin: 12px !important;
+      }
+
+      #dropdownIcon {
+        font-size: 16px !important;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .contact__video__container {
+        position: relative;
+        bottom: 224px;
+        left: -400px;
+      }
+
+      .contact__video__container video {
+        height: 310px;
+      }
+
+      .contact__banner__content h2 {
+        font-size: 48px !important;
+        padding-top: 80px !important;
+      }
+
+      .contact__address__container {
+        top: 152.5% !important;
+      }
+
+      .contact__banner__content p {
+        font-size: 16px !important;
+      }
+
+      .contact__banner__content {
+        min-width: 100%;
+      }
+
+      .google-maps-control {
+        margin-top: 54px !important;
+        margin-left: 12px !important;
+      }
+
+      .contact__address__container {
+        margin: 12px !important;
+      }
+
+      #dropdownIcon {
+        font-size: 16px !important;
+      }
+    }
+  </style>
+
+
+  <link rel="stylesheet" href="../css/main.css">
+  <!-- CSS here -->
+
+  <!-- Scripts here -->
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
 
 
@@ -68,7 +666,7 @@
 
 <body class="font-heading-recoleta-medium">
 
- 
+
   <!-- Cursor Animation -->
   <div class="cursor1"></div>
   <div class="cursor2"></div>
@@ -79,7 +677,7 @@
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
     </svg>
   </div>
- 
+
 
   <!-- offcanvas start  -->
   <div class="offcanvas-3__area">
@@ -160,15 +758,16 @@
                   <li><a href="#">Mobile App Development</a></li>
                 </ul>
               </li>
-             
+
               <li><a href="gallery.html">@thinkB</a></li>
               <li><a href="blogs.html">Blogs</a></li>
             </ul>
           </nav>
         </div>
-        <div class="header__button d-none d-sm-inline-block">
-          <a href="../contact.html" class="wc-btn wc-btn-primary btn-text-flip" data-bs-toggle="modal" data-bs-target="#signupform"> <span data-text="Contact Now">Contact Now</span></a>
-        </div>
+        <!-- <div class="header__button d-none d-sm-inline-block">
+          <a href="../contact.html" class="wc-btn wc-btn-primary btn-text-flip" data-bs-toggle="modal"
+            data-bs-target="#signupform"> <span data-text="Contact Now">Contact Now</span></a>
+        </div> -->
         <div class="header__navicon d-xl-none">
           <button onclick="showCanvas3()" class="open-offcanvas">
             <i class="fa-solid fa-bars"></i></button>
@@ -185,101 +784,100 @@
 
         <!-- overlay switcher close  -->
         <div class="overlay-switcher-close"></div>
-
         <main>
-
-
-            <div class="breadcrumb__section" >
-                <div class="container">
-                    <div class="image__section">
-                        <h4>Contact Us</h4>
+          <div class="breadcrumb__section">
+            <div class="container">
+              <div class="image__section">
+                <div style="display: flex; justify-content: space-between;height: 450px;">
+                  <!-- <div> -->
+                  <div class="contact__banner__content">
+                    <h2 style="font-size: 148px;padding-top: 65px;">Let us talk</h2>
+                    <div>
+                      <p>Every great design starts with a conversation a spark of an idea that grows into something
+                        extraordinary. Share your vision, goals, or even just a thought with us, and we’ll help you
+                        shape it into a meaningful experience that inspires, engages, and truly stands out. From
+                        branding and
+                        visuals to digital experiences, our creative team is here to bring your story to life through
+                        design that connects and leaves a lasting impression. Let’s collaborate and build something
+                        beautiful together.</p>
                     </div>
+                  </div>
+                  <div class="contact__video__container">
+                    <video id="myVideo" width="640" height="400" autoplay muted loop>
+                      <source src="./assets/images/contact us/phone-animation.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
+
+          <!-- <div> -->
+          <div class="contact-container" style="position: relative;height: 500px;top: 10px;">
+
+            <div class="map__and__form__container">
+
+              <!-- MAP -->
 
 
-            <div class="contact___form">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 left__section">
-                            <span>Get In Touch</span>
-                            <h3>We are always ready to help you and answer your questions</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam veritatis alias dignissimos? Hic iste ipsam obcaecati perferendis? Laudantium dolorem, deleniti saepe aliquid odio consequatur!</p>
-
-                            <div class="flex__box">
-                                <div class="bx_contact">
-
-                                    <div class="bx">
-                                        <h6>Call Center</h6>
-                                        <a href="">
-                                            +91 9966992122
-                                        </a> <br>
-                                        <a href="">
-                                            +91 999999999
-                                        </a>
-                                    </div>
-
-                                    <div class="bx">
-                                        <h6>Email</h6>
-                                        <a href="">
-                                            info@thinkb.agency
-                                        </a>
-                                        <a href="">
-                                            varma@thinkb.agency
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="bx_location">
-                                    <div class="bx">
-                                        <h6>Our Location</h6>
-                                        <p>204, 2nd Cross Rd, East of NGEF Layout, Kasturi Nagar, Bengaluru, Karnataka 560043</p>
-                                    </div>
-
-                                    <div class="bx">
-                                        <h6>
-                                            Follow Us
-                                        </h6>
-                                        <div class="icons">
-                                            <a href="">
-                                                <i class="fa-brands fa-facebook"></i>
-                                            </a>
-                                            <a href="">
-                                                <i class="fa-brands fa-instagram"></i>
-                                            </a>
-                                            <a href="">
-                                                <i class="fa-brands fa-linkedin"></i>
-                                            </a>
-                                            <a href="">
-                                                <i class="fa-brands fa-twitter"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 right__section">
-                            <form action="">
-                                <h5>Get In Touch</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, exercitationem.</p>
-
-                                <input type="text" name="name" placeholder="Full Name">
-                                <input type="email" name="email" placeholder="Email">
-                                <input type="tel" name="number" placeholder="Phone Number">
-                                <input type="text" name="subject" placeholder="Subject">
-                                <textarea name="message" id="" placeholder="Message"></textarea>
-
-                                <button>Send Message</button>
-                            </form>
-                        </div>
+              <!-- FORM ABOVE MAP -->
+              <div class="contact____form"
+                style="position: absolute; top: 38%; transform: translateY(-50%); z-index: 10;">
+                <h3>Get in touch</h3>
+                <form>
+                  <input type="text" placeholder="Full Name" required />
+                  <input type="text" placeholder="Designation" required />
+                  <input type="email" placeholder="Email ID" required />
+                  <input type="text" placeholder="Phone Number" required />
+                  <input type="text" placeholder="Company" required />
+                  <!-- <label for="industry" style="font-size:13px;color:#555;">Looking for Industry</label> -->
+                  <div class="dropdown">
+                    <div class="dropdown-toggle" id="dropdownToggle">
+                      <span id="dropdownSelected">Looking for Industry</span>
+                      <i class="fa-solid fa-chevron-down" id="dropdownIcon"></i>
                     </div>
-                </div>
-            </div>
-        
+                    <div class="dropdown-menu" id="dropdownMenu">
+                      <label><input type="checkbox" value="Web Designing"> Web Designing</label>
+                      <label><input type="checkbox" value="Branding"> Branding</label>
+                      <label><input type="checkbox" value="UI/UX Designing"> UI/UX Designing</label>
+                      <label><input type="checkbox" value="Digital Marketing"> Digital Marketing</label>
+                      <label><input type="checkbox" value="Graphic Design"> Graphic Design</label>
+                    </div>
+                  </div>
 
 
-            <div class="iframe__section">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.517912605329!2d77.65646757289602!3d13.00265685460947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae157e756c6543%3A0x3b37aa5c7755c497!2sthinkB%20Agency!5e0!3m2!1sen!2sin!4v1760159833488!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <div class="selected-items" id="selectedItems"></div>
+                  <textarea placeholder="Message / Comment" rows="3"></textarea>
+                  <button type="submit">SEND MESSAGE →</button>
+                </form>
+              </div>
+
+              <div id="map" style="position: relative; z-index: 1;height: 500px;"></div>
+
             </div>
+
+
+            <div class="contact__address__container">
+              <p>
+                thinkB Creative Agency,<br />
+                204, 2nd Cross Rd, East of NGEF Layout, Kasturi Nagar,<br />
+                Bengaluru, Karnataka 560043
+              </p>
+            </div>
+            <div class="contact__us__heading">
+              <h2>Contact us</h2>
+            </div>
+            <div class="black__box"></div>
+
+          </div>
+
+          <!-- </div> -->
+
+
+
+
+
         </main>
 
 
@@ -292,7 +890,8 @@
                   <a href="#"><img src="../assets/images/white-logo.svg" alt="site-logo"></a>
                 </div>
 
-                <p class="ft__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis tempora neque, quidem explicabo pariatur rem sed sint. Excepturi, adipisci facilis.</p>
+                <p class="ft__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis tempora
+                  neque, quidem explicabo pariatur rem sed sint. Excepturi, adipisci facilis.</p>
 
                 <ul class="social-links">
                   <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -301,20 +900,20 @@
                   <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
               </div>
-                <div class="footer-widget-wrapper">
-                    <h2 class="title">Quick Links</h2>
-                    <ul class="footer-nav-list">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Our Services</a></li>
-                    <li><a href="#">Our Portfolio</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Latest Blogs</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Terms & Condition</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
+              <div class="footer-widget-wrapper">
+                <h2 class="title">Quick Links</h2>
+                <ul class="footer-nav-list">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Our Services</a></li>
+                  <li><a href="#">Our Portfolio</a></li>
+                  <li><a href="#">Gallery</a></li>
+                  <li><a href="#">Latest Blogs</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Terms & Conditions</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
               <div class="footer-widget-wrapper">
                 <h2 class="title">Our Services</h2>
                 <ul class="footer-nav-list">
@@ -334,19 +933,21 @@
               <div class="footer-widget-wrapper">
                 <h2 class="title">Contact Us</h2>
                 <ul class="footer-nav-list">
-                  <li><a class="text-underline location" href="#"> 204, 2nd Cross Rd, East of NGEF Layout, Kasturi Nagar, Bengaluru, Karnataka 560043</a></li>
+                  <li><a class="text-underline location" href="#"> 204, 2nd Cross Rd, East of NGEF Layout, Kasturi
+                      Nagar, Bengaluru, Karnataka 560043</a></li>
                   <li><a href="tel:+919966992122">+91 99669 92122</a></li>
                   <li><a href="mailto:info@thinkb.agency">info@thinkb.agency</a></li>
                 </ul>
               </div>
-              
+
             </div>
           </div>
           <div class="copyright-area">
             <div class="container">
               <div class="copyright-area-inner">
                 <div class="copyright-text">
-                  <p class="text">© 2025 <a href="https://thinkb.agency" target="_blank">thinkB Creative Agency. </a>All Rights Reserved
+                  <p class="text">© 2025 <a href="https://thinkb.agency" target="_blank">thinkB Creative Agency. </a>All
+                    Rights Reserved
                   </p>
                 </div>
               </div>
@@ -376,6 +977,140 @@
   <script src="../js/main.js"></script>
   <script src="../js/error-handling.js"></script>
   <script src="../js/offcanvas.js"></script>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map centered on the provided coordinates, with attribution disabled
+    var map = L.map('map', {
+      attributionControl: false, // Removes the attribution label
+      scrollWheelZoom: false
+
+    }).setView([13.002686105427477, 77.66139089321865], 16); // Coordinates for thinkB Creative Agency, zoom level 16
+
+    // Add CartoDB Dark Matter tiles for black background with white streets
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    }).addTo(map);
+
+    // Create a custom divIcon using Font Awesome location-dot icon
+    // Replace the old whitePinIcon with this
+    var telephoneIcon = L.icon({
+      iconUrl: './assets/images/contact us/thinkb-mapIcon.png',  // Your image path
+      iconSize: [95, 110],   // Adjust to your image dimensions
+      iconAnchor: [30, 90],    // Center horizontally, anchor at bottom
+      popupAnchor: [0, -80]
+    });
+
+    // // And update the marker line
+    // var marker = L.marker([13.002686105427477, 77.66139089321865], { icon: telephoneIcon })
+    //   .addTo(map)
+    //   // .bindPopup('thinkB Creative Agency<br>204, 2nd Cross Rd, East of NGEF Layout, Kasturi Nagar, Bengaluru, Karnataka 560043');
+    // // Set the z-index to make the marker appear above other elements
+    // marker.setZIndexOffset(1000); // Adjust the value as needed to ensure it appears on top
+
+
+    var marker = L.marker([13.002686105427477, 77.66139089321865], { 
+  icon: telephoneIcon 
+})
+.addTo(map)
+.setZIndexOffset(1000);
+
+marker.on('click', function() {
+  window.open('https://maps.app.goo.gl/JKbcifvFvaAUkkDa6', '_blank');
+});
+
+    // Show popup on hover (mouseover) and hide on mouseout
+    marker.on('mouseover', function () {
+      this.openPopup();
+    });
+    marker.on('mouseout', function () {
+      this.closePopup();
+    });
+
+    // Create custom Google Maps button control
+    L.Control.GoogleMaps = L.Control.extend({
+      options: {
+        position: 'topleft'
+      },
+      onAdd: function (map) {
+        var container = L.DomUtil.create('div', 'google-maps-control');
+        var link = L.DomUtil.create('a', '', container);
+        link.innerHTML = 'View on Google Maps';
+        link.href = 'https://maps.app.goo.gl/JKbcifvFvaAUkkDa6';
+        link.target = '_blank'; // Open in new tab
+        return container;
+      }
+    });
+
+    // Add Google Maps button to the map
+    L.control.googleMaps = function (opts) {
+      return new L.Control.GoogleMaps(opts);
+    };
+    L.control.googleMaps().addTo(map);
+  </script>
+
+  <script>
+    const toggle = document.getElementById('dropdownToggle');
+    const menu = document.getElementById('dropdownMenu');
+    const selectedText = document.getElementById('dropdownSelected');
+
+    // toggle visibility
+    toggle.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = 'none';
+      }
+    });
+
+    // prevent scrolling the page while scrolling inside dropdown
+    menu.addEventListener('wheel', function (e) {
+      const delta = e.deltaY;
+      const up = delta < 0;
+      const down = delta > 0;
+      const atTop = this.scrollTop === 0;
+      const atBottom = this.scrollHeight - this.scrollTop === this.clientHeight;
+
+      // Only prevent page scroll if at boundaries
+      if ((up && atTop) || (down && atBottom)) {
+        e.preventDefault();
+      }
+
+      // Ensure dropdown scrolls smoothly
+      e.stopPropagation();
+    }, { passive: false });
+
+    // handle checkbox selections
+    const checkboxes = menu.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const selected = Array.from(checkboxes)
+          .filter(c => c.checked)
+          .map(c => c.value);
+        selectedText.textContent = selected.length ? selected.join(', ') : 'Looking for Industry';
+      });
+    });
+  </script>
+
+
+  <script>
+    // Select the video element
+    const video = document.getElementById('myVideo');
+
+    // Set playback speed (e.g., 0.5 for half speed, 1 for normal speed, 2 for double speed)
+    video.playbackRate = 0.5; // This will play the video at half speed
+
+    // Optionally, you can use a function to control the speed dynamically
+    function setSpeed(speed) {
+      video.playbackRate = speed;
+    }
+
+    // Example usage to set speed to 0.8 (80% normal speed)
+    setSpeed(0.5);
+  </script>
 
 
 </body>

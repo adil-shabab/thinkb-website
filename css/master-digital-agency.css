@@ -8649,7 +8649,7 @@ section {
     .footer-area .footer-area-inner {
         padding-top: 60px;
         padding-bottom: 80px;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 2.2fr 1fr 1fr;
     }
 }
 @media only screen and (max-width: 767px) {
@@ -9490,11 +9490,6 @@ section {
 }
 .breadcrumb__section{
     background-color: rgba(235, 235, 235, 0.699);
-    padding-top: 150px;
-    padding-bottom: 80px;
-}
-.breadcrumb__section{
-    background-color: #ebebeb5e;
     padding-top: 150px;
     padding-bottom: 80px;
 }
