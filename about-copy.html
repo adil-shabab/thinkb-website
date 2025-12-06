@@ -47,6 +47,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
+    <!-- Font Awesome 6 Free CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-yH05lN8Ck8Vh6pXQwWqG1TDRRbNm/j8zWQ4sQ/jUo0YOCtD1p7K4fW6KkG5VZfef9b9ozx6F+I4xXxFhIu2m2w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <style>
         /* BASE STYLES & LAYOUT */
 
@@ -63,235 +69,6 @@
             margin: 0;
             padding: 0;
         }
-
-        .hero-container {
-            min-height: 550px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px 40px 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .content-wrapper {
-            max-width: 1280px;
-            width: 100%;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .hero-title {
-            font-size: 3rem;
-            line-height: 0.9;
-            font-weight: 800;
-            text-align: center;
-            position: relative;
-            z-index: 10;
-            margin: 0 auto;
-            max-width: 900px;
-        }
-
-        .hero-title span {
-            color: #dc303f;
-        }
-
-        .intro-paragraph {
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1.5rem;
-            line-height: 1.6;
-            font-weight: 300;
-            color: #4b5563;
-            text-align: center;
-            position: relative;
-            z-index: 10;
-            margin-top: 3rem;
-        }
-
-        .image-card {
-            position: absolute;
-            width: 180px;
-            height: 120px;
-            overflow: hidden;
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.5, 1), box-shadow 0.4s ease-out;
-            cursor: pointer;
-            z-index: 20;
-        }
-
-        .image-card:hover {
-            transform: scale(1.15) rotate(0deg);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            z-index: 50;
-        }
-
-        .image-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        #card-1 {
-            bottom: 150%;
-            left: 50%;
-            margin-left: -90px;
-            transform: rotate(-12deg);
-            width: 215px;
-            height: 140px;
-        }
-
-        #card-2 {
-            top: 32%;
-            right: 82%;
-            transform: rotate(-32deg);
-            width: 150px;
-            height: 200px;
-        }
-
-        #card-3 {
-            top: 78%;
-            left: 82%;
-            transform: rotate(18deg);
-            width: 215px;
-            height: 140px;
-        }
-
-        /* Full-page overlay */
-        #typing-overlay {
-            position: fixed;
-            inset: 0;
-            background: var(--bg);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.6s ease;
-        }
-
-        /* Neon text */
-        .neon-text-container {
-            text-align: center;
-            max-width: 80%;
-        }
-
-
-        .neon-text {
-            font-size: 64px;
-            line-height: 1.2;
-            color: #fff;
-            position: relative;
-            text-align: center;
-            text-shadow:
-                0 0 5px var(--accent),
-                0 0 10px var(--accent),
-                0 0 20px var(--accent),
-                0 0 40px var(--accent);
-            word-break: break-word;
-        }
-
-        .typed {
-            white-space: pre-wrap;
-        }
-
-        .cursor {
-            position: absolute;
-            width: 2px;
-            height: 1.05em;
-            background: var(--accent);
-            box-shadow: 0 0 6px var(--accent), 0 0 12px var(--accent);
-            animation: blink 0.7s steps(1) infinite;
-        }
-
-        @keyframes blink {
-            50% {
-                opacity: 0;
-            }
-        }
-
-        .founder-section {
-            background-color: black;
-        }
-
-        .founder-section h1 {
-            color: white;
-            font-size: 52px;
-            margin-bottom: 20px;
-        }
-
-        .founder-section p {
-            color: white;
-        }
-
-        #trusted {
-            text-align: center;
-            padding: 100px 10px 10px;
-            overflow: hidden;
-        }
-
-        #trusted h2 {
-            font-size: 3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        #trusted .description {
-            max-width: 700px;
-            margin: 0 auto 80px auto;
-            line-height: 1.6;
-            color: #444;
-            font-size: 1.1rem;
-        }
-
-        /* .stats-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 60px;
-    }
-
-    .stat {
-      flex: 1 1 200px;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .stat.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .number {
-      font-size: 4rem;
-      font-weight: 600;
-      color: #222;
-      position: relative;
-    }
-
-    .number::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 2px;
-      background-color: #e6e0dc;
-      margin: 15px auto 20px;
-      border-radius: 10px;
-    }
-
-    .stat p {
-      color: #333;
-      font-size: 1rem;
-      line-height: 1.5;
-      max-width: 200px;
-      margin: 0 auto;
-    } */
 
         .testimonial-section {
             text-align: center;
@@ -545,6 +322,250 @@
             text-align: center;
         }
 
+        .about-main {
+            background: linear-gradient(180deg, #D9D9D900 0%, #F5D9D9 100%);
+        }
+
+        .founder-section {
+            background-color: black;
+            color: white !important;
+        }
+
+        .founder-section h1,
+        .founder-section p {
+            color: white !important;
+        }
+
+        .founder-flex-section {
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            gap: 5%;
+            padding: 100px 0px;
+        }
+
+        .founder-img {
+            width: 500px;
+        }
+
+        /* -------------------------------------
+  THINKB CREATIVE ENGINE – EDITORIAL STYLE
+  Brand Accent: #dc303f
+--------------------------------------*/
+
+        :root {
+            --brand: #dc303f;
+        }
+
+        .thinkb-creative-engine {
+            padding: 110px 20px;
+            font-family: "Inter", system-ui, -apple-system;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .thinkb-creative-engine h2 {
+            font-size: clamp(2.4rem, 3vw, 3rem);
+            letter-spacing: -1.2px;
+            margin-bottom: 80px;
+            color: #111;
+        }
+
+        /* GRID */
+        .engine-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 950px;
+            margin: auto;
+        }
+
+        /* CARD */
+        .step {
+            position: relative;
+            padding: 50px 36px;
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: all .35s cubic-bezier(.25, .85, .25, 1);
+        }
+
+        /* BRAND STROKE */
+        .step::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--brand);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .45s ease;
+        }
+
+        .step:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* HOVER FEEL */
+        .step:hover {
+            transform: translateY(-8px);
+            border-color: var(--brand);
+        }
+
+        /* HUGE WATERMARK ICON */
+        .step i {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 90px;
+            opacity: 0.2;
+            pointer-events: none;
+            color: var(--brand);
+        }
+
+        /* CONTENT STACK */
+        .step h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            letter-spacing: -.4px;
+            color: #111;
+        }
+
+        .step p {
+            color: #555;
+            line-height: 1.5;
+            max-width: 260px;
+            margin: auto;
+        }
+
+        /* TAGLINE */
+        .engine-tagline {
+            margin-top: 70px;
+            max-width: 600px;
+            margin-inline: auto;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        /* ----------------------------------------
+   DIRECTIONAL ENTRANCE ANIMATIONS
+-----------------------------------------*/
+
+        .step {
+            opacity: 0;
+            animation-duration: .85s;
+            animation-fill-mode: forwards;
+            animation-timing-function: cubic-bezier(.18, .9, .3, 1);
+        }
+
+        /* FROM TOP */
+        .engine-steps .step:nth-child(1) {
+            transform: translateY(-60px);
+            animation-name: enterDown;
+        }
+
+        /* FROM BOTTOM */
+        .engine-steps .step:nth-child(2) {
+            transform: translateY(60px);
+            animation-name: enterUp;
+            animation-delay: .15s;
+        }
+
+        /* FROM RIGHT */
+        .engine-steps .step:nth-child(3) {
+            transform: translateX(60px);
+            animation-name: enterLeft;
+            animation-delay: .3s;
+        }
+
+        /* FROM LEFT (4th card future ready) */
+        .engine-steps .step:nth-child(4) {
+            transform: translateX(-60px);
+            animation-name: enterRight;
+            animation-delay: .45s;
+        }
+
+        /* KEYFRAMES */
+
+        @keyframes enterDown {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes enterUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes enterLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes enterRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* MOBILE TUNING */
+        @media(max-width:600px) {
+            .thinkb-creative-engine h2 {
+                font-size: 2.2rem;
+            }
+
+            .step {
+                padding: 40px 28px;
+            }
+        }
+
+
+        .about-heading {
+            text-align: center;
+        }
+
+        .red-text {
+            color: #dc303f;
+        }
+
+        .red-button {
+            background-color: #dc303f;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .about-para-one {
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            gap: 5%;
+            padding: 100px 0px;
+        }
+
+        .meet-our-team-section {
+            padding: 100px 0px;
+        }
+
+        .meet-our-team-sub-section {
+            padding-top: 10px;
+        }
+
+        .meet-our-team-sub-section p {
+            margin-bottom: 0px;
+            font-size: 30px;
+        }
+
         /* ——— Responsive ——— */
         @media (max-width: 1199px) {
             .testimonials-grid {
@@ -588,24 +609,20 @@
                 width: 48px;
                 height: 48px;
             }
+
+            .testimonial-section h2 {
+                font-size: 2.5rem;
+                color: #fff;
+                font-weight: 700;
+                margin: 0 0 6px;
+            }
+
+            .testimonial-section .subtitle {
+                font-size: 0.9rem;
+                color: #fff;
+                margin-bottom: 2.25rem;
+            }
         }
-
-
-
-
-        /* @media (max-width: 768px) {
-      #trusted h2 {
-        font-size: 2.2rem;
-      }
-
-      .number {
-        font-size: 3rem;
-      }
-
-      .stats-container {
-        gap: 40px;
-      }
-    } */
 
 
         @media (max-width: 1024px) {
@@ -803,16 +820,246 @@
                 <!-- overlay switcher close -->
                 <div class="overlay-switcher-close"></div>
                 <main>
-                    <div class="breadcrumb__section">
+                    <div class="breadcrumb__section" style="position: relative;top: 10px;padding-bottom: 0px;">
                         <div class="image__section">
-                        
 
-                        
+                            <div class="about-main">
+                                <h1 class="about-heading"><span class="red-text">About Us</span></h1>
 
-                        
+                                <div class="container">
+                                    <div class="about-para-one">
+                                        <div>
+                                            <img src="./assets/images/about-2.webp" alt="">
+                                        </div>
 
+                                        <div>
+                                            <h1>Our <span class="red-text">Story</span></h1>
+                                            <p>At thinkB, one of Bangalore's leading branding agencies, our journey has
+                                                been
+                                                nothing
+                                                short of inspiring. It all began when our founder decided to break free
+                                                from
+                                                a
+                                                monotonous routine and pursue a creative venture of his own.
+                                            </p>
 
-                        
+                                            <p>What started as Red Advertising, a small design agency, has now evolved
+                                                into
+                                                a
+                                                full-fledged design & digital agency. While times have changed and we’ve
+                                                grown
+                                                over
+                                                the years, our passion for creativity and innovation has remained
+                                                unwavering.
+                                            </p>
+                                            <button class="red-button">View all our works</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="founder-section">
+                                <div class="container">
+                                    <div class="founder-flex-section">
+                                        <div>
+                                            <h1 class="mb-30">Meet Our <span class="red-text">Founder</span></h1>
+                                            <p>
+                                                Sagar Varma’s journey in advertising began in Mumbai, where he gained
+                                                invaluable experience in the fast-paced world of leading ad agencies.
+                                                Fuelled by a passion for creativity, he returned to Bengaluru to carve
+                                                his own path, founding Red Advertising, now known as thinkB Creative
+                                                Agency. His mission was clear - to break away from traditional corporate
+                                                moulds and redefine branding with fresh ideas.
+                                            </p>
+                                            <p>
+                                                Over the years, Sagar has worked with renowned brands like Panasonic,
+                                                Mahindra, Renault, and Sakra World Hospital. His knack for combining
+                                                strategy with creativity has helped businesses build impactful campaigns
+                                                and stand out in competitive markets.
+                                            </p>
+                                            <p>
+                                                Known for his hands-on approach, Sagar is often found brainstorming with
+                                                his team or immersed in discussions. His ability to balance big ideas
+                                                with attention to detail has made thinkB a trusted name in branding.
+                                                Sagar’s passion continues to drive thinkB’s success in delivering
+                                                innovative and meaningful campaigns.
+                                            </p>
+                                        </div>
+                                        <div class="founder-img">
+                                            <img src="./images/sagar-varma.webp" alt="founder-img">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- counter area start  -->
+                            <section class="counter-area">
+                                <div class="container">
+                                    <div class="counter-area-inner section-spacing">
+                                        <div class="counters-grid">
+                                            <div class="counter-item has_fade_anim" data-fade-from="left">
+                                                <h2 class="title wc-counter">300+</h2>
+                                                <p class="text">Happy <br> customers</p>
+                                            </div>
+                                            <div class="counter-item has_fade_anim" data-fade-from="left">
+                                                <h2 class="title wc-counter">800+</h2>
+                                                <p class="text">Project <br> completed</p>
+                                            </div>
+                                            <div class="counter-item has_fade_anim" data-fade-from="left">
+                                                <h2 class="title wc-counter">10+</h2>
+                                                <p class="text">Years <br> experiences</p>
+                                            </div>
+                                            <div class="counter-item has_fade_anim" data-fade-from="left">
+                                                <h2 class="title wc-counter">05+</h2>
+                                                <p class="text">Global <br> Reach</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- counter area end  -->
+
+                            <!-- client area start  -->
+                            <div class="client-area has_fade_anim" style="background: white;">
+                                <div class="container">
+                                    <div class="client-area-inner section-spacing-top">
+                                        <div class="client-area-text">
+                                            <h2 class="text">We worked with largest
+                                                global brands</h2>
+                                        </div>
+                                        <div class="clients-wrapper-box">
+                                            <div class="clients-wrapper">
+                                                <div class="client-box">
+                                                    <img class="show-light" src="assets/images/client/1.jpg"
+                                                        alt="client image">
+                                                    <img class="show-dark" src="images/img-s-1-light.webp"
+                                                        alt="client image">
+                                                </div>
+                                                <div class="client-box">
+                                                    <img class="show-light" src="assets/images/client/2.webp"
+                                                        alt="client image">
+                                                    <img class="show-dark" src="images/img-s-2-light_1.webp"
+                                                        alt="client image">
+                                                </div>
+                                                <div class="client-box">
+                                                    <img class="show-light" src="assets/images/client/3.jpg"
+                                                        alt="client image">
+                                                    <img class="show-dark" src="images/img-s-3-light.webp"
+                                                        alt="client image">
+                                                </div>
+                                                <div class="client-box">
+                                                    <img class="show-light" src="assets/images/client/4.jpg"
+                                                        alt="client image">
+                                                    <img class="show-dark" src="images/img-s-4-light.webp"
+                                                        alt="client image">
+                                                </div>
+                                                <div class="client-box">
+                                                    <img class="show-light" src="assets/images/client/5.webp"
+                                                        alt="client image">
+                                                    <img class="show-dark" src="images/img-s-5-light.webp"
+                                                        alt="client image">
+                                                </div>
+                                                <div class="client-box">
+                                                    <img class="show-light" src="assets/images/client/6.webp"
+                                                        alt="client image">
+                                                    <img class="show-dark" src="images/img-s-6-light.webp"
+                                                        alt="client image">
+                                                </div>
+                                                <div class="client-box">
+                                                    <img class="show-light" src="assets/images/client/7.webp"
+                                                        alt="client image">
+                                                    <img class="show-dark" src="images/img-s-7-light.webp"
+                                                        alt="client image">
+                                                </div>
+                                                <div class="client-box">
+                                                    <img class="show-light" src="assets/images/client/8.webp"
+                                                        alt="client image">
+                                                    <img class="show-dark" src="images/img-s-8-light.webp"
+                                                        alt="client image">
+                                                </div>
+                                                <div class="client-box">
+                                                    <img class="show-light" src="assets/images/client/9.webp"
+                                                        alt="client image">
+                                                    <img class="show-dark" src="images/img-s-9-light.webp"
+                                                        alt="client image">
+                                                </div>
+                                                <div class="client-box">
+                                                    <img class="show-light" src="assets/images/client/10.png"
+                                                        alt="client image">
+                                                    <img class="show-dark" src="images/img-s-10-light.webp"
+                                                        alt="client image">
+                                                </div>
+                                                <div class="client-box">
+                                                    <img class="show-light" src="assets/images/client/11.webp"
+                                                        alt="client image">
+                                                    <img class="show-dark" src="images/img-s-11-light.webp"
+                                                        alt="client image">
+                                                </div>
+                                                <div class="client-box">
+                                                    <img class="show-light" src="assets/images/client/12.webp"
+                                                        alt="client image">
+                                                    <img class="show-dark" src="images/img-s-12-light.webp"
+                                                        alt="client image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- client area end  -->
+
+                            <section class="thinkb-creative-engine">
+                                <h2>The thinkB Creative Engine</h2>
+                                <div class="engine-steps">
+                                    <div class="step">
+                                        <i class="fas fa-search fa-3x"></i>
+                                        <h3>Discover</h3>
+                                        <p>Dive deep into your brand, audience, and market.</p>
+                                    </div>
+                                    <div class="step">
+                                        <i class="fas fa-lightbulb fa-3x"></i>
+                                        <h3>Ideate</h3>
+                                        <p>Spark bold, original ideas that stand out.</p>
+                                    </div>
+                                    <div class="step">
+                                        <i class="fas fa-rocket fa-3x"></i>
+                                        <h3>Deliver</h3>
+                                        <p>Bring concepts to life with precision and impact.</p>
+                                    </div>
+                                </div>
+                                <p class="engine-tagline"><strong>Where strategy meets creativity to move brands
+                                        forward.</strong></p>
+                            </section>
+
+                            <section>
+                                <div style="background: linear-gradient(180deg, #D9D9D900 0%, #F5D9D9 100%);">
+                                    <div class="container">
+                                        <div class="meet-our-team-section">
+                                            <h1>Meet Our <span class="red-text">Team</span></h1>
+                                            <div>
+                                                <p>We at thinkB, one of the best branding agencies in Banglore, comprise
+                                                    talente
+                                                    individuals who are passionate about bringing ideas to life. With
+                                                    diverse
+                                                    skillness, we collaborate to produce effective and creative
+                                                    solutions
+                                                    for
+                                                    our clients. Together, our creativwe team is committed to delivering
+                                                    impactful work that exceeds expectations. </p>
+                                                <p>Together, our creative team is committed to delivering impactful work
+                                                    that
+                                                    exceeds expectations.</p>
+                                            </div>
+
+                                            <div class="meet-our-team-sub-section">
+                                                <p>We <span class="red-text">deliver</span></p>
+                                                <p>Expectional <span class="red-text">results</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
 
                             <section class="testimonial-section">
                                 <h2>They say it best</h2>
@@ -951,16 +1198,6 @@
 
                         </div>
 
-
-                        <!-- Black Overlay Typing Section -->
-                        <div id="typing-overlay">
-                            <div class="neon-text-container">
-                                <div class="neon-text" id="neon">
-                                    <span id="typed" class="typed"></span>
-                                    <span id="cursor" class="cursor"></span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </main>
 
@@ -992,7 +1229,7 @@
                                     <li><a href="#">Gallery</a></li>
                                     <li><a href="#">Latest Blogs</a></li>
                                     <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Terms & Condition</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
                                     <li><a href="#">Privacy Policy</a></li>
                                 </ul>
                             </div>
