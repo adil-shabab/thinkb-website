@@ -8395,7 +8395,7 @@ section {
     position: relative;
 }
 .client-area-text .text {
-    font-size: 30px;
+    font-size: 32px;
     line-height: 1;
     max-width: 310px;
     position: absolute;
@@ -9890,7 +9890,7 @@ section {
 /* wrapper + responsive svg */
 .team-svg{ 
     position:relative; 
-    margin-bottom: -320px;
+    margin-bottom: -400px;
     z-index: 1;
 }
 .team-svg svg{ width:100%; height:auto; display:block; }
@@ -10020,12 +10020,55 @@ section {
   .team-svg svg image[data-name]{ transition:none; }
 }
 
+
+@media screen and (max-width: 1600px) {
+
+  .team-svg{
+    margin-bottom: -270px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  .team-svg{
+    margin-bottom: -215px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+
+  .team-svg{
+    margin-bottom: -182px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .team-svg{
+    margin-bottom: -138px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .mt_minus{
     margin-top: -70px !important;
   }
   .team-svg{
-    margin-bottom: -65px;
+    margin-bottom: -76px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .team-svg{
+    margin-bottom: -68px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+
+  .team-svg{
+    margin-bottom: -58px;
   }
 }
 
