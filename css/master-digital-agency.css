@@ -5,6 +5,7 @@
 @import "https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 :root {
     --primary: #121212;
     --secondary: #555555;
@@ -3034,16 +3035,29 @@
 .mbm-1 {
     margin-bottom: -1px;
 }
+
 :root {
-    --font_kanit: "Kanit", sans-serif;
+    --font_recoleta:"Outfit", sans-serif;;
+    --font_body: "body-font", sans-serif;
     --font_awesome: "Font Awesome 6 Free";
+
+
+    --font_dmsans: "DM Sans", sans-serif;
+    --font_plusjakartasans: "Plus Jakarta Sans", sans-serif;
+    --font_beatricetrial: "beatricetrial";
+    --font_khand: "Khand", sans-serif;
+    --font_getaway: "getaway";
+    --font_instrumentsans: "Instrument Sans", sans-serif;
+    --font_spacegrotesk: "Space Grotesk", sans-serif;
+    --font_canelatrial: "canelatrial";
+    --font_bonvivant: "bonvivant";
 }
 * {
     margin: 0;
     padding: 0;
 }
 body {
-    font-family: var(--font_kanit);
+    font-family: var(--font_body);
     line-height: 1;
     scroll-behavior: smooth;
 }
@@ -3142,6 +3156,11 @@ h6 {
     font-size: 18px;
 }
 @font-face {
+    font-family: "body-font";
+    src: url("../fonts/SFPRODISPLAYREGULAR.otf");
+    font-display: swap;
+}
+@font-face {
     font-family: "recoleta";
     src: url("../fonts/Latinotype%20-%20Recoleta%20Medium.otf");
     font-display: swap;
@@ -3174,8 +3193,10 @@ h6 {
     font-display: swap;
 }
 :root {
-    --font_recoleta: "recoleta";
-    --font_teko: "Teko", sans-serif;
+    --font_recoleta:"Outfit", sans-serif;;
+    --font_body: "body-font", sans-serif;
+
+
     --font_dmsans: "DM Sans", sans-serif;
     --font_plusjakartasans: "Plus Jakarta Sans", sans-serif;
     --font_beatricetrial: "beatricetrial";
@@ -3186,6 +3207,7 @@ h6 {
     --font_canelatrial: "canelatrial";
     --font_bonvivant: "bonvivant";
 }
+
 .font-heading-recoleta-medium h1,
 .font-heading-recoleta-medium h2,
 .font-heading-recoleta-medium h3,
@@ -3202,7 +3224,7 @@ h6 {
 .font-heading-teko-bold h4,
 .font-heading-teko-bold h5,
 .font-heading-teko-bold h6 {
-    font-family: var(--font_teko);
+    font-family: var(--font_recoleta);
     font-weight: 700;
     line-height: 0.94;
 }
@@ -3212,7 +3234,7 @@ h6 {
 .font-heading-dmsans-medium h4,
 .font-heading-dmsans-medium h5,
 .font-heading-dmsans-medium h6 {
-    font-family: var(--font_dmsans);
+    font-family: var(--font_recoleta);
     font-weight: 500;
     line-height: 1;
 }
@@ -3222,7 +3244,7 @@ h6 {
 .font-heading-plusjakartasans-regular h4,
 .font-heading-plusjakartasans-regular h5,
 .font-heading-plusjakartasans-regular h6 {
-    font-family: var(--font_plusjakartasans);
+    font-family: var(--font_recoleta);
     font-weight: 400;
     line-height: 1;
 }
@@ -3232,7 +3254,7 @@ h6 {
 .font-heading-plusjakartasans-regular-2 h4,
 .font-heading-plusjakartasans-regular-2 h5,
 .font-heading-plusjakartasans-regular-2 h6 {
-    font-family: var(--font_plusjakartasans);
+    font-family: var(--font_recoleta);
     font-weight: 400;
     line-height: 1.08;
 }
@@ -3242,7 +3264,7 @@ h6 {
 .font-heading-beatricetrial-regular h4,
 .font-heading-beatricetrial-regular h5,
 .font-heading-beatricetrial-regular h6 {
-    font-family: var(--font_beatricetrial);
+    font-family: var(--font_recoleta);
     font-weight: 400;
     line-height: 1.07;
 }
@@ -3252,7 +3274,7 @@ h6 {
 .font-heading-beatricetrial-regular-2 h4,
 .font-heading-beatricetrial-regular-2 h5,
 .font-heading-beatricetrial-regular-2 h6 {
-    font-family: var(--font_beatricetrial);
+    font-family: var(--font_recoleta);
     font-weight: 400;
     line-height: 1.08;
 }
@@ -3262,7 +3284,7 @@ h6 {
 .font-heading-beatricetrial-medium h4,
 .font-heading-beatricetrial-medium h5,
 .font-heading-beatricetrial-medium h6 {
-    font-family: var(--font_beatricetrial);
+    font-family: var(--font_recoleta);
     font-weight: 500;
     line-height: 1.08;
 }
@@ -3272,7 +3294,7 @@ h6 {
 .font-heading-khand-bold h4,
 .font-heading-khand-bold h5,
 .font-heading-khand-bold h6 {
-    font-family: var(--font_khand);
+    font-family: var(--font_recoleta);
     font-weight: 700;
     line-height: 0.88;
 }
@@ -3282,7 +3304,7 @@ h6 {
 .font-heading-instumentsans-medium h4,
 .font-heading-instumentsans-medium h5,
 .font-heading-instumentsans-medium h6 {
-    font-family: var(--font_instrumentsans);
+    font-family: var(--font_recoleta);
     font-weight: 500;
     line-height: 1;
 }
@@ -3292,7 +3314,7 @@ h6 {
 .font-heading-instumentsans-semibold h4,
 .font-heading-instumentsans-semibold h5,
 .font-heading-instumentsans-semibold h6 {
-    font-family: var(--font_instrumentsans);
+    font-family: var(--font_recoleta);
     font-weight: 600;
     line-height: 1;
 }
@@ -3302,7 +3324,7 @@ h6 {
 .font-heading-spacegrotesk-bold h4,
 .font-heading-spacegrotesk-bold h5,
 .font-heading-spacegrotesk-bold h6 {
-    font-family: var(--font_spacegrotesk);
+    font-family: var(--font_recoleta);
     font-weight: 700;
     line-height: 1;
 }
@@ -3312,7 +3334,7 @@ h6 {
 .font-heading-canelatrial-thin h4,
 .font-heading-canelatrial-thin h5,
 .font-heading-canelatrial-thin h6 {
-    font-family: var(--font_canelatrial);
+    font-family: var(--font_recoleta);
     font-weight: 300;
     line-height: 1.2;
 }
@@ -5237,29 +5259,42 @@ section {
 .btn-text-flip {
     perspective: 1000px;
 }
-.btn-text-flip:hover span {
-    transform: rotateX(90deg) translateY(-12px);
-    color: inherit;
-}
+
 .btn-text-flip span {
     position: relative;
     display: inline-block;
     padding: 0;
     transition: transform 0.5s;
-    transform-origin: 50% 0;
+    transform-origin: center top;
+    backface-visibility: hidden;
 }
+
 .btn-text-flip span:before {
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
+    color: white;
     width: 100%;
     height: 100%;
     content: attr(data-text);
-    transition: color 0.5s;
     transform: rotateX(-90deg);
-    transform-origin: 50% 0;
+    transform-origin: center bottom;
+    transition: transform 0.5s;
     text-align: center;
+    backface-visibility: hidden;
 }
+
+.btn-text-flip:hover span {
+    transform: rotateX(0deg);
+    color: transparent;
+}
+
+.btn-text-flip:hover span:before {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
 .wc-btn-group {
     display: flex;
     width: -moz-fit-content;
@@ -6789,7 +6824,7 @@ section {
     top: 40%;
     z-index: 99;
     transform: translateY(-50%);
-    font-family: var(--font_primary);
+    font-family: var(--font_body);
     transition: all 0.3s;
 }
 .switcher__items .wc-col-2 {
@@ -7205,7 +7240,7 @@ section {
 .font-heading-Beatricetrial h4,
 .font-heading-Beatricetrial h5,
 .font-heading-Beatricetrial h6 {
-    font-family: var(--font_beatricetrial);
+    font-family: var(--font_recoleta);
 }
 .cf_feature.style-3 {
     border-right: 1px solid #f1f1f1;
@@ -7475,8 +7510,9 @@ section {
 }
 @media only screen and (max-width: 1919px) {
     .header-area .header__nav {
-        width: 750px;
+        width: 800px;
         height: 80px;
+        background-position: center;
     }
 }
 @media only screen and (max-width: 1199px) {
@@ -8588,6 +8624,8 @@ section {
 }
 .footer-area {
     background-color: var(--primary);
+    z-index: 111;
+    position: relative;
 }
 .dark .footer-area {
     background-color: #1b1b1b;
@@ -8866,7 +8904,7 @@ section {
     font-size: 16px;
     margin-top: 18px;
     margin-bottom: 0px;
-    font-family: var(--font_kanit);
+    font-family: var(--font_body);
     color: rgb(228, 228, 228);
 }
 .about__section .flex___box .bx__about .head__bx{
@@ -9311,7 +9349,7 @@ section {
 .portfolio___section .txt__box .flex__content .txt_section p {
   color: white;
   font-size: 17px;
-  font-family: var(--font_kanit);
+  font-family: var(--font_body);
   margin-top: 15px;
 }
 
@@ -9374,7 +9412,7 @@ section {
     margin: 15px 0px;
 }
 .contact___form .left__section p{
-    font-family: var(--font_kanit);
+    font-family: var(--font_body);
     font-size: 18px;
     font-weight: 400;
 }
@@ -9395,7 +9433,7 @@ section {
 .contact___form .left__section .flex__box .bx a{
     font-size: 20px;
     font-weight: 400;
-    font-family: var(--font_kanit);
+    font-family: var(--font_body);
 }
 .contact___form .left__section .flex__box .bx_location .bx .icons{
     display: flex;
@@ -9483,7 +9521,7 @@ section {
 }
 .about_us_page p{
     font-size: 18px;
-    font-family: var(--font_kanit);
+    font-family: var(--font_body);
 }
 .about_us_page ul{
     list-style: circle !important;
@@ -9493,7 +9531,7 @@ section {
     font-size: 18px;
     margin-bottom: 10px;
     list-style: circle !important;
-    font-family: var(--font_kanit);
+    font-family: var(--font_body);
 }
 .about_us_page .img_flex_box{
     display: flex;
@@ -9848,3 +9886,151 @@ section {
     transform: translateX(-50%);
   }
 }
+
+
+
+
+
+
+/* wrapper + responsive svg */
+.team-svg{ 
+    position:relative; 
+    margin-bottom: -320px;
+    z-index: 1;
+}
+.team-svg svg{ width:100%; height:auto; display:block; }
+
+/* base style for each member image */
+.team-svg svg image[data-name]{
+  cursor:pointer;
+  /* transitions for smooth hover */
+  transition: filter .18s ease, transform .18s ease, opacity .18s ease;
+  /* required for transforms on <image> */
+  transform-box: fill-box;
+  transform-origin: center;
+  will-change: filter, transform;
+}
+
+/* --- MODERN: blur everyone except the hovered one using :has() --- */
+.team-svg:has(svg image[data-name]:hover) svg image[data-name]:not(:hover){
+  filter: blur(4px) brightness(.85);
+}
+
+/* hovered one: keep sharp, lift, and add strong shadow */
+.team-svg svg image[data-name]:hover{
+  filter: url(#hoverShadowStrong);
+  transform: translateY(-8px) scale(1.02);
+  opacity:1;
+}
+
+/* --- FALLBACK for browsers without :has() (JS toggles these classes) --- */
+.team-svg.is-hovering svg image[data-name]{ filter: blur(4px) brightness(.85); }
+.team-svg.is-hovering svg image[data-name].active{
+  filter: url(#hoverShadowStrong);
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* THEME */
+.team-svg{
+  --tip-bg: rgba(16, 16, 22, 0.88);  /* glass dark */
+  --tip-fg: #fff;
+  --tip-border: rgba(255,255,255,0.14);
+  --tip-accent: #7aa2ff;            /* change to your brand color */
+}
+
+
+/* Tooltip container */
+.member-tip{
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+
+  /* glass look */
+  background: var(--tip-bg);
+  color: var(--tip-fg);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+
+  border: 1px solid var(--tip-border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  min-width: 160px;
+  box-shadow:
+    0 14px 34px rgba(0,0,0,.35),
+    0 2px 0 rgba(255,255,255,.05) inset;
+
+  /* entry animation */
+  opacity: 0;
+  transform: translate(14px,-14px) scale(.98);
+  transition: opacity .16s ease, transform .16s ease;
+  white-space: nowrap;
+}
+
+/* left accent bar */
+.member-tip::before{
+  content: "";
+  position: absolute; inset: 0 auto 0 0;
+  width: 3px; border-radius: 12px 0 0 12px;
+  background: linear-gradient(180deg, var(--tip-accent), transparent);
+  opacity: .95;
+}
+
+/* arrow */
+.member-tip::after{
+  content: "";
+  position: absolute;
+  width: 10px; height: 10px;
+  background: var(--tip-bg);
+  border-left: 1px solid var(--tip-border);
+  border-top: 1px solid var(--tip-border);
+  transform: rotate(45deg);
+  box-shadow: 0 4px 10px rgba(0,0,0,.25);
+}
+
+/* arrow positions (JS toggles .dir-*) */
+.member-tip.dir-right::after{ left: -6px; top: calc(50% - 5px); }
+.member-tip.dir-left::after { right: -6px; top: calc(50% - 5px); transform: rotate(45deg); }
+.member-tip.dir-top::after  { left: calc(50% - 5px); bottom: -6px; transform: rotate(45deg); }
+.member-tip.dir-bottom::after{ left: calc(50% - 5px); top: -6px; transform: rotate(45deg); }
+
+/* visible state (JS toggles this) */
+.member-tip.is-visible{
+  opacity: 1;
+  transform: translate(14px,-14px) scale(1);
+}
+
+/* text styles */
+.member-tip .member-name{
+  font: 700 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  letter-spacing: .2px;
+}
+.member-tip .member-role{
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font: 600 12px/1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.12);
+}
+.mt_minus{
+  margin-top: -341px !important;
+}
+/* motion reduce */
+@media (prefers-reduced-motion: reduce){
+  .member-tip{ transition: none; }
+}
+/* accessibility */
+@media (prefers-reduced-motion: reduce){
+  .team-svg svg image[data-name]{ transition:none; }
+}
+
+@media screen and (max-width: 500px) {
+  .mt_minus{
+    margin-top: -70px !important;
+  }
+  .team-svg{
+    margin-bottom: -65px;
+  }
+}
+
