@@ -7534,6 +7534,9 @@ section {
 .dark .header-area .main-menu > ul > li > a {
     border-color: rgba(255, 255, 255, 0.12);
 }
+.header-area .main-menu > ul > li > a.active {
+    border: 1px solid rgb(175 38 50 / 27%);
+}
 .header-area .search-icon {
     color: var(--primary);
 }
@@ -8096,6 +8099,7 @@ section {
 
 .service-area .service-top-wrapper .text {
   padding-bottom: 31px;
+  font-family: var(--font_body);
 }
 
 @media only screen and (max-width: 991px) {
@@ -8858,7 +8862,7 @@ section {
     border-style: solid;
     border-color: rgba(187, 187, 187, 0.212);
     border-image: initial;
-    padding: 25px 30px;
+    padding: 20px 20px;
     position: relative;
     transition: 0.5s ease-in;
     z-index: 11;
@@ -9352,6 +9356,7 @@ section {
   color: black;
   padding: 13px 20px;
   border-radius: 30px;
+  font-family: var(--font_recoleta);
   position: absolute;
   bottom: 25px;
   font-size: 16px;
@@ -9590,19 +9595,22 @@ section {
     }
     .about__section .flex___box .left_section{
         width: 100%;
-        padding: 0px 20px;
+        padding: 0px 10px;
     }
     .center_section{
         width: 100%;
         margin-bottom: 50px;
+        padding: 0px 15px;
+        margin-top: 30px;
     }
     .about__section .flex___box .right_section{
         width: 100%;
-        padding: 0px 20px;
+        padding: 0px 15px;
 
     }
     .about__section .flex___box .bx__about{
         width: 100%;
+        padding: 12px 19px;
     }
     .about__section .flex___box .bx__about .head__bx h6{
         font-size: 22px;
@@ -10043,6 +10051,17 @@ section {
   .team-svg{
     margin-bottom: -76px;
   }
+  .portfolio___section .flex__box .p__box .img__box h4{
+    font-size: 22px;
+    top: 15px;
+    left: 15px;
+  }
+  .about__section{
+    padding: 50px 0px;
+  }
+  .about__section .flex___box .bx__about{
+    margin-bottom: 25px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -10341,7 +10360,7 @@ preloader
 ------------------------------------------- */
 .mil-preloader {
   position: fixed;
-  z-index: 1111;
+  z-index: 111111;
   top: 0;
   font-family: var(--font_recoleta);
   left: 0;
@@ -10414,11 +10433,13 @@ preloader
     width: 120px;
     bottom: 20px;
     left: 20px;
+    z-index: 111;
     position: fixed;
 }
 .lottie__icon_call{
     width: 120px;
     bottom: 90px;
+    z-index: 111;
     left: 20px;
     position: fixed;
 }
@@ -10552,5 +10573,130 @@ preloader
     bottom: 0px;
 }
 p{
-    color: var(--font_body);
+    font-family: var(--font_body) !important;
+}
+.tp-breadcrumb-s7-content p{
+    font-family: var(--font_body) !important;
+}
+.tp-breadcrumb-s7-list ul li{
+    font-family: var(--font_recoleta) !important;
+}
+.objecives_section h4{
+    font-family: var(--font_recoleta) !important;
+}
+@media screen and (max-width: 500px) {
+    .tp-breadcrumb-s7-ptb{
+        padding-bottom: 30px !important;
+    }
+    .service-details-title{
+        font-size: 28px !important;
+    }
+    .py____5{
+        padding: 70px 0px !important; 
+        padding-bottom: 35px !important;
+    }
+    .inner-step-style .bnc-step-wrapper{
+        padding-bottom: 10px !important;
+    }
+    .inner-step-title{
+        font-size: 27px !important;
+    }
+    .inner-step-content p{
+        margin-bottom: 25px !important;
+    }
+    .inner-step-style .py____5{
+        margin-bottom: 40px !important;
+    }
+    .objecives_section h2{
+        font-size: 30px !important;
+        margin-bottom: 20px;
+    }
+    .tp-breadcrumb-s7-ptb{
+        padding-bottom: 30px;
+    }
+    .service-details-style{
+        padding: 0px 0px !important;
+    }
+    .testimonial__se_ction{
+        padding: 50px 0px;
+    }
+    .testimonial__se_ction .testimonial___flex__box{
+        gap: 25px;
+        flex-direction: column;
+    }
+    .testimonial__se_ction .testimonial___flex__box .video__carousel{
+        margin-bottom: 1px;
+        width: 100%;
+    }
+    .testimonial__se_ction .testimonial___flex__box .video__carousel .video_testimonial img{
+        height: 400px;
+    }
+    
+    .testimonial__se_ction .text__testimonial_section{
+        width: 100%;
+    }
+    .testimonial__se_ction .text__testimonial_section .text__testimonial_carousel{
+        height: unset;
+        padding-bottom: 70px;
+    }
+    .testimonial__se_ction .text__testimonial_section .text__testimonial_carousel .test__bx{
+        min-height: unset;
+        padding: 15px;
+        border: 1px solid rgba(179, 179, 179, 0.342);
+    }
+    .testimonial__se_ction .text__testimonial_section .section_testimonial_title{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .footer-area .footer-area-inner{
+        padding-bottom: 35px;
+    }
+
+
+    .lottie__icon_wtsap{
+        width: 100px;
+        bottom: 10px;
+        left: 0px;
+    }
+    .lottie__icon_call{
+        width: 100px;
+        bottom: 68px;
+        left: 0px;
+    }
+    .mockup__grid .fl___ex_box .img__bx.first{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .mockup__grid .fl___ex_box .img__bx.second{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .mockup__grid .fl___ex_box .img__bx.third{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .mockup__grid .fl___ex_box .img__bx.fourth{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .mockup__grid .fl___ex_box .img__bx.fifth{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .mockup__grid .fl___ex_box .img__bx.sixth{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .mockup__grid .fl___ex_box .img__bx.seventh{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
 }
