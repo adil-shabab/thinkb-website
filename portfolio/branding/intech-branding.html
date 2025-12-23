@@ -46,6 +46,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css" />
 
 
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css"
+  />
+
 
 </head>
 
@@ -310,30 +315,48 @@
 
               <div class="flex_box_one">
                 <div class="first_box">
-                  <img src="../../assets/images/Intech Assets/1.png" class="first_image" alt="">
-                  <img src="../../assets/images/Intech Assets/2.png" class="second_image" alt="">
+                  <a href="./../assets/images/Intech Assets/1.png" data-fancybox="gallery">
+                    <img src="../../assets/images/Intech Assets/1.png" class="first_image" alt="">
+                  </a>
+                  <a href="../../assets/images/Intech Assets/2.png" data-fancybox="gallery">
+                    <img src="../../assets/images/Intech Assets/2.png" class="second_image" alt="">
+                  </a>
                 </div>
                 <div class="second_box">
-                  <img src="../../assets/images/Intech Assets/3.png" class="first_image" alt="">
+                  <a href="../../assets/images/Intech Assets/3.png" data-fancybox="gallery">
+                    <img src="../../assets/images/Intech Assets/3.png" class="first_image" alt="">
+                  </a>
                 </div>
                 <div class="third_box">
-                  <img src="../../assets/images/Intech Assets/4.png" class="first_image" alt="">
+                  <a href="../../assets/images/Intech Assets/4.png" data-fancybox="gallery">
+                    <img src="../../assets/images/Intech Assets/4.png" class="first_image" alt="">
+                  </a>
                 </div>
               </div>
 
               <div class="flex_box_two">
                 <div class="first_box">
-                  <img src="../../assets/images/Intech Assets/5.png" class="first_image" alt="">
-                  <img src="../../assets/images/Intech Assets/7.png" class="second_image" alt="">
+                  <a href="../../assets/images/Intech Assets/5.png" data-fancybox="gallery">
+                    <img src="../../assets/images/Intech Assets/5.png" class="first_image" alt="">
+                  </a>
+                  <a href="../../assets/images/Intech Assets/7.png" data-fancybox="gallery">
+                    <img src="../../assets/images/Intech Assets/7.png" class="second_image" alt="">
+                  </a>
                 </div>
 
                 <div class="second_box">
-                  <img src="../../assets/images/Intech Assets/6.png" class="second_image" alt="">
+                  <a href="../../assets/images/Intech Assets/6.png" data-fancybox="gallery">
+                    <img src="../../assets/images/Intech Assets/6.png" class="second_image" alt="">
+                  </a>
 
                   <div class="second-mini">
-                    <img src="../../assets/images/Intech Assets/8.png" class="second_image" alt="">
+                    <a href="../../assets/images/Intech Assets/8.png" class="second_image" data-fancybox="gallery">
+                      <img src="../../assets/images/Intech Assets/8.png" class="second_image" alt="">
+                    </a>
                     <div class="second-mini-1">
-                      <img src="../../assets/images/Intech Assets/9.png" class="first_image" alt="">
+                      <a href="../../assets/images/Intech Assets/9.png" data-fancybox="gallery">
+                        <img src="../../assets/images/Intech Assets/9.png" class="first_image" alt="">
+                      </a>
                     </div>
                   </div>
 
@@ -342,9 +365,13 @@
 
               <div class="flex_box_three">
                 <div class="first_box">
-                  <img src="../../assets/images/Intech Assets/10.png" class="second_image" alt="">
+                  <a href="../../assets/images/Intech Assets/10.png" class="second_image_style" data-fancybox="gallery">
+                    <img src="../../assets/images/Intech Assets/10.png" class="second_image" alt="">
+                  </a>
                 </div>
-                <img src="../../assets/images/Intech Assets/11.png" class="third_image" alt="">
+                <a href="../../assets/images/Intech Assets/11.png" class="third_image_style" data-fancybox="gallery">
+                  <img src="../../assets/images/Intech Assets/11.png" class="third_image" alt="">
+                </a>
               </div>
 
             </div>
@@ -496,6 +523,14 @@
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/lg-zoom.umd.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+
+
+  <script>
+    Fancybox.bind("[data-fancybox]", {
+      // Optional: custom settings
+    });
+  </script>
 
 
   <script>
