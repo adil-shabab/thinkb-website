@@ -9949,6 +9949,68 @@ margin-top: 8px;
 
 }
 
+.intech__portfolio__section .flex_box_one{
+    display: flex;
+    gap: 8px;
+}
+
+.intech__portfolio__section .flex_box_one .first_box{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 40.8%;
+}
+
+.intech__portfolio__section .flex_box_one .second_box{
+width: 26%;
+}
+
+.intech__portfolio__section .flex_box_one .third_box{
+width: 40%;
+}
+
+.intech__portfolio__section .flex_box_two .first_box{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 62%;
+}
+
+.intech__portfolio__section .flex_box_two{
+    display: flex;
+    gap: 8px;
+}
+
+.intech__portfolio__section .flex_box_two .second_box{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.intech__portfolio__section .flex_box_two .second_box .second-mini{
+    display: flex;
+    gap: 8px;
+}
+
+.intech__portfolio__section .flex_box_two .second_box .second-mini .second_image{
+width: 63%;
+}
+
+.intech__portfolio__section .flex_box_two .second_box .second-mini-1{
+    display: flex;
+    flex-direction: column;
+}
+
+.intech__portfolio__section .flex_box_two .second_box .second-mini-1 .second_image{
+width: 100%;
+}
+
+.intech__portfolio__section .flex_box_three .first_box{
+width: 77.5%;
+}
+
+
 @media screen and (max-width: 500px) {
 
  .nuvotec__portfolio__section .flex_box_one {
