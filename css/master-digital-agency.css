@@ -9686,10 +9686,128 @@ section {
     width: 30px;
 }
 
-/* ===============================
-   🌟 SERVICES SECTION BASE
-================================= */
-.service-area {
+/* latest services css */
+
+.service-area .service-top-wrapper {
+
+    padding-bottom: 70px;
+    padding-left: 64px;
+    padding-right: 64px;
+    text-align: center;
+}
+
+.service-area .service-top-wrapper .section-title{
+font-size: 45px;
+    color: #dc303f;
+    margin-bottom: 24px;
+}
+
+
+
+.services {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.services hr{
+    margin: 24px 0px;
+}
+
+.service-row {
+  display: flex;
+  background: #F2F2F2;
+  border: 1px solid #DC303F;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  min-height: 280px;
+}
+
+.service-text {
+  width: 50%;
+  padding: 35px;
+}
+
+.service-image {
+  width: 50%;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-text h4 {
+  color: #dc303f;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.service-text p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  /* margin-bottom: 24px; */
+}
+
+.service-text ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-bottom: 20px;
+}
+
+.service-text li {
+  width: 45%;
+  font-size: 13px;
+  padding-left: 12px;
+  position: relative;
+}
+
+.service-text li::before {
+  content: "•";
+  color: #dc303f;
+  position: absolute;
+  left: 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 9px 22px;
+  border: 1px solid #dc303f;
+  color: #dc303f;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #dc303f;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .service-row {
+    flex-direction: column;
+  }
+
+  .service-text,
+  .service-image {
+    width: 100%;
+  }
+
+  .service-image img {
+    height: 220px;
+  }
+}
+
+/* .service-area {
     background-color: #faf8f7;
     position: relative;
     overflow: hidden;
@@ -9699,7 +9817,6 @@ section {
     background-color: #171717;
 }
 
-/* Top wrapper — heading + intro */
 .service-area .service-top-wrapper {
     display: grid;
     grid-template-columns: 1fr 520px;
@@ -9729,7 +9846,7 @@ section {
     text-transform: capitalize;
     text-decoration-thickness: 2px;
     text-underline-offset: 2px;
-}
+} */
 
 /* ===============================
    🧭 SERVICES HORIZONTAL SCROLL
@@ -12023,32 +12140,69 @@ display: flex;
     padding: 20px;
     background-color: #003e1a;
 }
-
 .admist-nature__portfolio__section .flex_box_one{
     display: flex;
-    gap: 8px;
+    gap: 1%;
+}
+.admist-nature__portfolio__section .flex_box_one .first_box{
+    width: 32.5%;
+}
+.admist-nature__portfolio__section .flex_box_one .first_box a{
+    width: 100%;
 }
 
-.admist-nature__portfolio__section .flex_box_one .second_box {
+.admist-nature__portfolio__section .flex_box_one .first_box a img{
+    width: 100%;
+}
+.admist-nature__portfolio__section .flex_box_one .second_box{
+    width: 66.5%;
+}
+.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex{
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    flex-wrap: wrap;
+    gap: 1%;
+}
+.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex .first_image_row{
+    width: 100%;
 }
 
-/* .admist-nature__portfolio__section .flex_box_two{
+.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex .second_mini_box{
+    width: 100%;
+    position: relative;
     display: flex;
-} */
-
-.admist-nature__portfolio__section .flex_box_three{
-    display: flex;
-    margin-top: 8px;
 }
-.admist-nature__portfolio__section .flex_box_four {
-    margin-top: 8px;
+.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex .second_mini_box .second_image_row_a_tag{
+    margin-top: 18px;
+    width: 49%;
+    position: relative;
 }
-.admist-nature__portfolio__section .flex_box_four .first_box{
+.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex .second_image_row_a_tag .second_image_row{
+    width: 100%;
+}
+.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex .third_image_row{
+    position: absolute;
+    right: 0px;
+    width: 55.5%;
+    top: -78.5px;
+}
+.admist-nature__portfolio__section .flex_box_two{
+    width: 100%;
+    margin-top: 15px;
+}
+.admist-nature__portfolio__section .flex_box_two .first_box{
     display: flex;
-    gap: 8px;
+    gap: 1.5%;
+    align-items: end;
+}
+.admist-nature__portfolio__section .flex_box_two .first_box .first_image_a_tag{
+    width: 69%;
+}
+.admist-nature__portfolio__section .flex_box_two .first_box .second_image {
+    margin-bottom: -12px;
+}
+.admist-nature__portfolio__section .flex_box_two .first_box .first_image_a_tag .first_image{
+    width: 100%;
 }
 
 
