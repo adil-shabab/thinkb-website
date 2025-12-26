@@ -12184,7 +12184,8 @@ display: flex;
     position: absolute;
     right: 0px;
     width: 55.5%;
-    top: -78.5px;
+    top: -75.5px;
+    height: 862px;
 }
 .admist-nature__portfolio__section .flex_box_two{
     width: 100%;
@@ -12199,10 +12200,23 @@ display: flex;
     width: 69%;
 }
 .admist-nature__portfolio__section .flex_box_two .first_box .second_image {
-    margin-bottom: -12px;
+    margin-bottom: -2px;
 }
 .admist-nature__portfolio__section .flex_box_two .first_box .first_image_a_tag .first_image{
     width: 100%;
+}
+
+.admist-nature__portfolio__section .flex_box_three .first_box{
+    margin-top: 1.5%;
+}
+
+.admist-nature__portfolio__section .flex_box_four{
+    margin-top: 1.5%;
+}
+
+.admist-nature__portfolio__section .flex_box_four .first_box{
+    display: flex;
+    gap: 1.5%;
 }
 
 
