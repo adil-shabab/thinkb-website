@@ -9688,22 +9688,22 @@ section {
 
 /* latest services css */
 
-.service-area .service-top-wrapper {
+/* .service-area .service-top-wrapper {
 
     padding-bottom: 70px;
     padding-left: 64px;
     padding-right: 64px;
     text-align: center;
-}
+} */
 
-.service-area .service-top-wrapper .section-title{
+/* .service-area .service-top-wrapper .section-title{
 font-size: 45px;
     color: #dc303f;
     margin-bottom: 24px;
-}
+} */
 
 
-
+/* 
 .services {
   width: 90%;
   max-width: 1200px;
@@ -9723,7 +9723,6 @@ font-size: 45px;
   border: 1px solid #DC303F;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
   min-height: 280px;
 }
 
@@ -9752,7 +9751,6 @@ font-size: 45px;
   font-size: 14px;
   line-height: 1.6;
   color: #555;
-  /* margin-bottom: 24px; */
 }
 
 .service-text ul {
@@ -9793,9 +9791,12 @@ font-size: 45px;
 }
 
 @media (max-width: 900px) {
-  .service-row {
+
+    .service-row {
     flex-direction: column;
   }
+
+
 
   .service-text,
   .service-image {
@@ -9805,9 +9806,9 @@ font-size: 45px;
   .service-image img {
     height: 220px;
   }
-}
+} */
 
-/* .service-area {
+.service-area {
     background-color: #faf8f7;
     position: relative;
     overflow: hidden;
@@ -9846,7 +9847,7 @@ font-size: 45px;
     text-transform: capitalize;
     text-decoration-thickness: 2px;
     text-underline-offset: 2px;
-} */
+}
 
 /* ===============================
    🧭 SERVICES HORIZONTAL SCROLL
