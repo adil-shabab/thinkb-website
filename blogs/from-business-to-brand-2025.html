@@ -435,9 +435,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===============================
     ScrollTrigger.create({
         trigger: ".blog-layout",
-        start: "top top+=120",
+        start: "top top+=100",
         endTrigger: ".footer-area",
-        end: "top bottom-=200",
+        end: "top bottom-=00",
         pin: toc,
         pinSpacing: false
     });
@@ -457,7 +457,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Smooth scroll (GSAP compatible)
             if (smoother) {
-                smoother.scrollTo(target, true, "top 120px");
+                smoother.scrollTo(target, true, "top 0px");
             } else {
                 window.scrollTo({
                     top: target.offsetTop - 120,
