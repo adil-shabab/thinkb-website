@@ -409,14 +409,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===============================
     // STICKY / PIN TOC (GSAP)
     // ===============================
-    ScrollTrigger.create({
+     ScrollTrigger.create({
         trigger: ".blog-layout",
-        start: "top top+=120",
+        start: "top top+=100",
         endTrigger: ".footer-area",
-        end: "top bottom-=200",
+        end: "top bottom-=00",
         pin: toc,
         pinSpacing: false
     });
+
 
     // ===============================
     // CLICK → SCROLL + ACTIVE
