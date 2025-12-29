@@ -435,13 +435,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // STICKY / PIN TOC (GSAP)
     // ===============================
     ScrollTrigger.create({
-  trigger: ".blog-content",      // scroll area = article only
-  start: "top top+=200",
-  end: "bottom bottom",          // stop at end of article
-  pin: toc,
-  pinSpacing: true,              // keeps layout from jumping
-  pinType: "transform"           // prevents fixed + top: values
-});
+        trigger: ".blog-layout",
+        start: "top top+=100",
+        endTrigger: ".footer-area",
+        end: "top bottom-=00",
+        pin: toc,
+        pinSpacing: false
+    });
 
     // ===============================
     // CLICK → SCROLL + ACTIVE
