@@ -9689,125 +9689,250 @@ section {
 
 /* latest services css */
 
-/* .service-area .service-top-wrapper {
-
-    padding-bottom: 70px;
-    padding-left: 64px;
-    padding-right: 64px;
-    text-align: center;
-} */
-
-/* .service-area .service-top-wrapper .section-title{
-font-size: 45px;
-    color: #dc303f;
-    margin-bottom: 24px;
-} */
-
-
-/* 
-.services {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.main___service-top-wrapper {
+    margin-bottom: 70px;
 }
 
-.services hr{
+.main___service-top-wrapper .section-heading .section-title {
+    color: #DC303F;
+    font-size: 44px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.main___service-top-wrapper .text {
+    text-align: center;
+}
+
+.main___services {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.main___services hr {
     margin: 24px 0px;
 }
 
-.service-row {
-  display: flex;
-  background: #F2F2F2;
-  border: 1px solid #DC303F;
-  border-radius: 16px;
-  overflow: hidden;
-  min-height: 280px;
+.main___service-row {
+    display: flex;
+    background: #F2F2F2;
+    border: 1px solid #DC303F;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 280px;
 }
 
-.service-text {
-  width: 50%;
-  padding: 35px;
+.main___service-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    background: #F2F2F2;
+    border: 1px solid #DC303F;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 280px;
 }
 
-.service-image {
-  width: 50%;
+.main___service-text {
+    width: 50%;
+    padding: 35px;
 }
 
-.service-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.main___service-image {
+    width: 50%;
 }
 
-.service-text h4 {
-  color: #dc303f;
-  margin-bottom: 16px;
-  letter-spacing: 1px;
+.main___service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.service-text p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #555;
+.main___service-text h4 {
+    color: #dc303f;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
 }
 
-.service-text ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 20px;
-  margin-bottom: 20px;
+.main___service-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
 }
 
-.service-text li {
-  width: 45%;
-  font-size: 13px;
-  padding-left: 12px;
-  position: relative;
+.main___service-text ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin-bottom: 20px;
 }
 
-.service-text li::before {
-  content: "•";
-  color: #dc303f;
-  position: absolute;
-  left: 0;
+.main___service-text li {
+    width: 45%;
+    font-size: 16px;
+    padding-left: 12px;
+    position: relative;
+}
+
+.main___service-text li::before {
+    content: "•";
+    color: #dc303f;
+    position: absolute;
+    left: 0;
 }
 
 .btn {
-  display: inline-block;
-  padding: 9px 22px;
-  border: 1px solid #dc303f;
-  color: #dc303f;
-  border-radius: 8px;
-  font-size: 13px;
-  cursor: pointer;
+    display: inline-block;
+    padding: 9px 22px;
+    border: 1px solid #dc303f;
+    background: #dc303f;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .btn:hover {
-  background: #dc303f;
-  color: #fff;
+    background: #F2F2F2;
+    border: 1px solid #dc303f;
+
+    color: #dc303f;
 }
 
-@media (max-width: 900px) {
+.projects-section {
+    padding: 70px 0;
+}
 
-    .service-row {
-    flex-direction: column;
-  }
+.projects-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
 
+.projects-title span {
+    color: #dc303f;
+}
 
+/* FLEX CONTAINER */
+.projects-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
 
-  .service-text,
-  .service-image {
+/* 3 CARDS DESKTOP */
+.project-card {
+    flex: 1 1 calc(33.333% - 40px);
+    text-align: center;
+}
+
+.project-card img {
     width: 100%;
-  }
+    border-radius: 8px;
+    object-fit: cover;
+}
 
-  .service-image img {
-    height: 220px;
-  }
-} */
+.project-card h4 {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* CTA BUTTON */
+.projects-btn-wrapper {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.projects-btn {
+    background: #dc303f;
+    padding: 15px 22px;
+    color: white;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 15px;
+}
+
+/* RESPONSIVE — BELOW 1000px */
+@media (max-width: 1000px) {
+    .project-card {
+        flex: 1 1 100%;
+    }
+}
+
+
+/* Tablet: 2 cards per row, stacked inside */
+@media (max-width: 1000px) {
+    .main___service-row {
+        flex-direction: column;
+    }
+
+    .main___service-row-reverse {
+        flex-direction: column;
+    }
+
+    .main___service-image,
+    .main___service-text {
+        width: 100%;
+    }
+}
+
+/* Mobile: 1 card per row */
+@media (max-width: 600px) {
+    .main___service-row {
+        width: 100%;
+    }
+
+    .main___service-top-wrapper .text {
+        font-size: 15px;
+    }
+
+    .main___service-top-wrapper {
+        margin-bottom: 48px;
+    }
+
+    .main___service-top-wrapper .section-heading .section-title {
+
+        margin-bottom: 24px;
+
+    }
+
+    .main___service-text p {
+        font-size: 12px;
+
+    }
+
+    .main___service-text h4 {
+
+        font-size: 16px;
+    }
+
+    .main___service-text li {
+
+        font-size: 12px;
+
+    }
+
+    .btn {
+
+        font-size: 12px;
+    }
+
+    .main___service-text {
+        padding: 16px;
+    }
+}
+
+
+
+
 
 .service-area {
     background-color: #faf8f7;
@@ -12100,7 +12225,7 @@ font-size: 45px;
     gap: 8px;
 }
 
-.medtour-expo__portfolio__section .flex_box_one .first_box{
+.medtour-expo__portfolio__section .flex_box_one .first_box {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -12114,109 +12239,123 @@ font-size: 45px;
     width: 43.2%;
 }
 
-.medtour-expo__portfolio__section .flex_box_two{
-display: flex;
+.medtour-expo__portfolio__section .flex_box_two {
+    display: flex;
     gap: 8px;
     margin-top: 8px;
 }
 
-.medtour-expo__portfolio__section .flex_box_two .first_box{
-  display: flex;
+.medtour-expo__portfolio__section .flex_box_two .first_box {
+    display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 62%;  
+    width: 62%;
 }
 
-.medtour-expo__portfolio__section .flex_box_two .second_box{
-    width: 40%;  
+.medtour-expo__portfolio__section .flex_box_two .second_box {
+    width: 40%;
 }
 
-.medtour-expo__portfolio__section .flex_box_three .first_box{
-display: flex;
+.medtour-expo__portfolio__section .flex_box_three .first_box {
+    display: flex;
     gap: 8px;
     margin-top: 8px;
 }
 
 
-.admist-nature__portfolio__section{
+.admist-nature__portfolio__section {
     padding: 20px;
     background-color: #003e1a;
 }
-.admist-nature__portfolio__section .flex_box_one{
+
+.admist-nature__portfolio__section .flex_box_one {
     display: flex;
     gap: 1%;
 }
-.admist-nature__portfolio__section .flex_box_one .first_box{
+
+.admist-nature__portfolio__section .flex_box_one .first_box {
     width: 32.5%;
 }
-.admist-nature__portfolio__section .flex_box_one .first_box a{
+
+.admist-nature__portfolio__section .flex_box_one .first_box a {
     width: 100%;
 }
 
-.admist-nature__portfolio__section .flex_box_one .first_box a img{
+.admist-nature__portfolio__section .flex_box_one .first_box a img {
     width: 100%;
 }
-.admist-nature__portfolio__section .flex_box_one .second_box{
+
+.admist-nature__portfolio__section .flex_box_one .second_box {
     width: 66.5%;
 }
-.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex{
+
+.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 1%;
 }
-.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex .first_image_row{
+
+.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex .first_image_row {
     width: 100%;
 }
 
-.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex .second_mini_box{
+.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex .second_mini_box {
     width: 100%;
     position: relative;
     display: flex;
 }
-.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex .second_mini_box .second_image_row_a_tag{
+
+.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex .second_mini_box .second_image_row_a_tag {
     margin-top: 18px;
     width: 49%;
     position: relative;
 }
-.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex .second_image_row_a_tag .second_image_row{
+
+.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex .second_image_row_a_tag .second_image_row {
     width: 100%;
 }
-.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex .third_image_row{
+
+.admist-nature__portfolio__section .flex_box_one .second_box .mini_flex .third_image_row {
     position: absolute;
     right: 0px;
     width: 55.5%;
     top: -75.5px;
     height: 862px;
 }
-.admist-nature__portfolio__section .flex_box_two{
+
+.admist-nature__portfolio__section .flex_box_two {
     width: 100%;
     margin-top: 15px;
 }
-.admist-nature__portfolio__section .flex_box_two .first_box{
+
+.admist-nature__portfolio__section .flex_box_two .first_box {
     display: flex;
     gap: 1.5%;
     align-items: end;
 }
-.admist-nature__portfolio__section .flex_box_two .first_box .first_image_a_tag{
+
+.admist-nature__portfolio__section .flex_box_two .first_box .first_image_a_tag {
     width: 69%;
 }
+
 .admist-nature__portfolio__section .flex_box_two .first_box .second_image {
     margin-bottom: -2px;
 }
-.admist-nature__portfolio__section .flex_box_two .first_box .first_image_a_tag .first_image{
+
+.admist-nature__portfolio__section .flex_box_two .first_box .first_image_a_tag .first_image {
     width: 100%;
 }
 
-.admist-nature__portfolio__section .flex_box_three .first_box{
+.admist-nature__portfolio__section .flex_box_three .first_box {
     margin-top: 1.5%;
 }
 
-.admist-nature__portfolio__section .flex_box_four{
+.admist-nature__portfolio__section .flex_box_four {
     margin-top: 1.5%;
 }
 
-.admist-nature__portfolio__section .flex_box_four .first_box{
+.admist-nature__portfolio__section .flex_box_four .first_box {
     display: flex;
     gap: 1.5%;
 }
