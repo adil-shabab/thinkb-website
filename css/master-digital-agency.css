@@ -7511,6 +7511,7 @@ section {
     .header-area .header__nav {
         background: none;
         width: auto;
+        display: none;
     }
 }
 .header-area .header-search {
@@ -8527,7 +8528,7 @@ section {
 }
 .blog-area .blog-wrapper {
     display: grid;
-    gap: 40px 45px;
+    gap: 20px 20px;
     grid-template-columns: repeat(3, 1fr);
 }
 @media only screen and (max-width: 991px) {

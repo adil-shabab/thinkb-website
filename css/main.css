@@ -27693,7 +27693,7 @@ p.checkout-coupon button {
 
 .blog-layout {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     align-items: flex-start;
 }
 
@@ -27716,9 +27716,24 @@ ol {
 
 .blog-toc {
     position: sticky;
-    top: 20px; /* distance from top while scrolling */
+    top: 0px; /* distance from top while scrolling */
     height: fit-content;
 }
+
+
+@media (max-width: 768px) {
+  .blog-toc {
+    display: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .blog-toc {
+    display: none !important;
+  }
+}
+
+
 
 
 
