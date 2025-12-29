@@ -435,13 +435,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // STICKY / PIN TOC (GSAP)
     // ===============================
     ScrollTrigger.create({
-        trigger: ".blog-layout",
-        start: "top top+=120",
-        endTrigger: ".footer-area",
-        end: "top bottom-=200",
-        pin: toc,
-        pinSpacing: false
-    });
+  trigger: ".blog-content",      // scroll area = article only
+  start: "top top+=200",
+  end: "bottom bottom",          // stop at end of article
+  pin: toc,
+  pinSpacing: true,              // keeps layout from jumping
+  pinType: "transform"           // prevents fixed + top: values
+});
 
     // ===============================
     // CLICK → SCROLL + ACTIVE
@@ -458,7 +458,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Smooth scroll (GSAP compatible)
             if (smoother) {
-                smoother.scrollTo(target, true, "top 120px");
+                smoother.scrollTo(target, true, "top 0px");
             } else {
                 window.scrollTo({
                     top: target.offsetTop - 120,

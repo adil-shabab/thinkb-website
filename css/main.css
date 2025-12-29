@@ -27586,7 +27586,7 @@ p.checkout-coupon button {
 .blog-toc a {
     position: relative;
     display: block;
-    padding: 10px 14px;
+    padding: 10px 10px;
     border-radius: 6px;
         color: white;
    
@@ -27638,12 +27638,6 @@ p.checkout-coupon button {
         width: 100%;
     }
 
-    /* Remove sticky effect on small screens */
-    .blog-toc {
-        position: static;
-        max-height: none;
-        overflow: visible;
-    }
 
     /* Heading + Excerpt stack */
     .blog-heading-wrap {
@@ -27734,9 +27728,7 @@ ol {
 }
 
 
-.blog-toc {
-  position: sticky;
-  transform: none !important;
-  translate: none !important;
-}
+
+
+
 
