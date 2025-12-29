@@ -27727,13 +27727,16 @@ ol {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .blog-toc {
     display: none !important;
   }
 }
 
 
-
-
+.blog-toc {
+  position: sticky;
+  transform: none !important;
+  translate: none !important;
+}
 
