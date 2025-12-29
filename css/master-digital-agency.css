@@ -9008,6 +9008,7 @@ section {
     .header-area .header__nav {
         background: none;
         width: auto;
+        display: none;
     }
 }
 
@@ -10321,7 +10322,7 @@ font-size: 45px;
 
 .blog-area .blog-wrapper {
     display: grid;
-    gap: 40px 45px;
+    gap: 20px 20px;
     grid-template-columns: repeat(3, 1fr);
 }
 
