@@ -4483,6 +4483,7 @@ h6 {
     position: fixed !important;
     background-color: var(--white);
     z-index: 9999;
+    height: 80px;
 }
 
 .dark .header-area.sticky {
@@ -9840,7 +9841,7 @@ section {
 
 .project-card h4 {
     margin-top: 15px;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 500;
     color: #333;
 }
@@ -9860,12 +9861,7 @@ section {
     font-size: 15px;
 }
 
-/* RESPONSIVE — BELOW 1000px */
-@media (max-width: 1000px) {
-    .project-card {
-        flex: 1 1 100%;
-    }
-}
+
 
 
 /* Tablet: 2 cards per row, stacked inside */
@@ -9881,6 +9877,10 @@ section {
     .main___service-image,
     .main___service-text {
         width: 100%;
+    }
+
+        .project-card {
+        flex: 1 1 100%;
     }
 }
 
@@ -9899,8 +9899,8 @@ section {
     }
 
     .main___service-top-wrapper .section-heading .section-title {
-
-        margin-bottom: 24px;
+        font-size: 35px;
+      margin-bottom: 24px;
 
     }
 
@@ -9928,6 +9928,247 @@ section {
     .main___service-text {
         padding: 16px;
     }
+
+    .projects-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.project-card h4 {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.projects-btn {
+    font-size: 12px;
+}
+
+.projects-wrapper {
+    gap: 30px;
+ 
+}
+}
+
+
+/* service internal stylings */
+/* HERO */
+.branding__hero {
+  background: #1b1b1b;
+  margin-top: 80px;
+  padding: 70px 0;
+}
+
+.branding__hero-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.branding__hero-text {
+  color: #fff;
+}
+
+.branding__title {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.branding__subtitle {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+/* WHAT SECTION */
+.branding__section-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.branding__what{
+    padding: 100px;
+}
+
+.branding__why{
+    padding: 50px 100px;
+    background-color: #F2F2F2;
+}
+
+.branding__growth{
+    padding: 100px;
+}
+
+.branding__section-title span {
+  color: #dc303f;
+}
+
+.branding__text {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+/* .branding__bullet-area ul li {
+  margin-bottom: 5px;
+  list-style: disc !important;
+} */
+
+.branding__rrc {
+  margin-top: 20px;
+}
+
+.branding__rrc-title {
+  font-weight: 600;
+}
+
+.branding__rrc-flex {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* WHY (CARDS) */
+.branding__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.branding__card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 calc(33% - 25px);
+}
+
+.branding__card img {
+  width: 25px;
+  margin-bottom: 10px;
+}
+
+/* GROWTH BENEFITS */
+.branding__benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.branding__benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  flex: 1 1 calc(33% - 15px);
+}
+
+/* ---- Statistics ---- */
+.branding__stats {
+  background: #fff;
+  padding: 60px 0;
+}
+.branding__stats-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+.branding__stats-title span {
+  color: #dc303f;
+}
+.branding__stats-list {
+  margin: 20px 0;
+  line-height: 1.8;
+}
+.branding__stats-img img {
+      padding: 60px 0;
+  max-width: 300px;
+  display: block;
+}
+
+/* ---- Includes Section ---- */
+.branding__includes-flex {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+}
+.branding__include-box {
+  flex: 1;
+  border: 1px solid #eee;
+  padding: 25px;
+  border-radius: 10px;
+  background: #fff;
+}
+.branding__include-box h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #dc303f;
+}
+.branding__include-box h4 {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+/* ---- Process ---- */
+.branding__process-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 35px;
+}
+.branding__process-image img {
+  width: 380px;
+  border-radius: 10px;
+  display: block;
+}
+.branding__process-steps {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.branding__step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.branding__step .circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #dc303f;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+/* ---- Responsive ---- */
+@media(max-width: 991px){
+  .branding__includes-flex,
+  .branding__process-wrapper {
+    flex-direction: column;
+  }
+  .branding__process-image img {
+    width: 100%;
+  }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .branding__hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+  .branding__card,
+  .branding__benefit-item {
+    flex: 1 1 100%;
+  }
 }
 
 
