@@ -27727,8 +27727,6 @@ ol {
   }
 }
 
-
-
-
-
-
+.blog-layout {
+  position: relative;
+}

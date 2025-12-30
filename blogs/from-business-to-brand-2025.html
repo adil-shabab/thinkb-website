@@ -28,7 +28,7 @@
 
     <body class="font-heading-recoleta-medium">
         <!-- Header area start -->
-       <header class="header-area pos-abs zi-9">
+        <header class="header-area pos-abs zi-9">
             <div class="container container-large">
                 <div class="header-area__inner">
                     <div class="header__logo">
@@ -37,7 +37,7 @@
                             <img class="normal-logo show-dark" src="../assets/images/white-logo.svg" alt="Site Logo" />
                         </a>
                     </div>
-                      <div class="header__nav pos-center">
+                    <div class="header__nav pos-center">
                         <nav class="main-menu">
                             <ul>
                                 <li><a href="/index.html">Home</a></li>
@@ -65,8 +65,7 @@
                         <a
                             href="/contact.html"
                             class="wc-btn wc-btn-primary btn-text-flip"
-                            data-bs-toggle="modal"
-                            data-bs-target="#signupform"
+                           
                         >
                             <span data-text="Contact Now">Contact Now</span>
                         </a>
@@ -113,10 +112,6 @@
 
                                     <!-- Layout -->
                                     <div class="blog-layout">
-                                       
-
-                                       
-
                                         <!-- Left Sidebar -->
                                         <aside class="blog-toc">
                                             <h4>TABLE OF CONTENTS</h4>
@@ -336,18 +331,30 @@
                                         quidem explicabo pariatur rem sed sint. Excepturi, adipisci facilis.
                                     </p>
 
-                                    <ul class="social-links">
+                                     <ul class="social-links">
                                         <li>
-                                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a
+                                                target="_blank"
+                                                href="https://www.instagram.com/thinkb.agency?igsh=c2F4bWo2ZWJyYWU2"
+                                                ><i class="fa-brands fa-instagram"></i
+                                            ></a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                            <a
+                                                target="_blank"
+                                                href="https://www.linkedin.com/company/thinkb-creative-agency"
+                                                ><i class="fa-brands fa-linkedin"></i
+                                            ></a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                            <a target="_blank" href="https://www.youtube.com/@thinkBCreativeAgency"
+                                                ><i class="fa-brands fa-youtube"></i
+                                            ></a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                            <a target="_blank" href="https://www.facebook.com/thinkbcreativeagency/">
+                                                <i class="fa-brands fa-facebook-f"></i
+                                            ></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -413,142 +420,112 @@
                 </div>
             </div>
         </div>
- 
 
         <!-- ✅ Sticky Sidebar Script -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    // ===============================
-    // GSAP SETUP
-    // ===============================
-    gsap.registerPlugin(ScrollTrigger);
 
-    const smoother = window.ScrollSmoother ? ScrollSmoother.get() : null;
-    const toc = document.querySelector(".blog-toc");
-    const links = document.querySelectorAll(".blog-toc a");
-    const sections = document.querySelectorAll("article section");
-
-    // ===============================
-    // STICKY / PIN TOC (GSAP)
-    // ===============================
-    ScrollTrigger.create({
-        trigger: ".blog-layout",
-        start: "top top+=100",
-        endTrigger: ".footer-area",
-        end: "top bottom-=00",
-        pin: toc,
-        pinSpacing: false
-    });
-
-    // ===============================
-    // CLICK → SCROLL + ACTIVE
-    // ===============================
-    links.forEach(link => {
-        link.addEventListener("click", e => {
-            e.preventDefault();
-
-            const target = document.querySelector(link.getAttribute("href"));
-
-            // Active state immediately on click
-            links.forEach(l => l.classList.remove("active"));
-            link.classList.add("active");
-
-            // Smooth scroll (GSAP compatible)
-            if (smoother) {
-                smoother.scrollTo(target, true, "top 0px");
-            } else {
-                window.scrollTo({
-                    top: target.offsetTop - 120,
-                    behavior: "smooth"
-                });
-            }
-        });
-    });
-
-    // ===============================
-    // SCROLL → ACTIVE STATE
-    // ===============================
-    function setActiveOnScroll() {
-        const scrollPos = smoother
-            ? smoother.scrollTop() + 150
-            : window.scrollY + 150;
-
-        sections.forEach(section => {
-            if (
-                section.offsetTop <= scrollPos &&
-                section.offsetTop + section.offsetHeight > scrollPos
-            ) {
-                links.forEach(link => {
-                    link.classList.toggle(
-                        "active",
-                        link.getAttribute("href") === `#${section.id}`
-                    );
-                });
-            }
-        });
-    }
-
-    window.addEventListener("scroll", setActiveOnScroll);
-});
-</script>
-
-
-      
-      
         <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.querySelector(".toc-toggle");
-    const toc = document.querySelector(".blog-toc");
+            document.addEventListener("DOMContentLoaded", () => {
+                // ===============================
+                // GSAP SETUP
+                // ===============================
+                gsap.registerPlugin(ScrollTrigger);
 
-    if (!toggle || !toc) return;
+                const smoother = window.ScrollSmoother ? ScrollSmoother.get() : null;
+                const toc = document.querySelector(".blog-toc");
+                const links = document.querySelectorAll(".blog-toc a");
+                const sections = document.querySelectorAll("article section");
 
-    toggle.addEventListener("click", () => {
-        toc.classList.toggle("open");
-    });
-});
-</script>
+                // ===============================
+                // STICKY / PIN TOC (GSAP)
+                // ===============================
+                ScrollTrigger.create({
+                    trigger: ".blog-layout",
+                    start: "top top+=100",
+                    endTrigger: ".footer-area",
+                    end: "top bottom-=00",
+                    pin: toc,
+                    pinSpacing: false,
+                });
 
+                // ===============================
+                // CLICK → SCROLL + ACTIVE
+                // ===============================
+                links.forEach((link) => {
+                    link.addEventListener("click", (e) => {
+                        e.preventDefault();
 
+                        const target = document.querySelector(link.getAttribute("href"));
 
+                        // Active state immediately on click
+                        links.forEach((l) => l.classList.remove("active"));
+                        link.classList.add("active");
 
+                        // Smooth scroll (GSAP compatible)
+                        if (smoother) {
+                            smoother.scrollTo(target, true, "top 0px");
+                        } else {
+                            window.scrollTo({
+                                top: target.offsetTop - 120,
+                                behavior: "smooth",
+                            });
+                        }
+                    });
+                });
 
+                // ===============================
+                // SCROLL → ACTIVE STATE
+                // ===============================
+                function setActiveOnScroll() {
+                    const scrollPos = smoother ? smoother.scrollTop() + 150 : window.scrollY + 150;
 
+                    sections.forEach((section) => {
+                        if (section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
+                            links.forEach((link) => {
+                                link.classList.toggle("active", link.getAttribute("href") === `#${section.id}`);
+                            });
+                        }
+                    });
+                }
 
+                window.addEventListener("scroll", setActiveOnScroll);
+            });
+        </script>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const toggle = document.querySelector(".toc-toggle");
+                const toc = document.querySelector(".blog-toc");
 
+                if (!toggle || !toc) return;
 
+                toggle.addEventListener("click", () => {
+                    toc.classList.toggle("open");
+                });
+            });
+        </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const progress = document.querySelector("#progress");
+                if (!progress) return;
 
-    const progress = document.querySelector("#progress");
-    if (!progress) return;
+                const path = progress.querySelector("path");
+                if (!path) return;
 
-    const path = progress.querySelector("path");
-    if (!path) return;
+                const pathLength = path.getTotalLength();
 
-    const pathLength = path.getTotalLength();
+                path.style.strokeDasharray = pathLength;
+                path.style.strokeDashoffset = pathLength;
 
-    path.style.strokeDasharray = pathLength;
-    path.style.strokeDashoffset = pathLength;
-
-    window.addEventListener("scroll", function () {
-        const scroll = window.scrollY;
-        const height = document.documentElement.scrollHeight - window.innerHeight;
-        const progressValue = pathLength - (scroll * pathLength) / height;
-        path.style.strokeDashoffset = progressValue;
-    });
-
-});
-
-</script>
-
-
-
-
-
+                window.addEventListener("scroll", function () {
+                    const scroll = window.scrollY;
+                    const height = document.documentElement.scrollHeight - window.innerHeight;
+                    const progressValue = pathLength - (scroll * pathLength) / height;
+                    path.style.strokeDashoffset = progressValue;
+                });
+            });
+        </script>
 
         <!-- Existing JS files -->
         <script src="../js/bootstrap.bundle.min.js"></script>
@@ -556,7 +533,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <script src="../js/swiper-bundle.min.js"></script>
         <script src="../js/counter.js"></script>
         <script src="../js/progressbar.js"></script>
-        
+
         <script src="../js/SplitText.min.js"></script>
         <script src="../js/jquery.meanmenu.min.js"></script>
         <script src="../js/backToTop.js"></script>
