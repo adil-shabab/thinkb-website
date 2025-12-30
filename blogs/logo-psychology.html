@@ -26,7 +26,7 @@
 
     <body class="font-heading-recoleta-medium">
         <!-- Header area start -->
-       <header class="header-area pos-abs zi-9">
+        <header class="header-area pos-abs zi-9">
             <div class="container container-large">
                 <div class="header-area__inner">
                     <div class="header__logo">
@@ -35,7 +35,7 @@
                             <img class="normal-logo show-dark" src="../assets/images/white-logo.svg" alt="Site Logo" />
                         </a>
                     </div>
-                      <div class="header__nav pos-center">
+                    <div class="header__nav pos-center">
                         <nav class="main-menu">
                             <ul>
                                 <li><a href="/index.html">Home</a></li>
@@ -292,7 +292,8 @@
                                         <a href="#"><img src="../assets/images/white-logo.svg" alt="site-logo" /></a>
                                     </div>
                                     <p class="ft__description">
-At thinkB, one of Bangalore's leading branding agencies, our journey has been nothing short of inspiring.
+                                        At thinkB, one of Bangalore's leading branding agencies, our journey has been
+                                        nothing short of inspiring.
                                     </p>
                                     <ul class="social-links">
                                         <li>
@@ -309,7 +310,7 @@ At thinkB, one of Bangalore's leading branding agencies, our journey has been no
                                         </li>
                                     </ul>
                                 </div>
-                              <div class="footer-widget-wrapper">
+                                <div class="footer-widget-wrapper">
                                     <h2 class="title">Quick Links</h2>
                                     <ul class="footer-nav-list">
                                         <li><a href="/index.html">Home</a></li>
@@ -373,82 +374,73 @@ At thinkB, one of Bangalore's leading branding agencies, our journey has been no
 
         <!-- ✅ Sticky Sidebar Script -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script>
-document.addEventListener("DOMContentLoaded", () => {
-    // ===============================
-    // GSAP SETUP
-    // ===============================
-    gsap.registerPlugin(ScrollTrigger);
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                // ===============================
+                // GSAP SETUP
+                // ===============================
+                gsap.registerPlugin(ScrollTrigger);
 
-    const smoother = window.ScrollSmoother ? ScrollSmoother.get() : null;
-    const toc = document.querySelector(".blog-toc");
-    const links = document.querySelectorAll(".blog-toc a");
-    const sections = document.querySelectorAll("article section");
+                const smoother = window.ScrollSmoother ? ScrollSmoother.get() : null;
+                const toc = document.querySelector(".blog-toc");
+                const links = document.querySelectorAll(".blog-toc a");
+                const sections = document.querySelectorAll("article section");
 
-    // ===============================
-    // STICKY / PIN TOC (GSAP)
-    // ===============================
-   ScrollTrigger.create({
-        trigger: ".blog-layout",
-        start: "top top+=100",
-        endTrigger: ".footer-area",
-        end: "top bottom-=00",
-        pin: toc,
-        pinSpacing: false
-    });
-
-
-    // ===============================
-    // CLICK → SCROLL + ACTIVE
-    // ===============================
-    links.forEach(link => {
-        link.addEventListener("click", e => {
-            e.preventDefault();
-
-            const target = document.querySelector(link.getAttribute("href"));
-
-            // Active state immediately on click
-            links.forEach(l => l.classList.remove("active"));
-            link.classList.add("active");
-
-            // Smooth scroll (GSAP compatible)
-            if (smoother) {
-                smoother.scrollTo(target, true, "top 120px");
-            } else {
-                window.scrollTo({
-                    top: target.offsetTop - 120,
-                    behavior: "smooth"
+                // ===============================
+                // STICKY / PIN TOC (GSAP)
+                // ===============================
+                ScrollTrigger.create({
+                    trigger: ".blog-layout",
+                    start: "top top+=100",
+                    endTrigger: ".footer-area",
+                    end: "top bottom-=00",
+                    pin: toc,
+                    pinSpacing: false,
                 });
-            }
-        });
-    });
 
-    // ===============================
-    // SCROLL → ACTIVE STATE
-    // ===============================
-    function setActiveOnScroll() {
-        const scrollPos = smoother
-            ? smoother.scrollTop() + 150
-            : window.scrollY + 150;
+                // ===============================
+                // CLICK → SCROLL + ACTIVE
+                // ===============================
+                links.forEach((link) => {
+                    link.addEventListener("click", (e) => {
+                        e.preventDefault();
 
-        sections.forEach(section => {
-            if (
-                section.offsetTop <= scrollPos &&
-                section.offsetTop + section.offsetHeight > scrollPos
-            ) {
-                links.forEach(link => {
-                    link.classList.toggle(
-                        "active",
-                        link.getAttribute("href") === `#${section.id}`
-                    );
+                        const target = document.querySelector(link.getAttribute("href"));
+
+                        // Active state immediately on click
+                        links.forEach((l) => l.classList.remove("active"));
+                        link.classList.add("active");
+
+                        // Smooth scroll (GSAP compatible)
+                        if (smoother) {
+                            smoother.scrollTo(target, true, "top 120px");
+                        } else {
+                            window.scrollTo({
+                                top: target.offsetTop - 120,
+                                behavior: "smooth",
+                            });
+                        }
+                    });
                 });
-            }
-        });
-    }
 
-    window.addEventListener("scroll", setActiveOnScroll);
-});
-</script>
+                // ===============================
+                // SCROLL → ACTIVE STATE
+                // ===============================
+                function setActiveOnScroll() {
+                    const scrollPos = smoother ? smoother.scrollTop() + 150 : window.scrollY + 150;
+
+                    sections.forEach((section) => {
+                        if (section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
+                            links.forEach((link) => {
+                                link.classList.toggle("active", link.getAttribute("href") === `#${section.id}`);
+                            });
+                        }
+                    });
+                }
+
+                window.addEventListener("scroll", setActiveOnScroll);
+            });
+        </script>
 
         <!-- JS files -->
         <script src="../js/bootstrap.bundle.min.js"></script>
