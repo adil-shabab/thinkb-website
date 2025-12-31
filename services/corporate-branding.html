@@ -44,6 +44,38 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!-- CSS here -->
+
+    <style>
+
+                .red-text {
+            color: #dc303f;
+        }
+
+
+        .outline-red-button {
+            background-color: white;
+            color: #dc303f;
+            border: 1px solid #dc303f;
+            padding: 20px;
+            border-radius: 16px;
+            font-size: 28px;
+        }
+                .let-us-collaborate {
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            gap: 5%;
+            padding: 42px 0px;
+        }
+
+        .let-us-collaborate h1 {
+            margin-bottom: 20px;
+        }
+
+        .let-us-collaborate img {
+            border-radius: 24px;
+        }
+    </style>
 </head>
 
 <body class="font-heading-recoleta-medium">
@@ -52,7 +84,7 @@
     <div class="cursor2"></div>
 
 
-    </head>
+  
 
     <body class="font-heading-recoleta-medium">
 
@@ -67,24 +99,6 @@
                 <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
             </svg>
         </div>
-
-        <!-- preloader -->
-        <div class="mil-preloader">
-            <div class="mil-preloader-animation">
-                <div class="mil-pos-abs mil-animation-1">
-                    <p class="mil-h3 mil-muted mil-thin">Business</p>
-                    <p class="mil-h3 mil-muted mil-thin">to</p>
-                    <p class="mil-h3 mil-muted">Brand</p>
-                </div>
-                <div class="mil-pos-abs mil-animation-2">
-                    <div class="mil-reveal-frame">
-                        <p class="mil-reveal-box"></p>
-                        <p class="mil-h3 mil-muted mil-thin">thinkb.agency</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- preloader end -->
 
 
         <!-- offcanvas start  -->
@@ -155,15 +169,15 @@
                                 <li class="menu-item-has-children">
                                     <a href="../services.html">Services</a>
                                     <ul class="dp-menu col-2">
-                                        <li><a href="services/corporate-branding.html">Corporate Branding</a></li>
-                                        <li><a href="services/website-development.html">Website Development</a></li>
-                                        <li><a href="services/social-media-marketing.html">Social Media Marketing</a>
+                                        <li><a href="corporate-branding.html">Corporate Branding</a></li>
+                                        <li><a href="website-development.html">Website Development</a></li>
+                                        <li><a href="social-media-marketing.html">Social Media Marketing</a>
                                         </li>
-                                        <li><a href="services/search-engine-optimization.html">SEO</a></li>
-                                        <li><a href="services/google-ads.html">Google Ads</a></li>
-                                        <li><a href="services/package-design.html">Package Design</a></li>
-                                        <li><a href="services/videography.html">Videography</a></li>
-                                        <li><a href="services/photography.html">Photography</a></li>
+                                        <li><a href="search-engine-optimization.html">SEO</a></li>
+                                        <li><a href="google-ads.html">Google Ads</a></li>
+                                        <li><a href="package-design.html">Package Design</a></li>
+                                        <li><a href="videography.html">Videography</a></li>
+                                        <li><a href="photography.html">Photography</a></li>
                                     </ul>
                                 </li>
 
@@ -520,7 +534,7 @@
                                     <h1>At <span class="red-text">ThinkB</span>, we craft brands that speak,
                                         connect, and captivate.</h1>
                                     <div class="about-button-holder">
-                                        <button class="outline-red-button">Lets collaborate</button>
+                                        <button class="outline-red-button"><a href="../contact.html">Lets collaborate</a></button>
                                     </div>
                                 </div>
                                 <div>
@@ -652,111 +666,6 @@
         <script src="../js/error-handling.js"></script>
         <script src="../js/offcanvas.js"></script>
 
-        <script>
-
-            var timeline = gsap.timeline();
-
-            timeline.to(".mil-preloader-animation", {
-                opacity: 1,
-            });
-
-            timeline.fromTo(
-                ".mil-animation-1 .mil-h3",
-                {
-                    y: "30px",
-                    opacity: 0,
-                },
-                {
-                    y: "0px",
-                    opacity: 1,
-                    stagger: 0.4,
-                }
-            );
-
-            timeline.to(
-                ".mil-animation-1 .mil-h3",
-                {
-                    opacity: 0,
-                    y: "-30",
-                },
-                "+=.3"
-            );
-
-            timeline.fromTo(
-                ".mil-reveal-box",
-                0.1,
-                {
-                    opacity: 0,
-                },
-                {
-                    opacity: 1,
-                    x: "-30",
-                }
-            );
-
-            timeline.to(
-                ".mil-reveal-box",
-                0.45,
-                {
-                    width: "100%",
-                    x: 0,
-                },
-                "+=.1"
-            );
-            timeline.to(".mil-reveal-box", {
-                right: "0",
-            });
-            timeline.to(".mil-reveal-box", 0.3, {
-                width: "0%",
-            });
-            timeline.fromTo(
-                ".mil-animation-2 .mil-h3",
-                {
-                    opacity: 0,
-                },
-                {
-                    opacity: 1,
-                },
-                "-=.5"
-            );
-            timeline.to(
-                ".mil-animation-2 .mil-h3",
-                0.6,
-                {
-                    opacity: 0,
-                    y: "-30",
-                },
-                "+=.5"
-            );
-            timeline.to(
-                ".mil-preloader",
-                0.8,
-                {
-                    opacity: 0,
-                    ease: "sine",
-                },
-                "+=.2"
-            );
-            timeline.fromTo(
-                ".mil-up",
-                0.8,
-                {
-                    opacity: 0,
-                    y: 40,
-                    scale: 0.98,
-                    ease: "sine",
-                },
-                {
-                    y: 0,
-                    opacity: 1,
-                    scale: 1,
-                    onComplete: function () {
-                        document.querySelector(".mil-preloader").classList.add("mil-hidden");
-                    },
-                },
-                "-=1"
-            );
-        </script>
     </body>
 
 
