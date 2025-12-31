@@ -278,7 +278,7 @@
 
               <div class="flex_box_one">
                 <div class="first_box">
-                  <a href="./../assets/images/Intech Assets/1.png" data-fancybox="gallery">
+                  <a href="../../assets/images/Intech Assets/1.png" data-fancybox="gallery">
                     <img src="../../assets/images/Intech Assets/1.png" class="first_image" alt="">
                   </a>
                   <a href="../../assets/images/Intech Assets/2.png" data-fancybox="gallery">
@@ -365,18 +365,18 @@
 
               <div class="flex_box_one">
                 <div class="first_box">
-                  <a href="../../assets/images/Mbl-Intech-Assets/1.png" data-fancybox="gallery">
+                  <a href="../../assets/images/Mbl-Intech-Assets/1.png" data-fancybox-mobile="gallery">
                     <img src="../../assets/images/Mbl-Intech-Assets/1.png" class="first_image" alt="">
                   </a>
-                  <a href="../../assets/images/Mbl-Intech-Assets/2.png" data-fancybox="gallery">
+                  <a href="../../assets/images/Mbl-Intech-Assets/2.png" data-fancybox-mobile="gallery">
                     <img src="../../assets/images/Mbl-Intech-Assets/2.png" class="second_image" alt="">
                   </a>
                 </div>
                 <div class="second_box">
-                  <a href="../../assets/images/Mbl-Intech-Assets/3.png" data-fancybox="gallery">
+                  <a href="../../assets/images/Mbl-Intech-Assets/3.png" data-fancybox-mobile="gallery">
                     <img src="../../assets/images/Mbl-Intech-Assets/3.png" class="first_image" alt="">
                   </a>
-                  <a href="../../assets/images/Mbl-Intech-Assets/4.png" data-fancybox="gallery">
+                  <a href="../../assets/images/Mbl-Intech-Assets/4.png" data-fancybox-mobile="gallery">
                     <img src="../../assets/images/Mbl-Intech-Assets/4.png" class="second_image" alt="">
                   </a>
                 </div>
@@ -384,19 +384,19 @@
 
               <div class="flex_box_two">
                 <div class="first_box">
-                  <a href="../../assets/images/Mbl-Intech-Assets/5.png" data-fancybox="gallery">
+                  <a href="../../assets/images/Mbl-Intech-Assets/5.png" data-fancybox-mobile="gallery">
                     <img src="../../assets/images/Mbl-Intech-Assets/5.png" class="first_image" alt="">
                   </a>
-                  <a href="../../assets/images/Mbl-Intech-Assets/6.png" data-fancybox="gallery">
+                  <a href="../../assets/images/Mbl-Intech-Assets/6.png" data-fancybox-mobile="gallery">
                     <img src="../../assets/images/Mbl-Intech-Assets/6.png" class="second_image" alt="">
                   </a>
                 </div>
 
                 <div class="second_box">
-                  <a href="../../assets/images/Mbl-Intech-Assets/7t.png" data-fancybox="gallery">
+                  <a href="../../assets/images/Mbl-Intech-Assets/7t.png" data-fancybox-mobile="gallery">
                     <img src="../../assets/images/Mbl-Intech-Assets/7t.png" class="second_image" alt="">
                   </a>
-                  <a href="../../assets/images/Mbl-Intech-Assets/7.png" data-fancybox="gallery">
+                  <a href="../../assets/images/Mbl-Intech-Assets/7.png" data-fancybox-mobile="gallery">
                     <img src="../../assets/images/Mbl-Intech-Assets/7.png" class="second_image" alt="">
                   </a>
                 </div>
@@ -405,11 +405,11 @@
               <div class="flex_box_three">
                 <div class="first_box">
                   <a href="../../assets/images/Mbl-Intech-Assets/8.png" class="second_image_style"
-                    data-fancybox="gallery">
+                    data-fancybox-mobile="gallery">
                     <img src="../../assets/images/Mbl-Intech-Assets/8.png" class="second_image" alt="">
                   </a>
                   <a href="../../assets/images/Mbl-Intech-Assets/9.png" class="third_image_style"
-                    data-fancybox="gallery">
+                    data-fancybox-mobile="gallery">
                     <img src="../../assets/images/Mbl-Intech-Assets/9.png" class="third_image" alt="">
                   </a>
                 </div>
@@ -571,7 +571,13 @@
 
   <script>
     Fancybox.bind("[data-fancybox]", {
-      // Optional: custom settings
+      showCounter: true
+    });
+  </script>
+
+  <script>
+    Fancybox.bind("[data-fancybox-mobile]", {
+      showCounter: true
     });
   </script>
 
