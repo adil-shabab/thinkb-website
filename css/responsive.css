@@ -1,4 +1,4 @@
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 500px) and (max-width: 992px) {
     .intro-area img {
         border-radius: 10px !important;
     }
@@ -66,5 +66,232 @@
     .fz___60 {
         font-size: 40px;
     }
+
+
+
+    .about__section {
+        padding: 50px 0px;
+    }
+
+    .about__section h3 {
+        font-size: 35px;
+    }
+
+    .about__section .flex___box {
+        margin-top: 50px;
+    }
+
+    .about__section .flex___box .bx__about {
+        width: 100%;
+        padding: 14pxx;
+    }
+
+
+
+    .about__section .flex___box .bx__about .head__bx .icon {
+        display: none;
+    }
+
+
+
+    .about__section .flex___box .bx__about .head__bx h6 {
+        font-size: 18px;
+    }
+
+    .about__section .flex___box .left_section {
+        padding: 0px 0px;
+    }
+
+
+    .center_section {
+        width: 40%;
+        padding: 0 28px;
+        display: flex;
+        gap: 4%;
+        max-height: 580px;
+        overflow: hidden;
+        position: relative;
+    }
+
+
+
+    .first_half {
+        display: none;
+    }
+
+    .second_half {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .scroll_content {
+        display: flex;
+        flex-direction: column;
+        animation: scrollUp 20s linear infinite;
+    }
+
+    .second_half .scroll_content {
+        animation: scrollDown 20s linear infinite;
+    }
+
+    /* Infinite scroll effect */
+    @keyframes scrollUp {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-50%);
+        }
+    }
+
+    @keyframes scrollDown {
+        0% {
+            transform: translateY(-50%);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+
+
+    .first_gallery_section {
+        padding: 50px 0px;
+    }
+
+
+    .first_gallery_section .flex__box_gallery_first {
+        max-height: 550px;
+        min-height: 550px;
+    }
+
+    .first_gallery_section .flex__box_gallery_first .first__bx {
+        max-height: 48%;
+        min-height: 48%;
+        padding: 13px;
+    }
+
+    .first_gallery_section .flex__box_gallery_first .second__bx {
+        min-height: 50%;
+        max-height: 50%;
+    }
+
+    .first_gallery_section .flex__box_gallery_second .third__bx img {
+        width: 100%;
+        height: 550px;
+    }
+
+    .first_gallery_section .flex__box_gallery_third {
+        max-height: 580px;
+        gap: 2%;
+    }
+
+    .first_gallery_section .flex__box_gallery_third .fourth__bx {
+        min-height: 50%;
+        max-height: 50%;
+        height: 50%;
+    }
+
+
+    .first_gallery_section .flex__box_gallery_third .fifth__bx {
+        min-height: 46%;
+        max-height: 46%;
+    }
+
+
+    .elementor-1234 .elementor-element.elementor-element-c71dcc0 .magnetic_hero .hero__images {
+        margin-top: -22px !important;
+    }
+
+    .elementor-1234 .elementor-element.elementor-element-33008c7 .portfolio_wrap .portfolio-feed .ms-p-content h3 {
+        font-size: 15px !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    .first_gallery_section {
+        padding: 40px 0px;
+    }
+
+    .first_gallery_section .flex______box {
+        flex-direction: column;
+    }
+
+    .first_gallery_section .flex__box_gallery_first {
+        width: 100%;
+        min-height: unset;
+        gap: 2%;
+        max-height: unset;
+    }
+
+    .first_gallery_section .flex__box_gallery_first .first__bx {
+        max-height: unset;
+        min-height: unset;
+        margin-bottom: 15px;
+    }
+
+
+    .first_gallery_section .flex__box_gallery_second {
+        width: 100%;
+    }
+
+    .first_gallery_section .flex__box_gallery_first .second__bx img {
+        margin-bottom: 15px;
+    }
+
+    .first_gallery_section .flex__box_gallery_second .third__bx img {
+        margin-bottom: 15px;
+    }
+
+    .first_gallery_section .flex__box_gallery_third .fourth__bx img {
+        margin-bottom: 15px;
+    }
+
+
+    .first_gallery_section .flex__box_gallery_second .third__bx img {
+        width: 100%;
+        height: unset;
+    }
+
+    .first_gallery_section .flex__box_gallery_third {
+        width: 100%;
+        max-height: unset;
+    }
+
+    .first_gallery_section .flex__box_gallery_third .fourth__bx {
+        min-height: unset;
+        max-height: unset;
+        height: unset;
+    }
+
+
+
+    .first_gallery_section .flex__box_gallery_third .fifth__bx {
+        min-height: unset;
+        max-height: unset;
+    }
+
+
+
+    .flex__box_gallery_photos img {
+        height: 350px;
+    }
+
+
 
 }

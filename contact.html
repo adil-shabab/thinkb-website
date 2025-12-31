@@ -700,20 +700,15 @@
           </div>
           <div class="offcanvas-3__social d-none d-md-block">
             <p class="title">Follow Me</p>
-                <div class="offcanvas-3__social-links">
-                                <a href="https://www.instagram.com/thinkb.agency?igsh=c2F4bWo2ZWJyYWU2"
-                                    ><i class="fa-brands fa-instagram"></i
-                                ></a>
-                                <a target="_blank" href="https://www.linkedin.com/company/thinkb-creative-agency"
-                                    ><i class="fa-brands fa-linkedin"></i
-                                ></a>
-                                <a target="_blank" href="https://www.youtube.com/@thinkBCreativeAgency"
-                                    ><i class="fa-brands fa-youtube"></i
-                                ></a>
-                                <a href="https://www.facebook.com/thinkbcreativeagency/"
-                                    ><i class="fa-brands fa-facebook-f"></i
-                                ></a>
-                            </div>
+            <div class="offcanvas-3__social-links">
+              <a href="https://www.instagram.com/thinkb.agency?igsh=c2F4bWo2ZWJyYWU2"><i
+                  class="fa-brands fa-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/thinkb-creative-agency"><i
+                  class="fa-brands fa-linkedin"></i></a>
+              <a target="_blank" href="https://www.youtube.com/@thinkBCreativeAgency"><i
+                  class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.facebook.com/thinkbcreativeagency/"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -901,11 +896,14 @@
                   neque, quidem explicabo pariatur rem sed sint. Excepturi, adipisci facilis.</p>
 
                 <ul class="social-links">
-                  <li><a target="_blank" href="https://www.instagram.com/thinkb.agency?igsh=c2F4bWo2ZWJyYWU2"><i class="fa-brands fa-instagram"></i></a></li>
-                  <li><a target="_blank" href="https://www.linkedin.com/company/thinkb-creative-agency"><i class="fa-brands fa-linkedin"></i></a></li>
-                  <li><a target="_blank" href="https://www.youtube.com/@thinkBCreativeAgency"><i class="fa-brands fa-youtube"></i></a></li>
+                  <li><a target="_blank" href="https://www.instagram.com/thinkb.agency?igsh=c2F4bWo2ZWJyYWU2"><i
+                        class="fa-brands fa-instagram"></i></a></li>
+                  <li><a target="_blank" href="https://www.linkedin.com/company/thinkb-creative-agency"><i
+                        class="fa-brands fa-linkedin"></i></a></li>
+                  <li><a target="_blank" href="https://www.youtube.com/@thinkBCreativeAgency"><i
+                        class="fa-brands fa-youtube"></i></a></li>
                   <li><a target="_blank" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                 </ul>
+                </ul>
               </div>
               <div class="footer-widget-wrapper">
                 <h2 class="title">Quick Links</h2>
@@ -939,7 +937,8 @@
               <div class="footer-widget-wrapper">
                 <h2 class="title">Contact Us</h2>
                 <ul class="footer-nav-list">
-                  <li><a class="text-underline location" href="#"> 204, 2nd Cross Rd, East of NGEF Layout, Kasturi
+                  <li><a class="location" target="_blank" href="https://maps.app.goo.gl/tskFehNswqjTKTps7"> 204, 2nd
+                      Cross Rd, East of NGEF Layout, Kasturi
                       Nagar, Bengaluru, Karnataka 560043</a></li>
                   <li><a href="tel:+919966992122">+91 99669 92122</a></li>
                   <li><a href="mailto:info@thinkb.agency">info@thinkb.agency</a></li>
@@ -1015,15 +1014,15 @@
     // marker.setZIndexOffset(1000); // Adjust the value as needed to ensure it appears on top
 
 
-    var marker = L.marker([13.002686105427477, 77.66139089321865], { 
-  icon: telephoneIcon 
-})
-.addTo(map)
-.setZIndexOffset(1000);
+    var marker = L.marker([13.002686105427477, 77.66139089321865], {
+      icon: telephoneIcon
+    })
+      .addTo(map)
+      .setZIndexOffset(1000);
 
-marker.on('click', function() {
-  window.open('https://maps.app.goo.gl/JKbcifvFvaAUkkDa6', '_blank');
-});
+    marker.on('click', function () {
+      window.open('https://maps.app.goo.gl/JKbcifvFvaAUkkDa6', '_blank');
+    });
 
     // Show popup on hover (mouseover) and hide on mouseout
     marker.on('mouseover', function () {
