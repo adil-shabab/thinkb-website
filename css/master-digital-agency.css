@@ -9958,7 +9958,7 @@ section {
     padding: 70px 0;
 }
 
-.branding__hero-image {
+.branding__hero-image img{
     border-radius: 16px;
 }
 
@@ -9968,23 +9968,22 @@ section {
     align-items: center;
 }
 
-.branding__hero-text {
-    color: #fff;
-}
-
 .branding__title {
     font-size: 38px;
     font-weight: 700;
+        color: #fff;
+
 }
 
 .branding__subtitle {
     margin-top: 12px;
     font-size: 16px;
+    color: #DC303F;
 }
 
 /* WHAT SECTION */
 .branding__section-title {
-    font-size: 40px;
+    font-size: 44px;
     font-weight: 700;
     margin-bottom: 18px;
 }
@@ -10020,7 +10019,7 @@ section {
 }
 
 .branding__text {
-    font-size: 16px;
+    font-size: 24px;
     color: #444;
     margin-bottom: 18px;
     line-height: 1.6;
@@ -10029,7 +10028,30 @@ section {
 .branding__stats-list li {
     margin-bottom: 5px;
     list-style: disc !important;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.branding__bullet-area ul{
+    padding-left: 32px;
+    margin-bottom: 18px;
+}
+
+.branding__bullet-area ul li{
+ margin-bottom: 5px;
+    list-style: disc !important;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.branding__bullet-heading{
     font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.branding__importance-heading{
+    font-size: 24px;
+    margin-bottom: 18px;
 }
 
 .branding__rrc {
@@ -10038,6 +10060,7 @@ section {
 
 .branding__rrc-title {
     font-weight: 600;
+    font-size: 24px;
 }
 
 .branding__rrc-flex {
@@ -10045,9 +10068,48 @@ section {
     align-items: center;
     gap: 15px;
     margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 20px;
 }
 
 /* WHY (CARDS) */
+
+.red-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #FFD1D5;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.red-icon i {
+  color: #dc303f;
+  font-size: 18px;
+}
+
+.red-icon-s{
+ width: 48px;
+  height: 48px;
+  background-color: #FFD1D5;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;}
+
+.red-icon-s i {
+  color: #dc303f;
+  font-size: 18px;
+}
+
+.icon-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #dc303f;
+}
+
 .branding__cards {
     display: flex;
     flex-wrap: wrap;
@@ -10057,7 +10119,7 @@ section {
 
 .branding__card {
     background: #fff;
-    border: 1px solid #eee;
+    border: 1px solid #DFDDDD;
     border-radius: 10px;
     padding: 20px;
     flex: 1 1 calc(33% - 25px);
@@ -10074,6 +10136,8 @@ section {
     flex-wrap: wrap;
     gap: 15px;
     margin-top: 25px;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 
 .branding__benefit-item {
@@ -10110,7 +10174,7 @@ section {
 
 .branding__stats-img img {
     padding: 60px 0;
-    /* max-width: 300px; */
+    width: 90%;
     display: block;
 }
 
@@ -10123,7 +10187,7 @@ section {
 
 .branding__include-box {
     flex: 1;
-    border: 1px solid #eee;
+    border: 1px solid #DFDDDD;
     padding: 25px;
     border-radius: 10px;
     background: #fff;
