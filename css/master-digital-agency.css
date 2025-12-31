@@ -11146,6 +11146,30 @@ section {
     font-family: var(--font_recoleta);
 }
 
+.about__section .flex___box .bx__about.first__one::before {
+    content: '01';
+}
+
+.about__section .flex___box .bx__about.first__two::before {
+    content: '02';
+}
+
+.about__section .flex___box .bx__about.first__three::before {
+    content: '03';
+}
+
+.about__section .flex___box .bx__about.first__four::before {
+    content: '04';
+}
+
+.about__section .flex___box .bx__about.first__five::before {
+    content: '05';
+}
+
+.about__section .flex___box .bx__about.first__six::before {
+    content: '06';
+}
+
 .about__section .flex___box .bx__about:hover::before {
     color: white;
     right: -24px;
@@ -11606,7 +11630,7 @@ section {
 .portfolio___section .flex__box .p__box .img__box h4 {
     position: absolute;
     color: white;
-    font-size: 28px;
+    font-size: 24px;
     top: 25px;
     left: 25px;
 }
@@ -11932,6 +11956,7 @@ section {
 
     .portfolio___section .flex__box {
         flex-direction: column;
+        margin-top: 15px;
     }
 
     .portfolio___section h3 {
@@ -13012,15 +13037,11 @@ section {
     width: 32%;
 }
 
-.first_gallery_section .flex__box_gallery_second .third__bx {
-    min-height: 100%;
-    max-height: 100%;
-}
+.first_gallery_section .flex__box_gallery_second .third__bx {}
 
 .first_gallery_section .flex__box_gallery_second .third__bx img {
     width: 100%;
-    height: 100%;
-    max-height: 100%;
+    height: 640px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -13028,7 +13049,7 @@ section {
 .first_gallery_section .flex__box_gallery_third {
     width: 32%;
     min-height: 100%;
-    max-height: 100%;
+    max-height: 640px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13039,6 +13060,7 @@ section {
     min-height: 62%;
     max-height: 62%;
     height: 62%;
+    width: 100%;
 }
 
 .first_gallery_section .flex__box_gallery_third .fourth__bx img {
@@ -14198,4 +14220,9 @@ p {
     .intech__portfolio__section .flex_box_three .first_box {
         width: 70%;
     }
+}
+
+
+.footer-area .social-links i {
+    font-size: 20px;
 }
