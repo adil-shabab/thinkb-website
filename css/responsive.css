@@ -1,0 +1,70 @@
+@media screen and (max-width: 992px) {
+    .intro-area img {
+        border-radius: 10px !important;
+    }
+
+    .intro-area .intro-title {
+        font-size: 35px;
+    }
+
+    .portfolio___section .flex__box {
+        gap: 1%;
+        flex-wrap: wrap;
+    }
+
+    .portfolio___section {
+        padding: 40px 0;
+    }
+
+    .portfolio___section h3 {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+
+    .portfolio___section .flex__box .p__box {
+        min-height: 200px;
+        height: 200px;
+        margin-bottom: 18px;
+        width: 49%;
+        flex: unset;
+    }
+
+    .portfolio___section .flex__box .p__box:hover {
+        flex: unset;
+        transition: unset;
+    }
+
+    /* Shrink only the other boxes when one is hovered */
+    .portfolio___section .flex__box:has(.p__box:hover) .p__box:not(:hover) {
+        flex: unset;
+        transition: unset;
+    }
+
+
+    .testimonial__se_ction {
+        padding: 50px 0px;
+    }
+
+
+    .testimonial__se_ction .testimonial___flex__box .video__carousel {
+        width: 45%;
+    }
+
+    .testimonial__se_ction .text__testimonial_section {
+        width: 50%;
+    }
+
+    .testimonial__se_ction .text__testimonial_section .text__testimonial_carousel .test__bx {
+        padding: 0px;
+    }
+
+
+    .testimonial__se_ction .text__testimonial_section .section_testimonial_title {
+        font-size: 32px;
+    }
+
+    .fz___60 {
+        font-size: 40px;
+    }
+
+}
