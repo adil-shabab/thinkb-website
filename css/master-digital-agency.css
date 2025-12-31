@@ -9958,7 +9958,7 @@ section {
     padding: 70px 0;
 }
 
-.branding__hero-image img{
+.branding__hero-image img {
     border-radius: 16px;
 }
 
@@ -9971,7 +9971,7 @@ section {
 .branding__title {
     font-size: 38px;
     font-weight: 700;
-        color: #fff;
+    color: #fff;
 
 }
 
@@ -10032,24 +10032,24 @@ section {
     font-family: sans-serif;
 }
 
-.branding__bullet-area ul{
+.branding__bullet-area ul {
     padding-left: 32px;
     margin-bottom: 18px;
 }
 
-.branding__bullet-area ul li{
- margin-bottom: 5px;
+.branding__bullet-area ul li {
+    margin-bottom: 5px;
     list-style: disc !important;
     font-size: 20px;
     font-family: sans-serif;
 }
 
-.branding__bullet-heading{
+.branding__bullet-heading {
     font-size: 24px;
     margin-bottom: 8px;
 }
 
-.branding__importance-heading{
+.branding__importance-heading {
     font-size: 24px;
     margin-bottom: 18px;
 }
@@ -10075,39 +10075,40 @@ section {
 /* WHY (CARDS) */
 
 .red-icon {
-  width: 48px;
-  height: 48px;
-  background-color: #FFD1D5;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 15px;
+    width: 48px;
+    height: 48px;
+    background-color: #FFD1D5;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
 }
 
 .red-icon i {
-  color: #dc303f;
-  font-size: 18px;
+    color: #dc303f;
+    font-size: 18px;
 }
 
-.red-icon-s{
- width: 48px;
-  height: 48px;
-  background-color: #FFD1D5;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0px;}
+.red-icon-s {
+    width: 48px;
+    height: 48px;
+    background-color: #FFD1D5;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
 
 .red-icon-s i {
-  color: #dc303f;
-  font-size: 18px;
+    color: #dc303f;
+    font-size: 18px;
 }
 
 .icon-outline {
-  color: transparent;
-  -webkit-text-stroke: 1.5px #dc303f;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #dc303f;
 }
 
 .branding__cards {
@@ -10239,7 +10240,44 @@ section {
 }
 
 /* ---- Responsive ---- */
-@media(max-width: 991px) {
+@media(max-width: 1200px) {
+
+
+    .branding__what {
+        padding: 40px;
+    }
+
+    .branding__why {
+        padding: 25px 50px;
+        background-color: #F2F2F2;
+    }
+
+    .branding__growth {
+        padding: 50px 50px 0px 50px;
+    }
+
+    .branding__includes {
+        padding: 20px 50px 0px 50px;
+    }
+
+    .branding__process {
+        padding: 50px;
+    }
+
+    .services-projects-section {
+        padding: 0px 50px 50px 50px !important;
+    }
+
+    .branding__process-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 35px;
+}
+}
+
+@media(max-width: 1000px) {
 
     .branding__includes-flex,
     .branding__process-wrapper {
@@ -10249,12 +10287,8 @@ section {
     .branding__process-image img {
         width: 100%;
     }
-}
 
-
-/* RESPONSIVE */
-@media (max-width: 991px) {
-    .branding__hero-wrapper {
+      .branding__hero-wrapper {
         flex-direction: column;
         text-align: center;
         gap: 25px;
@@ -10264,7 +10298,120 @@ section {
     .branding__benefit-item {
         flex: 1 1 100%;
     }
+
+    .branding__stats__container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
 }
+}
+
+@media (max-width: 500px) {
+    .branding__what {
+        padding: 20px;
+    }
+
+    .branding__why {
+        padding: 12px 25px;
+        background-color: #F2F2F2;
+    }
+
+    .branding__growth {
+        padding: 25px 25px 0px 25px;
+    }
+
+    .branding__benefits {
+
+    margin-top: 6px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+    .branding__includes {
+        padding: 10px 25px 0px 25px;
+    }
+
+    .branding__process {
+        padding: 20px;
+    }
+
+    .branding__step img{
+        height: 100px !important;
+    }
+
+     .branding__step p{
+        font-size: 15px !important;
+    }
+
+        .services-projects-section {
+        padding: 0px 25px 25px 25px !important;
+    }
+
+    .branding__title {
+    font-size: 25px;
+
+}
+
+.branding__section-title {
+    font-size: 25px;
+
+}
+
+.branding__text {
+    font-size: 16px;
+
+}
+
+.branding__bullet-heading {
+    font-size: 20px;
+}
+
+.branding__bullet-area ul li {
+
+    font-size: 15px;
+}
+
+.branding__rrc-title {
+
+    font-size: 20px;
+}
+
+.branding__rrc-flex {
+
+    font-size: 12px;
+}
+
+.branding__importance-heading {
+    font-size: 20px;
+    margin-bottom: 9px;
+}
+
+.branding__cards {
+
+    margin-top: 15px;
+}
+
+.branding__cards h4{
+    font-size: 20px;
+}
+
+.branding__cards p{
+    font-size: 16px;
+}
+
+.branding__stats-title {
+    font-size: 25px;
+}
+
+.branding__stats-list li {
+
+    font-size: 16px;
+}
+}
+
+
+
+
 
 
 
