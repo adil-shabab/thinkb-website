@@ -52,14 +52,9 @@
 
 
     <style>
-
-
-                .red-text {
+        .red-text {
             color: #dc303f;
         }
-
-
-
 
         .outline-red-button {
             background-color: white;
@@ -69,7 +64,8 @@
             border-radius: 16px;
             font-size: 28px;
         }
-                .let-us-collaborate {
+
+        .let-us-collaborate {
             display: grid;
             grid-template-columns: auto auto;
             align-items: center;
@@ -85,6 +81,124 @@
 
         .let-us-collaborate img {
             border-radius: 24px;
+        }
+
+
+         @media screen and (max-width: 500px) {
+            .mt_minus {
+                margin-top: -70px !important;
+            }
+
+            .team-svg {
+                margin-bottom: -76px;
+            }
+
+            .about-button-holder {
+                text-align: center;
+            }
+
+
+            .about-para-one {
+                display: grid;
+                grid-template-columns: 1fr;
+                align-items: center;
+                gap: 5%;
+                padding: 100px 0px;
+                padding-top: 30px;
+            }
+
+            .about-para-one img {
+                border-radius: 16px;
+                width: 100%;
+            }
+
+            .about-para-one h1 {
+                text-align: center;
+            }
+
+            .about-para-one p {
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .let-us-collaborate {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                gap: 50px;
+                padding: 42px 0px;
+            }
+
+            .let-us-collaborate h1 {
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .founder-flex-section {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                gap: 50px;
+                padding: 100px 0px;
+            }
+
+            .founder-section h1,
+            .founder-section p {
+                text-align: center;
+            }
+
+            .founder-flex-section p {
+                font-size: 16px;
+            }
+
+            .founder-flex-section img {
+                max-width: 88%;
+                position: relative;
+                left: 38px;
+            }
+
+            .counter-area .counter-item .title {
+                font-size: 50px;
+            }
+
+            .meet-our-team-section {
+                padding: 100px 0px;
+                padding-bottom: 18px;
+                text-align: center;
+            }
+
+            .outline-red-button {
+                background-color: white;
+                color: #dc303f;
+                border: 1px solid #dc303f;
+                padding: 15px;
+                border-radius: 16px;
+                font-size: 20px;
+            }
+
+        }
+
+        @media screen and (max-width: 400px) {
+
+            .team-svg {
+                margin-bottom: -68px;
+            }
+
+            .client-area-text .text {
+                font-size: 28px;
+                max-width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 350px) {
+
+            .let-us-collaborate h1 {
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 17px;
+            }
+
         }
     </style>
 </head>
@@ -240,7 +354,7 @@
                             </p>
                         </div>
                         <div class="branding__hero-image">
-                            <img src="../assets/images/Services-images/s1.png" alt="Laptop Preview">
+                            <img src="../assets/images/Services-images/s7.png" alt="Laptop Preview">
                         </div>
                     </div>
                 </section>
