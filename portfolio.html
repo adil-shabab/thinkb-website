@@ -30,6 +30,43 @@
 
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
+    <style>
+        /* Disable click & hover */
+.item--inner.updating a {
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Image container */
+.item--inner.updating .ms-p-img {
+    position: relative;
+}
+
+/* Black overlay */
+.item--inner.updating .ms-p-img::before {
+    content: "UPDATING";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+       color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+
+/* Keep image normal */
+.item--inner.updating img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+    </style>
+
     <style id="wp-emoji-styles-inline-css" type="text/css">
         img.wp-smiley,
         img.emoji {
@@ -3431,7 +3468,7 @@
                                                 </div>
                                                 <div
                                                     class="below grid-item-p custom-ratio col-md-4 post-261 portfolios type-portfolios status-publish has-post-thumbnail hentry portfolios_categories-creative">
-                                                    <div class="item--inner">
+                                                    <div class="item--inner updating">
                                                         <a href="portfolio/branding.html" aria-label="The Dark Side">
                                                             <figure class="ms-p-img cursor-none">
                                                                 <img decoding="async"
@@ -3449,7 +3486,7 @@
                                                 </div>
                                                 <div
                                                     class="below grid-item-p custom-ratio col-md-4 post-261 portfolios type-portfolios status-publish has-post-thumbnail hentry portfolios_categories-creative">
-                                                    <div class="item--inner">
+                                                    <div class="item--inner updating">
                                                         <a href="portfolio/branding.html" aria-label="The Dark Side">
                                                             <figure class="ms-p-img cursor-none">
                                                                 <img decoding="async"
@@ -3467,7 +3504,7 @@
                                                 </div>
                                                 <div
                                                     class="below grid-item-p custom-ratio col-md-4 post-261 portfolios type-portfolios status-publish has-post-thumbnail hentry portfolios_categories-creative">
-                                                    <div class="item--inner">
+                                                    <div class="item--inner updating">
                                                         <a href="portfolio/branding.html" aria-label="The Dark Side">
                                                             <figure class="ms-p-img cursor-none">
                                                                 <img decoding="async"
@@ -3485,7 +3522,7 @@
                                                 </div>
                                                 <div
                                                     class="below grid-item-p custom-ratio col-md-4 post-261 portfolios type-portfolios status-publish has-post-thumbnail hentry portfolios_categories-creative">
-                                                    <div class="item--inner">
+                                                    <div class="item--inner updating">
                                                         <a href="portfolio/branding.html" aria-label="The Dark Side">
                                                             <figure class="ms-p-img cursor-none">
                                                                 <img decoding="async"
@@ -3503,7 +3540,7 @@
                                                 </div>
                                                 <div
                                                     class="below grid-item-p custom-ratio col-md-4 post-261 portfolios type-portfolios status-publish has-post-thumbnail hentry portfolios_categories-creative">
-                                                    <div class="item--inner">
+                                                    <div class="item--inner updating">
                                                         <a href="portfolio/branding.html" aria-label="The Dark Side">
                                                             <figure class="ms-p-img cursor-none">
                                                                 <img decoding="async"
