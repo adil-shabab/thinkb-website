@@ -33731,3 +33731,60 @@ ol {
 .blog-layout {
   position: relative;
 }
+.privacy-section {
+  padding: 60px 0;
+  background: #fafafa;
+}
+
+.privacy-container {
+
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.privacy-heading {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.privacy-text {
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+/* normal list */
+.privacy-list {
+  margin: 10px 0 20px 20px;
+  padding-left: 10px;
+}
+
+.privacy-list-item {
+  margin-bottom: 8px;
+}
+
+/* icon list */
+.privacy-icon-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 25px;
+}
+
+.privacy-icon-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+ 
+}
+
+.privacy-icon-item i {
+  font-size: 18px;
+  color: #1abc9c;
+}
+
+
