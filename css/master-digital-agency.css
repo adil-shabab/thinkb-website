@@ -14001,14 +14001,16 @@ p {
 
     .lottie__icon_wtsap {
         width: 100px;
-        bottom: 10px;
-        left: 0px;
+        bottom: 72px;
+        left: unset;
+        right: -7px;
     }
 
     .lottie__icon_call {
         width: 100px;
-        bottom: 68px;
-        left: 0px;
+        bottom: 125px;
+        left: unset;
+        right: -7px;
     }
 
     .mockup__grid .fl___ex_box .img__bx.first {
