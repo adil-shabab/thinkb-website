@@ -292,6 +292,10 @@
         height: 350px;
     }
 
-
+    .test___video {
+        height: unset;
+        border-radius: 10px;
+        object-fit: cover;
+    }
 
 }

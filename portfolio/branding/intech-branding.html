@@ -64,7 +64,6 @@
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
     </svg>
   </div>
-
   <!-- preloader -->
   <div class="mil-preloader">
     <div class="mil-preloader-animation">
@@ -73,15 +72,10 @@
         <p class="mil-h3 mil-muted mil-thin">to</p>
         <p class="mil-h3 mil-muted">Brand</p>
       </div>
-      <div class="mil-pos-abs mil-animation-2">
-        <div class="mil-reveal-frame">
-          <p class="mil-reveal-box"></p>
-          <p class="mil-h3 mil-muted mil-thin">thinkb.agency</p>
-        </div>
-      </div>
     </div>
   </div>
   <!-- preloader end -->
+
 
 
   <!-- offcanvas start  -->
@@ -599,7 +593,6 @@
       },
     });
   </script>
-
   <script>
 
     var timeline = gsap.timeline();
@@ -630,52 +623,8 @@
       "+=.3"
     );
 
-    timeline.fromTo(
-      ".mil-reveal-box",
-      0.1,
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        x: "-30",
-      }
-    );
 
-    timeline.to(
-      ".mil-reveal-box",
-      0.45,
-      {
-        width: "100%",
-        x: 0,
-      },
-      "+=.1"
-    );
-    timeline.to(".mil-reveal-box", {
-      right: "0",
-    });
-    timeline.to(".mil-reveal-box", 0.3, {
-      width: "0%",
-    });
-    timeline.fromTo(
-      ".mil-animation-2 .mil-h3",
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-      },
-      "-=.5"
-    );
-    timeline.to(
-      ".mil-animation-2 .mil-h3",
-      0.6,
-      {
-        opacity: 0,
-        y: "-30",
-      },
-      "+=.5"
-    );
+
     timeline.to(
       ".mil-preloader",
       0.8,
@@ -705,6 +654,7 @@
       "-=1"
     );
   </script>
+
 </body>
 
 
