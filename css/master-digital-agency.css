@@ -13969,11 +13969,12 @@ preloader
 }
 
 .testimonial__se_ction .testimonial___flex__box .video__carousel {
-    width: 27%;
+    width: 20%;
 }
 
 .testimonial__se_ction .testimonial___flex__box .video__carousel .video_testimonial {
     position: relative;
+    width: 100% !important;
 }
 
 .testimonial__se_ction .testimonial___flex__box .video__carousel .video_testimonial img {
@@ -14026,7 +14027,7 @@ preloader
 
 
 .testimonial__se_ction .text__testimonial_section {
-    width: 68%;
+    width: 75%;
 }
 
 .testimonial__se_ction .text__testimonial_section .text__testimonial_carousel {
