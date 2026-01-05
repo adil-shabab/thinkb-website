@@ -64,18 +64,6 @@
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
     </svg>
   </div>
-  <!-- preloader -->
-  <div class="mil-preloader">
-    <div class="mil-preloader-animation">
-      <div class="mil-pos-abs mil-animation-1">
-        <p class="mil-h3 mil-muted mil-thin">Business</p>
-        <p class="mil-h3 mil-muted mil-thin">to</p>
-        <p class="mil-h3 mil-muted">Brand</p>
-      </div>
-    </div>
-  </div>
-  <!-- preloader end -->
-
 
 
   <!-- offcanvas start  -->
@@ -592,67 +580,6 @@
         rotate: false,
       },
     });
-  </script>
-  <script>
-
-    var timeline = gsap.timeline();
-
-    timeline.to(".mil-preloader-animation", {
-      opacity: 1,
-    });
-
-    timeline.fromTo(
-      ".mil-animation-1 .mil-h3",
-      {
-        y: "30px",
-        opacity: 0,
-      },
-      {
-        y: "0px",
-        opacity: 1,
-        stagger: 0.4,
-      }
-    );
-
-    timeline.to(
-      ".mil-animation-1 .mil-h3",
-      {
-        opacity: 0,
-        y: "-30",
-      },
-      "+=.3"
-    );
-
-
-
-    timeline.to(
-      ".mil-preloader",
-      0.8,
-      {
-        opacity: 0,
-        ease: "sine",
-      },
-      "+=.2"
-    );
-    timeline.fromTo(
-      ".mil-up",
-      0.8,
-      {
-        opacity: 0,
-        y: 40,
-        scale: 0.98,
-        ease: "sine",
-      },
-      {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        onComplete: function () {
-          document.querySelector(".mil-preloader").classList.add("mil-hidden");
-        },
-      },
-      "-=1"
-    );
   </script>
 
 </body>
