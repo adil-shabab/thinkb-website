@@ -10150,6 +10150,7 @@ section {
     border-radius: 8px;
     border: 1px solid #eee;
     flex: 1 1 calc(33% - 15px);
+    border: 1px solid #F2CACA;
 }
 
 /* ---- Statistics ---- */
@@ -10336,7 +10337,7 @@ section {
     }
 
     .branding__step img{
-        height: 100px !important;
+        height: 70px !important;
     }
 
      .branding__step p{
