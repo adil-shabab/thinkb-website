@@ -1,3 +1,22 @@
+@import "https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+
+@font-face {
+    font-family: "body-font";
+    src: url("../fonts/SFPRODISPLAYREGULAR.otf");
+    font-display: swap;
+}
+
+
+
 @keyframes bannerAnimationTwo {
   0% {
     transform: translate(0px, 0px);
@@ -78,15 +97,15 @@ li,
   /**
   @font family declaration
   */
-  --tp-ff-p: "Kanit", serif;
-  --tp-ff-body: "Kanit", serif;
-  --tp-ff-popins: "Kanit", serif;
-  --tp-ff-heading: "recoleta", sans-serif;
-  --tp-ff-teko: 'Teko', serif;
-  --tp-ff-playfair: "recoleta", serif;
-  --tp-ff-unbounded: "Kanit", sans-serif;
-  --tp-ff-space: "recoleta", sans-serif;
-  --tp-ff-bricolage: "recoleta", sans-serif;
+  --tp-ff-p: "body-font", sans-serif;
+  --tp-ff-body: "body-font", sans-serif;
+  --tp-ff-popins: "body-font", sans-serif;
+  --tp-ff-heading: "Outfit", sans-serif;
+  --tp-ff-teko: "body-font", sans-serif;
+  --tp-ff-playfair: "Outfit", sans-serif;
+  --tp-ff-unbounded: "body-font", sans-serif;
+  --tp-ff-space: "Outfit", sans-serif;
+  --tp-ff-bricolage: "Outfit", sans-serif;
   --tp-ff-fontawesome: "Font Awesome 6 Pro";
   /**
   @color declaration
