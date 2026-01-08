@@ -10270,12 +10270,12 @@ section {
     }
 
     .branding__process-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-    margin-top: 35px;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        margin-top: 35px;
+    }
 }
 
 @media(max-width: 1000px) {
@@ -10289,7 +10289,7 @@ section {
         width: 100%;
     }
 
-      .branding__hero-wrapper {
+    .branding__hero-wrapper {
         flex-direction: column;
         text-align: center;
         gap: 25px;
@@ -10301,10 +10301,10 @@ section {
     }
 
     .branding__stats__container {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-}
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
 }
 
 @media (max-width: 500px) {
@@ -10323,10 +10323,10 @@ section {
 
     .branding__benefits {
 
-    margin-top: 6px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
+        margin-top: 6px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 
     .branding__includes {
         padding: 10px 25px 0px 25px;
@@ -10336,78 +10336,78 @@ section {
         padding: 20px;
     }
 
-    .branding__step img{
+    .branding__step img {
         height: 70px !important;
     }
 
-     .branding__step p{
+    .branding__step p {
         font-size: 15px !important;
     }
 
-        .services-projects-section {
+    .services-projects-section {
         padding: 0px 25px 25px 25px !important;
     }
 
     .branding__title {
-    font-size: 25px;
+        font-size: 25px;
 
-}
+    }
 
-.branding__section-title {
-    font-size: 25px;
+    .branding__section-title {
+        font-size: 25px;
 
-}
+    }
 
-.branding__text {
-    font-size: 16px;
+    .branding__text {
+        font-size: 16px;
 
-}
+    }
 
-.branding__bullet-heading {
-    font-size: 20px;
-}
+    .branding__bullet-heading {
+        font-size: 20px;
+    }
 
-.branding__bullet-area ul li {
+    .branding__bullet-area ul li {
 
-    font-size: 15px;
-}
+        font-size: 15px;
+    }
 
-.branding__rrc-title {
+    .branding__rrc-title {
 
-    font-size: 20px;
-}
+        font-size: 20px;
+    }
 
-.branding__rrc-flex {
+    .branding__rrc-flex {
 
-    font-size: 12px;
-}
+        font-size: 12px;
+    }
 
-.branding__importance-heading {
-    font-size: 20px;
-    margin-bottom: 9px;
-}
+    .branding__importance-heading {
+        font-size: 20px;
+        margin-bottom: 9px;
+    }
 
-.branding__cards {
+    .branding__cards {
 
-    margin-top: 15px;
-}
+        margin-top: 15px;
+    }
 
-.branding__cards h4{
-    font-size: 20px;
-}
+    .branding__cards h4 {
+        font-size: 20px;
+    }
 
-.branding__cards p{
-    font-size: 16px;
-}
+    .branding__cards p {
+        font-size: 16px;
+    }
 
-.branding__stats-title {
-    font-size: 25px;
-}
+    .branding__stats-title {
+        font-size: 25px;
+    }
 
-.branding__stats-list li {
+    .branding__stats-list li {
 
-    font-size: 16px;
-}
+        font-size: 16px;
+    }
 }
 
 
@@ -13349,7 +13349,7 @@ section {
 /* wrapper + responsive svg */
 .team-svg {
     position: relative;
-    margin-bottom: -400px;
+    margin-bottom: -341px;
     z-index: 1;
 }
 
@@ -13970,11 +13970,12 @@ preloader
 }
 
 .testimonial__se_ction .testimonial___flex__box .video__carousel {
-    width: 27%;
+    width: 20%;
 }
 
 .testimonial__se_ction .testimonial___flex__box .video__carousel .video_testimonial {
     position: relative;
+    width: 100% !important;
 }
 
 .testimonial__se_ction .testimonial___flex__box .video__carousel .video_testimonial img {
@@ -14027,7 +14028,7 @@ preloader
 
 
 .testimonial__se_ction .text__testimonial_section {
-    width: 68%;
+    width: 75%;
 }
 
 .testimonial__se_ction .text__testimonial_section .text__testimonial_carousel {
@@ -14211,14 +14212,16 @@ p {
 
     .lottie__icon_wtsap {
         width: 100px;
-        bottom: 10px;
-        left: 0px;
+        bottom: 72px;
+        left: unset;
+        right: -7px;
     }
 
     .lottie__icon_call {
         width: 100px;
-        bottom: 68px;
-        left: 0px;
+        bottom: 125px;
+        left: unset;
+        right: -7px;
     }
 
     .mockup__grid .fl___ex_box .img__bx.first {
@@ -14435,4 +14438,11 @@ p {
 
 .footer-area .social-links i {
     font-size: 20px;
+}
+
+
+.test___video {
+    height: 450px;
+    border-radius: 10px;
+    object-fit: cover;
 }

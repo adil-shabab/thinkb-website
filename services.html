@@ -93,15 +93,11 @@
         <p class="mil-h3 mil-muted mil-thin">to</p>
         <p class="mil-h3 mil-muted">Brand</p>
       </div>
-      <div class="mil-pos-abs mil-animation-2">
-        <div class="mil-reveal-frame">
-          <p class="mil-reveal-box"></p>
-          <p class="mil-h3 mil-muted mil-thin">thinkb.agency</p>
-        </div>
-      </div>
     </div>
   </div>
   <!-- preloader end -->
+
+
 
 
 
@@ -142,8 +138,8 @@
       <div class="header-area__inner">
         <div class="header__logo">
           <a href="index.html">
-            <img class="normal-logo show-light" src="../assets/images/logo.svg" alt="Site Logo">
-            <img class="normal-logo show-dark" src="../assets/images/white-logo.svg" alt="Site Logo">
+            <img class="normal-logo show-light" src="assets/images/logo.svg" alt="Site Logo">
+            <img class="normal-logo show-dark" src="assets/images/white-logo.svg" alt="Site Logo">
           </a>
         </div>
         <div class="header__nav pos-center">
@@ -160,7 +156,7 @@
                   <li><a href="services/website-development.html">Website Development</a></li>
                   <li><a href="services/social-media-marketing.html">Social Media Marketing</a></li>
                   <li><a href="services/search-engine-optimization.html">SEO</a></li>
-                  <li><a href="">Google Ads</a></li>
+                  <li><a href="services/google-ads.html">Google Ads</a></li>
                   <li><a href="services/package-design.html">Package Design</a></li>
                   <li><a href="services/videography.html">Videography</a></li>
                   <li><a href="services/photography.html">Photography</a></li>
@@ -514,7 +510,7 @@
             <div class="footer-area-inner">
               <div class="footer-widget-wrapper">
                 <div class="footer-logo">
-                  <a href="/"><img src="../assets/images/white-logo.svg" alt="site-logo" /></a>
+                  <a href="/"><img src="assets/images/white-logo.svg" alt="site-logo" /></a>
                 </div>
 
                 <p class="ft__description">At thinkB, one of Bangalore's leading branding agencies, our journey has been
@@ -541,7 +537,7 @@
                   <li><a href="gallery.html">Gallery</a></li>
                   <li><a href="blogs.html">Latest Blogs</a></li>
                   <li><a href="contact.html">Contact Us</a></li>
-                  <li><a href="#">Terms & Condition</a></li>
+                  <li><a href="terms-and-condition.html">Terms & Condition</a></li>
                   <li><a href="privacy-policy.html">Privacy Policy</a></li>
                 </ul>
               </div>
@@ -562,8 +558,8 @@
               <div class="footer-widget-wrapper">
                 <h2 class="title">Contact Us</h2>
                 <ul class="footer-nav-list">
-                  <li><a class="location" target="_blank"
-                      href="https://maps.app.goo.gl/tskFehNswqjTKTps7"> 204, 2nd Cross Rd, East of NGEF Layout, Kasturi
+                  <li><a class="location" target="_blank" href="https://maps.app.goo.gl/tskFehNswqjTKTps7"> 204, 2nd
+                      Cross Rd, East of NGEF Layout, Kasturi
                       Nagar, Bengaluru, Karnataka 560043</a></li>
                   <li><a href="tel:+919966992122">+91 99669 92122</a></li>
                   <li><a href="mailto:info@thinkb.agency">info@thinkb.agency</a></li>
@@ -621,8 +617,8 @@
   <script src="js/main.js"></script>
   <script src="js/error-handling.js"></script>
   <script src="js/offcanvas.js"></script>
-
   <script>
+
     var timeline = gsap.timeline();
 
     timeline.to(".mil-preloader-animation", {
@@ -651,52 +647,8 @@
       "+=.3"
     );
 
-    timeline.fromTo(
-      ".mil-reveal-box",
-      0.1,
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        x: "-30",
-      }
-    );
 
-    timeline.to(
-      ".mil-reveal-box",
-      0.45,
-      {
-        width: "100%",
-        x: 0,
-      },
-      "+=.1"
-    );
-    timeline.to(".mil-reveal-box", {
-      right: "0",
-    });
-    timeline.to(".mil-reveal-box", 0.3, {
-      width: "0%",
-    });
-    timeline.fromTo(
-      ".mil-animation-2 .mil-h3",
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-      },
-      "-=.5"
-    );
-    timeline.to(
-      ".mil-animation-2 .mil-h3",
-      0.6,
-      {
-        opacity: 0,
-        y: "-30",
-      },
-      "+=.5"
-    );
+
     timeline.to(
       ".mil-preloader",
       0.8,
@@ -726,6 +678,7 @@
       "-=1"
     );
   </script>
+
 </body>
 
 
