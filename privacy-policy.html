@@ -58,23 +58,6 @@
         </svg>
     </div>
 
-    <!-- preloader -->
-    <div class="mil-preloader">
-        <div class="mil-preloader-animation">
-            <div class="mil-pos-abs mil-animation-1">
-                <p class="mil-h3 mil-muted mil-thin">Business</p>
-                <p class="mil-h3 mil-muted mil-thin">to</p>
-                <p class="mil-h3 mil-muted">Brand</p>
-            </div>
-            <div class="mil-pos-abs mil-animation-2">
-                <div class="mil-reveal-frame">
-                    <p class="mil-reveal-box"></p>
-                    <p class="mil-h3 mil-muted mil-thin">thinkb.agency</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- preloader end -->
 
     <!-- offcanvas start  -->
     <div class="offcanvas-3__area">
@@ -121,7 +104,7 @@
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Our Services</a></li>
                         <li><a href="portfolio.html">Our Portfolio</a></li>
-                        <li><a href="gallery.html">@thinkB</a></li>
+                        <li><a href="gallery.html" style="text-transform: lowercase;" >@thinkB</a></li>
                         <li><a href="blogs.html">Our Blogs</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
@@ -163,7 +146,7 @@
                                 </ul>
                             </li>
 
-                            <li><a href="gallery.html">@thinkB</a></li>
+                            <li><a href="gallery.html" style="text-transform: lowercase;" >@thinkB</a></li>
                             <li><a href="blogs.html">Blogs</a></li>
                         </ul>
                     </nav>
@@ -293,7 +276,7 @@
                                     <li><a href="services.html">Our Services</a></li>
                                     <li><a href="portfolio.html">Our Portfolio</a></li>
                                     <li><a href="gallery.html">Gallery</a></li>
-                                    <li><a href="blogs.html">Latest Blogs</a></li>
+                                    <li><a href="blogs.html">Blogs</a></li>
                                     <li><a href="contact.html">Contact Us</a></li>
                                     <li><a href="#">Terms & Condition</a></li>
                                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
@@ -321,8 +304,9 @@
                                             204, 2nd Cross Rd, East of NGEF Layout, Kasturi Nagar, Bengaluru,
                                             Karnataka 560043</a>
                                     </li>
-                                    <li><a href="tel:+919966992122">+91 99669 92122</a></li>
-                                    <li><a href="mailto:info@thinkb.agency">info@thinkb.agency</a></li>
+                                    <li><a href="tel:+919966992122">+91 996699 2122</a></li>
+                                        <li><a href="tel:+918880988009">+91 888098 8009</a></li>
+                                    <li><a target="_blank" href="mailto:hello@thinkb.agency">hello@thinkb.agency</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -332,7 +316,7 @@
                             <div class="copyright-area-inner">
                                 <div class="copyright-text">
                                     <p class="text">
-                                        © 2025
+                                        © <script>document.write(new Date().getFullYear())</script>
                                         <a href="https://thinkb.agency" target="_blank">thinkB Creative Agency. </a>All
                                         Rights Reserved
                                     </p>
@@ -348,7 +332,7 @@
 
     <a target="_blank"
         href="https://wa.me/918880988009?text=Hi%21%20I%27m%20interested.%20Can%20you%20share%20more%20details%3F">
-        <dotlottie-wc src="https://lottie.host/b15b9f37-510a-4abc-81bf-6d5a828684d7/uSYVz0uR5P.lottie" speed="0.4"
+        <dotlottie-wc src="https://lottie.host/169865b9-f823-4bd8-a25d-c9952a1f449a/6fgXUOLMGN.lottie" speed="0.4"
             class="lottie__icon_wtsap" autoplay loop></dotlottie-wc>
     </a>
     <a href="tel:+918880988009">
@@ -381,110 +365,6 @@
         gallery.innerHTML += gallery.innerHTML; // duplicates all images for seamless loop
     </script>
 
-    <script>
-        var timeline = gsap.timeline();
-
-        timeline.to(".mil-preloader-animation", {
-            opacity: 1,
-        });
-
-        timeline.fromTo(
-            ".mil-animation-1 .mil-h3",
-            {
-                y: "30px",
-                opacity: 0,
-            },
-            {
-                y: "0px",
-                opacity: 1,
-                stagger: 0.4,
-            }
-        );
-
-        timeline.to(
-            ".mil-animation-1 .mil-h3",
-            {
-                opacity: 0,
-                y: "-30",
-            },
-            "+=.3"
-        );
-
-        timeline.fromTo(
-            ".mil-reveal-box",
-            0.1,
-            {
-                opacity: 0,
-            },
-            {
-                opacity: 1,
-                x: "-30",
-            }
-        );
-
-        timeline.to(
-            ".mil-reveal-box",
-            0.45,
-            {
-                width: "100%",
-                x: 0,
-            },
-            "+=.1"
-        );
-        timeline.to(".mil-reveal-box", {
-            right: "0",
-        });
-        timeline.to(".mil-reveal-box", 0.3, {
-            width: "0%",
-        });
-        timeline.fromTo(
-            ".mil-animation-2 .mil-h3",
-            {
-                opacity: 0,
-            },
-            {
-                opacity: 1,
-            },
-            "-=.5"
-        );
-        timeline.to(
-            ".mil-animation-2 .mil-h3",
-            0.6,
-            {
-                opacity: 0,
-                y: "-30",
-            },
-            "+=.5"
-        );
-        timeline.to(
-            ".mil-preloader",
-            0.8,
-            {
-                opacity: 0,
-                ease: "sine",
-            },
-            "+=.2"
-        );
-        timeline.fromTo(
-            ".mil-up",
-            0.8,
-            {
-                opacity: 0,
-                y: 40,
-                scale: 0.98,
-                ease: "sine",
-            },
-            {
-                y: 0,
-                opacity: 1,
-                scale: 1,
-                onComplete: function () {
-                    document.querySelector(".mil-preloader").classList.add("mil-hidden");
-                },
-            },
-            "-=1"
-        );
-    </script>
 </body>
 
 </html>

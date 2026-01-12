@@ -9040,7 +9040,7 @@ section {
 }
 
 .header-area .main-menu>ul>li>a.active {
-    border: 1px solid rgb(175 38 50 / 27%);
+    border: 1px solid #dc303f;
 }
 
 .header-area .search-icon {
@@ -9546,6 +9546,8 @@ section {
 
 .counter-area-inner {
     border-bottom: 1px solid var(--border);
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .counter-area .counters-grid {
@@ -9567,9 +9569,19 @@ section {
 }
 
 .counter-area .counter-item .title {
+    font-family: var(--font_recoleta);
     font-size: 100px;
     padding-bottom: 10px;
+  color: #e6e6e6;      /* fill color */
+  -webkit-text-stroke: 0; /* remove stroke */
+  text-shadow:
+    1px 0 0 #000,
+   -1px 0 0 #000,
+    0 1px 0 #000,
+    0 -1px 0 #000;
 }
+
+
 
 @media only screen and (max-width: 991px) {
     .counter-area .counter-item .title {
@@ -10072,6 +10084,55 @@ section {
     font-size: 20px;
 }
 
+.mil-button {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    height: 70px;
+    padding: 0 10px 0 50px;
+
+    background-color: #db303e;
+    color: #000;
+
+    border: none;
+    border-radius: 70px;
+
+    font-size: 12px;
+    font-family: var(--font_recoleta);
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition: 
+        background-color 0.4s cubic-bezier(0, 0, 0.3642, 1),
+        transform 0.25s ease;
+}
+
+.mil-button img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.mil-button:hover img {
+    transform: scale(1.1);
+}
+
+.mil-button img {
+    transition: transform 0.25s ease;
+}
+
+/* Optional hover effect */
+.mil-button:hover {
+    background-color: #f13544;
+    transform: scale(1.02);
+}
+
+
 /* WHY (CARDS) */
 
 .red-icon {
@@ -10422,6 +10483,8 @@ section {
     background-color: #faf8f7;
     position: relative;
     overflow: hidden;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .dark .service-area {
@@ -10587,7 +10650,7 @@ section {
 }
 
 .service-area .service-item .service-features li {
-    font-size: 18px;
+    font-size: 14px;
     color: var(--secondary);
     font-weight: 300;
     padding-bottom: 15px;
@@ -10777,6 +10840,11 @@ section {
     top: 70px;
 }
 
+.client-area-inner .section-spacing-top{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
 @media only screen and (max-width: 1399px) {
     .client-area-text .text {
         font-size: 26px;
@@ -10899,6 +10967,8 @@ section {
 
 .blog-area-inner {
     border-bottom: 1px solid var(--border);
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .blog-area .section-title {
@@ -11005,6 +11075,11 @@ section {
 
 .blog .date.has-left-line:before {
     width: 20px;
+}
+
+.cta-area-inner .section-spacing{
+    padding-top: 80px;
+    padding-left: 80px;
 }
 
 .cta-area .section-content {
@@ -11792,7 +11867,7 @@ section {
     /* using flex-basis instead of width */
     min-height: 450px;
     background: linear-gradient(to bottom, rgba(89, 86, 125, .6) 0%, rgba(233, 174, 213, .6) 100%);
-    border-radius: 10px;
+    border-radius: 16px;
     overflow: hidden;
     transition: flex-basis 0.5s ease;
 }
@@ -11827,7 +11902,12 @@ section {
     font-family: var(--font_recoleta);
     font-size: 45px;
     text-align: left;
-    margin-bottom: 10px;
+}
+
+#services-section h3{
+    font-family: var(--font_recoleta);
+    font-size: 45px;
+    text-align: left;
 }
 
 .portfolio___section .flex__box .p__box .img__box img {
@@ -13842,23 +13922,19 @@ section {
 }
 
 .client__btn {
-    font-size: 18px;
+    display: flex;
+    padding: 2px 16px;
+    margin-right: 25px;
     font-family: var(--font_recoleta);
-    background: black;
-    color: white;
-    padding: 13px 25px;
-    border-radius: 5px;
+    font-size: 16px;
+    border-radius: 50px;
+    justify-content: center;
+    cursor: pointer;
     border: 1px solid black;
-    transition: 0.5s ease-in;
-}
-
-.client__btn:hover {
+    background-color: white;
     color: black;
-    background: transparent;
+    align-items: center;
 }
-
-
-
 
 
 /* -------------------------------------------
@@ -13942,9 +14018,9 @@ preloader
 
 
 .lottie__icon_wtsap {
-    width: 120px;
+    width: 135px;
     bottom: 20px;
-    left: 20px;
+    left: 12px;
     z-index: 111;
     position: fixed;
 }
@@ -14210,11 +14286,11 @@ p {
     }
 
 
-    .lottie__icon_wtsap {
-        width: 100px;
+.lottie__icon_wtsap {
+        width: 112px;
         bottom: 72px;
         left: unset;
-        right: -7px;
+        right: -13px;
     }
 
     .lottie__icon_call {

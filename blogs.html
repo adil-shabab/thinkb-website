@@ -49,17 +49,6 @@
     <div class="cursor1"></div>
     <div class="cursor2"></div>
 
-    <!-- preloader -->
-    <div class="mil-preloader">
-        <div class="mil-preloader-animation">
-            <div class="mil-pos-abs mil-animation-1">
-                <p class="mil-h3 mil-muted mil-thin">Business</p>
-                <p class="mil-h3 mil-muted mil-thin">to</p>
-                <p class="mil-h3 mil-muted">Brand</p>
-            </div>
-        </div>
-    </div>
-    <!-- preloader end -->
 
 
 
@@ -113,7 +102,7 @@
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="gallery.html" style="text-transform: lowercase;" >@thinkB</a></li>
                         <li><a href="blogs.html">Blogs</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
@@ -154,7 +143,7 @@
                                 </ul>
                             </li>
 
-                            <li><a href="gallery.html">@thinkB</a></li>
+                            <li><a href="gallery.html" style="text-transform: lowercase;" >@thinkB</a></li>
                             <li><a class="active" href="blogs.html">Blogs</a></li>
                         </ul>
                     </nav>
@@ -237,11 +226,11 @@
                             <div class="row g-4">
                                 <!-- Blog 1 -->
                                 <div class="col-md-4">
-                                    <a href="blogs/from-business-to-brand-2025.html"
+                                    <a href="blogs/from-business-to-brand-2026.html"
                                         class="text-decoration-none text-dark">
                                         <div class="blog-card">
                                             <div class="blog-image-wrapper">
-                                                <img src="assets/images/blog/Frombusiness.jpg"
+                                                <img src="assets/images/blog/Frombusiness.png"
                                                     alt="From Business to Brand" class="blog-image img-fluid" />
                                                 <span class="blog-date-overlay">Oct 14, 2025</span>
                                             </div>
@@ -304,10 +293,10 @@
 
                                 <!-- Blog 4 -->
                                 <div class="col-md-4">
-                                    <a href="blogs/website-trends-2025.html" class="text-decoration-none text-dark">
+                                    <a href="blogs/website-trends-2026.html" class="text-decoration-none text-dark">
                                         <div class="blog-card">
                                             <div class="blog-image-wrapper">
-                                                <img src="assets/images/blog/Websitedesign.jpg"
+                                                <img src="assets/images/blog/Websitedesign.png"
                                                     alt="Website Design Trends for 2025: What Modern Brands Need to Know"
                                                     class="blog-image img-fluid" />
                                                 <span class="blog-date-overlay">Oct 22, 2025</span>
@@ -504,8 +493,8 @@
                                     <li><a href="about.html">About Us</a></li>
                                     <li><a href="services.html">Our Services</a></li>
                                     <li><a href="portfolio.html">Our Portfolio</a></li>
-                                    <li><a href="gallery.html">Gallery</a></li>
-                                    <li><a href="blogs.html">Latest Blogs</a></li>
+                                    <li><a href="gallery.html" style="text-transform: lowercase;" >@thinkB</a></li>
+                                    <li><a href="blogs.html">Blogs</a></li>
                                     <li><a href="contact.html">Contact Us</a></li>
                                     <li><a href="terms-and-condition.html">Terms & Condition</a></li>
                                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
@@ -532,8 +521,9 @@
                                             href="https://maps.app.goo.gl/tskFehNswqjTKTps7"> 204, 2nd
                                             Cross Rd, East of NGEF Layout, Kasturi
                                             Nagar, Bengaluru, Karnataka 560043</a></li>
-                                    <li><a href="tel:+919966992122">+91 99669 92122</a></li>
-                                    <li><a href="mailto:info@thinkb.agency">info@thinkb.agency</a></li>
+                                    <li><a href="tel:+919966992122">+91 996699 2122</a></li>
+                                        <li><a href="tel:+918880988009">+91 888098 8009</a></li>
+                                    <li><a target="_blank" href="mailto:hello@thinkb.agency">hello@thinkb.agency</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -543,7 +533,7 @@
                             <div class="copyright-area-inner">
                                 <div class="copyright-text">
                                     <p class="text">
-                                        © 2025
+                                        © <script>document.write(new Date().getFullYear())</script>
                                         <a href="https://thinkb.agency" target="_blank">thinkB Creative Agency. </a>All
                                         Rights Reserved
                                     </p>
@@ -612,67 +602,7 @@
     <script src="js/offcanvas.js"></script>
 
 
-    <script>
 
-        var timeline = gsap.timeline();
-
-        timeline.to(".mil-preloader-animation", {
-            opacity: 1,
-        });
-
-        timeline.fromTo(
-            ".mil-animation-1 .mil-h3",
-            {
-                y: "30px",
-                opacity: 0,
-            },
-            {
-                y: "0px",
-                opacity: 1,
-                stagger: 0.4,
-            }
-        );
-
-        timeline.to(
-            ".mil-animation-1 .mil-h3",
-            {
-                opacity: 0,
-                y: "-30",
-            },
-            "+=.3"
-        );
-
-
-
-        timeline.to(
-            ".mil-preloader",
-            0.8,
-            {
-                opacity: 0,
-                ease: "sine",
-            },
-            "+=.2"
-        );
-        timeline.fromTo(
-            ".mil-up",
-            0.8,
-            {
-                opacity: 0,
-                y: 40,
-                scale: 0.98,
-                ease: "sine",
-            },
-            {
-                y: 0,
-                opacity: 1,
-                scale: 1,
-                onComplete: function () {
-                    document.querySelector(".mil-preloader").classList.add("mil-hidden");
-                },
-            },
-            "-=1"
-        );
-    </script>
 
 
 </body>
