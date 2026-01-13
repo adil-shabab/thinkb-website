@@ -13936,6 +13936,25 @@ section {
     align-items: center;
 }
 
+@media screen and (max-width: 500px) {
+
+    .client__btn img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .client__btn p{
+        font-size: 12px;
+    }
+
+    .client__btn{
+            margin-right: 0px;
+            padding: 2px;
+            width: 100px;
+    }
+
+}
+
 
 /* -------------------------------------------
 
