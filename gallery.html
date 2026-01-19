@@ -46,7 +46,22 @@
   <!-- LightGallery CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css" />
 
-
+  <style>
+    @media (max-width: 1200px) and (min-width: 992px) {
+.about__section .flex___box .bx__about{
+  width: 90%;
+}
+.center_section {
+    width: 40%;
+    padding: 0 28px;
+    display: flex;
+    gap: 4%;
+    max-height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+}
+  </style>
 
 </head>
 
@@ -63,7 +78,7 @@
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
     </svg>
   </div>
- 
+
 
 
   <!-- offcanvas start  -->
@@ -107,7 +122,7 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="gallery.html" style="text-transform: lowercase;" >@thinkB</a></li>
+            <li><a href="gallery.html" style="text-transform: lowercase;">@thinkB</a></li>
             <li><a href="blogs.html">Blogs</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
@@ -148,14 +163,13 @@
                 </ul>
               </li>
 
-              <li><a class="active" href="gallery.html" style="text-transform: lowercase;" >@thinkB</a></li>
+              <li><a class="active" href="gallery.html" style="text-transform: lowercase;">@thinkB</a></li>
               <li><a href="blogs.html">Blogs</a></li>
             </ul>
           </nav>
         </div>
         <div class="header__button d-none d-sm-inline-block">
-          <a href="contact.html" class="wc-btn wc-btn-primary btn-text-flip" data-bs-toggle="modal"
-            data-bs-target="#signupform"> <span data-text="Contact Now">Contact Now</span></a>
+          <a href="contact.html" class="wc-btn wc-btn-primary btn-text-flip"><span data-text="Contact Now">Contact Now</span></a>
         </div>
         <div class="header__navicon d-xl-none">
           <button onclick="showCanvas3()" class="open-offcanvas">
@@ -337,7 +351,7 @@
                       <div class="icon">
                         <i class="fa-solid fa-pen-ruler"></i>
                       </div>
-                      <h6>Thoughtful Design Debates</h6>
+                      <h6>Thoughtful Design Process</h6>
                     </div>
                     <p>We think hard, design thoughtfully, and occasionally argue over fonts.</p>
                   </div>
@@ -367,6 +381,62 @@
 
 
 
+          
+
+          <section class="new_gallery_section">
+            <div class="container">
+
+              <!-- ROW 1 -->
+              <div class="gallery_row">
+                <div class="gallery_item w-30"><img
+                    src="./assets/images/ng1.jpg"
+                    alt=""></div>
+                <div class="gallery_item w-40"><img
+                    src="./assets/images/ng2.jpeg"
+                    alt=""></div>
+                <div class="gallery_item w-30"><img
+                  src="./assets/images/ng3.jpg"
+                  alt=""></div>
+              </div>
+
+              <!-- ROW 2 -->
+              <div class="gallery_row">
+                <div class="gallery_item w-40"><img
+                    src="./assets/images/ng4.jpeg"
+                    alt=""></div>
+                <div class="gallery_item w-60"><img
+                    src="./assets/images/ng5.jpeg"
+                    alt=""></div>
+              </div>
+
+              <!-- ROW 3 -->
+              <div class="gallery_row">
+                <div class="gallery_item w-60"><img
+                  src="./assets/images/ng6.jpeg"
+                    alt=""></div>
+                <div class="gallery_item w-40"><img
+src="./assets/images/ng7.jpeg"
+                  alt=""></div>
+              </div>
+
+              <!-- ROW 4 -->
+              <div class="gallery_row">
+                <div class="gallery_item w-30"><img
+                    src="./assets/images/ng8.jpg"
+                    alt=""></div>
+                <div class="gallery_item w-40"><img
+                  src="./assets/images/ng9.jpeg"
+                  alt=""></div>
+                <div class="gallery_item w-30"><img
+src="./assets/images/ng10.jpeg"
+                  alt=""></div>
+              </div>
+
+            </div>
+
+          </section>
+
+
           <div class="gallery____photos">
             <div class="flex__box_gallery_photos">
               <img src="assets/images/gallery-1.jpg" alt="img">
@@ -377,16 +447,8 @@
               <img src="assets/images/gallery-6.jpg" alt="img">
               <img src="assets/images/gallery-8.jpg" alt="img">
               <img src="assets/images/gallery-9.jpg" alt="img">
-              <!-- <img src="assets/images/gallery-2.jpg" alt="img">
-              <img src="assets/images/gallery-3.jpg" alt="img">
-              <img src="assets/images/gallery-4.jpg" alt="img">
-              <img src="assets/images/gallery-9.jpg" alt="img">
-              <img src="assets/images/gallery-6.jpg" alt="img">
-              <img src="assets/images/gallery-5.jpg" alt="img">
-              <img src="assets/images/gallery-8.jpg" alt="img"> -->
             </div>
           </div>
-
 
 
 
@@ -445,7 +507,8 @@
                   <a href="#"><img src="assets/images/white-logo.svg" alt="site-logo"></a>
                 </div>
 
-                <p class="ft__description">At ThinkB, a leading branding agency in Bangalore, our journey has been shaped by purpose, progress, and passion</p>
+                <p class="ft__description">At ThinkB, a leading branding agency in Bangalore, our journey has been
+                  shaped by purpose, progress, and passion</p>
 
                 <ul class="social-links">
                   <li><a target="_blank" href="https://www.instagram.com/thinkb.agency?igsh=c2F4bWo2ZWJyYWU2"><i
@@ -493,7 +556,7 @@
                       Cross Rd, East of NGEF Layout, Kasturi
                       Nagar, Bengaluru, Karnataka 560043</a></li>
                   <li><a href="tel:+919966992122">+91 996699 2122</a></li>
-                                        <li><a href="tel:+918880988009">+91 888098 8009</a></li>
+                  <li><a href="tel:+918880988009">+91 888098 8009</a></li>
                   <li><a target="_blank" href="mailto:hello@thinkb.agency">hello@thinkb.agency</a></li>
                 </ul>
               </div>
@@ -504,7 +567,9 @@
             <div class="container">
               <div class="copyright-area-inner">
                 <div class="copyright-text">
-                  <p class="text">© <script>document.write(new Date().getFullYear())</script> <a href="https://thinkb.agency" target="_blank">thinkB Creative Agency. </a>All
+                  <p class="text">©
+                    <script>document.write(new Date().getFullYear())</script> <a href="https://thinkb.agency"
+                      target="_blank">thinkB Creative Agency. </a>All
                     Rights Reserved
                   </p>
                 </div>

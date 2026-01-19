@@ -2687,7 +2687,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 @media only screen and (min-width: 768px) and (max-width: 991px),
 (max-width: 767px) {
   .tp-breadcrumb-s7-title {
-    font-size: 45px;
+    font-size: 60px;
   }
 }
 
