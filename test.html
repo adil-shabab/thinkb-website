@@ -1,985 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ThinkB — Best branding agency for startups in Bangalore.</title>
-  <meta name="description"
-    content="Discover the top branding agency in Bangalore for startups! At our branding agency, we specialize in providing innovative solutions tailored for emerging businesses. Let us elevate your brand's identity, visibility, and impact in the competitive market. Trust our experienced team to craft compelling brand strategies that resonate with your audience. Get started today with the leading branding agency for startups!" />
-  <meta property="og:title" content="ThinkB — Best branding agency for startups in Bangalore." />
-  <meta property="og:description"
-    content="Discover the top branding agency in Bangalore for startups! At our branding agency, we specialize in providing innovative solutions tailored for emerging businesses. Let us elevate your brand's identity, visibility, and impact in the competitive market. Trust our experienced team to craft compelling brand strategies that resonate with your audience. Get started today with the leading branding agency for startups!" />
-  <meta property="og:image" content="assets/images/logo-dark.svg" />
-  <meta property="og:site_name" content="ThinkB.Agency" />
-  <meta property="og:locale" content="en" />
-  <meta property="og:type" content="website" />
-  <meta property="twitter:title" content="ThinkB — Best branding agency for startups in Bangalore." />
-  <meta property="twitter:description"
-    content="Discover the top branding agency in Bangalore for startups! At our branding agency, we specialize in providing innovative solutions tailored for emerging businesses. Let us elevate your brand's identity, visibility, and impact in the competitive market. Trust our experienced team to craft compelling brand strategies that resonate with your audience. Get started today with the leading branding agency for startups!" />
-  <meta property="twitter:image" content="assets/images/favicon.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="google" content="notranslate" />
-  <meta property="og:locale" content="en" />
-  <link rel="canonical" href="https://www.thinkb.agency/" />
-  <link rel="icon" href="assets/images/favicon.png" type="" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Form</title>
+  <style>
+    * {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-  <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+body {
+  margin: 0;
+  background: #111;
+}
 
-  <!-- All CSS files -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/all.min.css">
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-  <link rel="stylesheet" href="css/master-digital-agency.css">
+.overlay {
+  min-height: 100vh;
+  background: linear-gradient(#8a8a8a, #2b2b2b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(0,0,0,0.45);
+  border-radius: 14px;
+  padding: 40px;
+  color: #fff;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+p {
+  text-align: center;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  flex: 1 1 calc(50% - 9px);
+  padding: 14px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  color: #fff;
+  outline: none;
+}
+
+textarea {
+  flex: 1 1 100%;
+  min-height: 90px;
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #ddd;
+}
+
+.phone-field {
+  display: flex;
+  align-items: center;
+  flex: 1 1 calc(50% - 9px);
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.country-code {
+  padding: 0 12px;
+  white-space: nowrap;
+}
+
+.phone-field input {
+  border: none;
+  background: transparent;
+  padding: 14px;
+  flex: 1;
+}
+
+.captcha-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 100%;
+}
+
+canvas {
+  background: #fff;
+  border-radius: 6px;
+}
+
+#reloadCaptcha {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.submit-btn {
+  display: block;
+  margin: 30px auto 0;
+  padding: 14px 36px;
+  background: #f5c400;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #ffcf28;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-grid input,
+  .form-grid select,
+  .phone-field {
+    flex: 1 1 100%;
+  }
+}
+
+  </style>
 </head>
+<body>
 
-<body class="font-heading-recoleta-medium">
+<div class="overlay">
+  <div class="form-container">
+    <button class="close-btn">&times;</button>
 
+    <h2>Like what you see?</h2>
+    <p>Drop in your details and let’s work on<br>your brand together</p>
 
+    <form id="contactForm">
+      <div class="form-grid">
+        <input type="text" placeholder="Full Name*" required>
+        <input type="text" placeholder="Designation*" required>
 
-  <!-- Cursor Animation -->
-  <div class="cursor1"></div>
-  <div class="cursor2"></div>
+        <input type="email" placeholder="Email Id*" required>
 
-  <!-- Sroll to top -->
-  <div class="progress-wrap">
-    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
-    </svg>
+        <div class="phone-field">
+          <span class="country-code">🇮🇳 +91</span>
+          <input type="tel" placeholder="Phone Number*" required>
+        </div>
+
+        <input type="text" placeholder="Company*" required>
+
+        <select required>
+          <option value="">Looking for*</option>
+          <option>Branding</option>
+          <option>Website</option>
+          <option>Marketing</option>
+          <option>Consultation</option>
+        </select>
+
+        <input type="text" placeholder="Industry">
+
+        <textarea placeholder="Message/Comment"></textarea>
+
+        <div class="captcha-box">
+          <canvas id="captchaCanvas"></canvas>
+          <button type="button" id="reloadCaptcha">↻</button>
+          <input type="text" id="captchaInput" placeholder="Enter captcha code" required>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit now</button>
+    </form>
   </div>
-
-
-
-  <!-- offcanvas start  -->
-  <div class="offcanvas-3__area">
-    <div class="offcanvas-3__inner">
-      <div class="offcanvas-3__meta-wrapper">
-        <div class="">
-          <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-        <div class="">
-          <div class="offcanvas-3__meta mb-145 d-none d-md-block">
-            <ul>
-              <li><a href="tel:+2-352698102" class="unnerline"><u>+2-352 698 102</u></a></li>
-              <li><a href="mailto:contact@me.com">contact@me.com</a></li>
-              <li><a href="">27 Division St, <br>
-                  New York, NY 10002, USA</a></li>
-            </ul>
-          </div>
-          <div class="offcanvas-3__social d-none d-md-block">
-            <p class="title">Follow Me</p>
-            <div class="offcanvas-3__social-links">
-              <a href="https://www.instagram.com/thinkb.agency?igsh=c2F4bWo2ZWJyYWU2"><i
-                  class="fa-brands fa-instagram"></i></a>
-              <a target="_blank" href="https://www.linkedin.com/company/thinkb-creative-agency"><i
-                  class="fa-brands fa-linkedin"></i></a>
-              <a target="_blank" href="https://www.youtube.com/@thinkBCreativeAgency"><i
-                  class="fa-brands fa-youtube"></i></a>
-              <a href="https://www.facebook.com/thinkbcreativeagency/"><i class="fa-brands fa-facebook-f"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="offcanvas-3__menu-wrapper">
-        <nav class="nav-menu offcanvas-3__menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="gallery.html" style="text-transform: lowercase;" >@thinkB</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div>
-  <!-- offcanvas end  -->
-
-
-  <!-- Header area start -->
-  <header class="header-area pos-abs zi-9">
-    <div class="container container-large">
-      <div class="header-area__inner">
-        <div class="header__logo">
-          <a href="#">
-            <img class="normal-logo show-light" src="assets/images/logo.svg" alt="Site Logo">
-            <img class="normal-logo show-dark" src="assets/images/white-logo.svg" alt="Site Logo">
-          </a>
-        </div>
-        <div class="header__nav pos-center">
-          <nav class="main-menu">
-            <ul>
-
-              <li><a href="index.html">Home</a></li>
-              <li><a href="index.html">About</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li class="menu-item-has-children">
-                <a href="services.html">Services</a>
-
-                <ul class="dp-menu col-2">
-                  <li><a href="services/corporate-branding.html">Corporate Branding</a></li>
-                  <li><a href="services/website-development.html">Website Development</a></li>
-                  <li><a href="services/social-media-marketing.html">Social Media Marketing</a></li>
-                  <li><a href="services/search-engine-optimization.html">SEO</a></li>
-                  <li><a href="services/google-ads.html">Google Ads</a></li>
-                  <li><a href="services/package-design.html">Package Design</a></li>
-                  <li><a href="services/videography.html">Videography</a></li>
-                  <li><a href="services/photography.html">Photography</a></li>
-                </ul>
-              </li>
-
-              <li><a href="gallery.html" style="text-transform: lowercase;" >@thinkB</a></li>
-              <li><a href="blogs.html">Blogs</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="header__button d-none d-sm-inline-block">
-          <a href="contact.html" class="wc-btn wc-btn-primary btn-text-flip"> <span data-text="Contact Now">Contact
-              Now</span></a>
-        </div>
-        <div class="header__navicon d-xl-none">
-          <button onclick="showCanvas3()" class="open-offcanvas">
-            <i class="fa-solid fa-bars"></i></button>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- Header area end -->
-
-  <div class="has-smooth" id="has_smooth"></div>
-  <div id="smooth-wrapper">
-    <div id="smooth-content">
-      <div class="body-wrapper digital-agencey">
-
-        <!-- overlay switcher close  -->
-        <div class="overlay-switcher-close"></div>
-
-        <main>
-
-          <!-- intro area start  -->
-          <section class="intro-area">
-            <div class="container">
-              <div class="intro-grid">
-                <div class="intro-content order-md-1 order-2">
-                  <h2 class="intro-title has_char_anim" data-translatex="70">We Think Creative <span
-                      class="small-hypen"></span>
-                    & Deliver Results.</h2>
-                  <p class="text has_word_anim" data-delay="0.30">ThinkB combines strategic thinking with creative
-                    excellence to build powerful brands. We craft digital experiences that engage audiences and drive
-                    measurable business growth through innovative design and data-driven solutions.</p>
-                  <div class="btn-wrap has_fade_anim" data-fade-from="bottom" data-delay="0.45">
-                    <a href="portfolio.html" class="wc-btn wc-btn-primary btn-text-flip"><span
-                        data-text="View Our Work">View Our Work</span></a>
-                  </div>
-                </div>
-                <div class="intro-thumb order-md-2 order-1">
-                  <div class="main-thumb">
-                    <img class="d-md-block d-none main-image" src="assets/images/thinkb.png" alt="intro-main-image">
-                    <img class="d-md-none d-block main-image" src="assets/images/about.jpg" alt="intro-main-image">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- intro area end  -->
-
-
-
-
-          <div class="portfolio___section">
-            <div class="container">
-              <h3>Showcasing Our Best Creations</h3>
-              <div class="flex__box">
-                <div class="p__box">
-                  <div class="img__box">
-                    <h4>Branding</h4>
-                    <img src="assets/images/portfolio/content-creators.avif" alt="img">
-                  </div>
-                  <div class="txt__box d-md-flex d-none">
-                    <a href="">
-                      <button>View Our Work</button>
-                    </a>
-                    <div class="flex__content">
-                      <div class="txt_section">
-                        <h5>Branding</h5>
-                        <h6>Tools that work like you do</h6>
-                        <p>Streamline your design process with AI-Powered tools and Lorem ipsum dolor, sit amet
-                          consectetur adipisicing elit. Aut atque nulla magni. Inventore vitae ducimus accusamus,
-                          expedita, facilis voluptatum itaque quaerat doloremque qui est beatae!</p>
-                      </div>
-                      <div class="img__section">
-                        <img src="assets/images/portfolio/branding.avif" alt="img">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="p__box">
-                  <div class="img__box">
-                    <h4>Branding</h4>
-                    <img src="assets/images/portfolio/content-creators.avif" alt="img">
-                  </div>
-                  <div class="txt__box d-md-flex d-none">
-                    <a href="">
-                      <button>View Our Work</button>
-                    </a>
-                    <div class="flex__content">
-                      <div class="txt_section">
-                        <h5>Branding</h5>
-                        <h6>Tools that work like you do</h6>
-                        <p>Streamline your design process with AI-Powered tools and Lorem ipsum dolor, sit amet
-                          consectetur adipisicing elit. Aut atque nulla magni. Inventore vitae ducimus accusamus,
-                          expedita, facilis voluptatum itaque quaerat doloremque qui est beatae!</p>
-                      </div>
-                      <div class="img__section">
-                        <img src="assets/images/portfolio/branding.avif" alt="img">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="p__box">
-                  <div class="img__box">
-                    <h4>Branding</h4>
-                    <img src="assets/images/portfolio/content-creators.avif" alt="img">
-                  </div>
-                  <div class="txt__box d-md-flex d-none">
-                    <a href="">
-                      <button>View Our Work</button>
-                    </a>
-                    <div class="flex__content">
-                      <div class="txt_section">
-                        <h5>Branding</h5>
-                        <h6>Tools that work like you do</h6>
-                        <p>Streamline your design process with AI-Powered tools and Lorem ipsum dolor, sit amet
-                          consectetur adipisicing elit. Aut atque nulla magni. Inventore vitae ducimus accusamus,
-                          expedita, facilis voluptatum itaque quaerat doloremque qui est beatae!</p>
-                      </div>
-                      <div class="img__section">
-                        <img src="assets/images/portfolio/branding.avif" alt="img">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="p__box">
-                  <div class="img__box">
-                    <h4>Branding</h4>
-                    <img src="assets/images/portfolio/content-creators.avif" alt="img">
-                  </div>
-                  <div class="txt__box d-md-flex d-none">
-                    <a href="">
-                      <button>View Our Work</button>
-                    </a>
-                    <div class="flex__content">
-                      <div class="txt_section">
-                        <h5>Branding</h5>
-                        <h6>Tools that work like you do</h6>
-                        <p>Streamline your design process with AI-Powered tools and Lorem ipsum dolor, sit amet
-                          consectetur adipisicing elit. Aut atque nulla magni. Inventore vitae ducimus accusamus,
-                          expedita, facilis voluptatum itaque quaerat doloremque qui est beatae!</p>
-                      </div>
-                      <div class="img__section">
-                        <img src="assets/images/portfolio/branding.avif" alt="img">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-
-          <section class="service-area section-spacing" id="services-section">
-            <div class="container">
-              <div class="service-top-wrapper">
-                <div class="section-heading">
-                  <h2 class="section-title">
-                    Our exclusive <br /> services
-                  </h2>
-                </div>
-                <div class="content">
-                  <p class="text">
-                    Whether it's crafting a visually stunning brand identity, designing immersive digital experiences,
-                    or developing strategic marketing campaigns.
-                  </p>
-                  <a href="services.html" class="wc-btn wc-btn-underline btn-text-flip">
-                    <span data-text="Learn more">View All Services</span>
-                  </a>
-                </div>
-              </div>
-
-              <!-- ✅ Swiper Slider -->
-              <div class="swiper Service_slider">
-                <div class="swiper-wrapper">
-                  <!-- Each slide -->
-                  <div class="swiper-slide">
-                    <div class="service-item">
-                      <div class="icon"><img src="images/icon-s-1.webp" alt="img"></div>
-                      <h2 class="title">Interaction <br> Design</h2>
-                      <ul class="service-features">
-                        <li>User Interface</li>
-                        <li>User Experience</li>
-                        <li>Design System</li>
-                        <li>Prototype</li>
-                      </ul>
-                      <a class="read_m_btn" href="">Read More</a>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="service-item">
-                      <div class="icon"><img src="images/icon-s-2.webp" alt="img"></div>
-                      <h2 class="title">Branding <br> Design</h2>
-                      <ul class="service-features">
-                        <li>Logo</li>
-                        <li>Identity</li>
-                        <li>Colors</li>
-                        <li>Typography</li>
-                      </ul>
-                      <a class="read_m_btn" href="">Read More</a>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="service-item">
-                      <div class="icon"><img src="images/icon-s-3.webp" alt="img"></div>
-                      <h2 class="title">Web <br> Development</h2>
-                      <ul class="service-features">
-                        <li>Frontend</li>
-                        <li>Backend</li>
-                        <li>SEO</li>
-                        <li>Hosting</li>
-                      </ul>
-                      <a class="read_m_btn" href="">Read More</a>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="service-item">
-                      <div class="icon"><img src="images/icon-s-4.webp" alt="img"></div>
-                      <h2 class="title">eCommerce <br> Setup</h2>
-                      <ul class="service-features">
-                        <li>Shopify</li>
-                        <li>WooCommerce</li>
-                        <li>Payments</li>
-                        <li>Inventory</li>
-                      </ul>
-                      <a class="read_m_btn" href="">Read More</a>
-                    </div>
-                  </div>
-
-                  <!-- add more slides here as needed -->
-                </div>
-
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-          </section>
-
-
-          <div class="about__section">
-            <div class="container">
-              <h3>We combine creative storytelling strategy</h3>
-
-              <div class="flex___box">
-                <div class="left_section">
-                  <div class="bx__about first_left">
-                    <div class="head__bx">
-                      <div class="icon">
-                        <i class="fa-solid fa-sliders"></i>
-                      </div>
-                      <h6>Results-Driven Approach</h6>
-                    </div>
-                    <p>We focus on strategies that don't just look good.</p>
-                  </div>
-                  <div class="bx__about second_left">
-                    <div class="head__bx">
-                      <div class="icon">
-                        <i class="fa-solid fa-sliders"></i>
-                      </div>
-                      <h6>Results-Driven Approach</h6>
-                    </div>
-                    <p>We focus on strategies that don't just look good.</p>
-                  </div>
-                  <div class="bx__about first_left">
-                    <div class="head__bx">
-                      <div class="icon">
-                        <i class="fa-solid fa-sliders"></i>
-                      </div>
-                      <h6>Results-Driven Approach</h6>
-                    </div>
-                    <p>We focus on strategies that don't just look good.</p>
-                  </div>
-                </div>
-
-                <div class="center_section">
-                  <div class="first_half">
-                    <div class="scroll_content">
-                      <img src="assets/images/about-1.webp" alt="img">
-                      <img src="assets/images/about-2.webp" alt="img">
-                      <img src="assets/images/about-3.webp" alt="img">
-                      <img src="assets/images/about-4.webp" alt="img">
-                      <img src="assets/images/about-5.webp" alt="img">
-                      <!-- duplicate images to make loop seamless -->
-                      <img src="assets/images/about-1.webp" alt="img">
-                      <img src="assets/images/about-2.webp" alt="img">
-                      <img src="assets/images/about-3.webp" alt="img">
-                      <img src="assets/images/about-4.webp" alt="img">
-                      <img src="assets/images/about-5.webp" alt="img">
-                    </div>
-                  </div>
-
-                  <div class="second_half">
-                    <div class="scroll_content">
-                      <img src="assets/images/about-4.webp" alt="img">
-                      <img src="assets/images/about-5.webp" alt="img">
-                      <img src="assets/images/about-1.webp" alt="img">
-                      <img src="assets/images/about-2.webp" alt="img">
-                      <img src="assets/images/about-4.webp" alt="img">
-                      <!-- duplicate images -->
-                      <img src="assets/images/about-4.webp" alt="img">
-                      <img src="assets/images/about-5.webp" alt="img">
-                      <img src="assets/images/about-1.webp" alt="img">
-                      <img src="assets/images/about-2.webp" alt="img">
-                      <img src="assets/images/about-4.webp" alt="img">
-                    </div>
-                  </div>
-                </div>
-
-
-                <div class="right_section">
-                  <div class="bx__about first_right">
-                    <div class="head__bx">
-                      <div class="icon">
-                        <i class="fa-solid fa-sliders"></i>
-                      </div>
-                      <h6>Results-Driven Approach</h6>
-                    </div>
-                    <p>We focus on strategies that don't just look good.</p>
-                  </div>
-                  <div class="bx__about second_right">
-                    <div class="head__bx">
-                      <div class="icon">
-                        <i class="fa-solid fa-sliders"></i>
-                      </div>
-                      <h6>Results-Driven Approach</h6>
-                    </div>
-                    <p>We focus on strategies that don't just look good.</p>
-                  </div>
-                  <div class="bx__about first_right">
-                    <div class="head__bx">
-                      <div class="icon">
-                        <i class="fa-solid fa-sliders"></i>
-                      </div>
-                      <h6>Results-Driven Approach</h6>
-                    </div>
-                    <p>We focus on strategies that don't just look good.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-          <!-- counter area start  -->
-          <section class="counter-area">
-            <div class="container">
-              <div class="counter-area-inner section-spacing">
-                <div class="counters-grid">
-                  <div class="counter-item has_fade_anim" data-fade-from="left">
-                    <h2 class="title wc-counter">25k</h2>
-                    <p class="text">Project <br> completed</p>
-                  </div>
-                  <div class="counter-item has_fade_anim" data-fade-from="left">
-                    <h2 class="title wc-counter">8k</h2>
-                    <p class="text">Happy <br> customers</p>
-                  </div>
-                  <div class="counter-item has_fade_anim" data-fade-from="left">
-                    <h2 class="title wc-counter">15</h2>
-                    <p class="text">Years <br> experiences</p>
-                  </div>
-                  <div class="counter-item has_fade_anim" data-fade-from="left">
-                    <h2 class="title wc-counter">98</h2>
-                    <p class="text">Awards <br> achievement</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- counter area end  -->
-
-
-
-
-
-
-
-
-          <!-- ================================
-              AWARDS AREA START
-          ================================ -->
-          <section class="awards-area">
-            <div class="area-bg">
-              <img src="images/img-s-6_1.webp" alt="gallery image">
-              <div class="overlay"></div>
-            </div>
-
-            <div class="container">
-              <div class="awards-area-inner">
-                <h4 class="section_testimonial_title">What our customers are saying</h4>
-
-                <div class="row align-items-stretch">
-                  <!-- Video Section -->
-                  <div class="col-md-6">
-                    <div class="video-wrapper">
-                      <div class="video-thumb">
-                        <img src="assets/images/thumbnail.jpg" alt="video thumbnail">
-                        <button class="play-btn" aria-label="Play video">
-                          <i class="fa-solid fa-play"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Testimonial Section -->
-                  <div class="col-md-6" style="position: relative;">
-                    <img class="quote__icon" src="assets/images/quote.png" alt="img">
-
-                    <div class="testimonial-carousel swiper">
-                      <div class="swiper-wrapper">
-                        <!-- Testimonial Item -->
-                        <div class="swiper-slide testimonial-item">
-                          <p class="testimonial-text">
-                            I am delighted to express my utmost satisfaction
-                            with the exceptional services provided by thinkB,
-                            led by Mr. Sagar. As the administrator of a
-                            hospital, our collaboration with thinkB has been
-                            truly outstanding. Mr. Sagar and his team showcased
-                            an unparalleled level of professionalism and
-                            dedication throughout our engagement.
-
-                          </p>
-                          <div class="testimonial-meta">
-                            <div>
-                              <h5>Escay SK</h5>
-                              <span>Total Ortho Care</span>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="swiper-slide testimonial-item">
-                          <p class="testimonial-text">
-
-                            I recently had the pleasure of working with ThinkB
-                            Creative Agency for branding services, and I must
-                            say, I was thoroughly impressed with their
-                            professionalism, creativity, and attention to
-                            detail. From the moment I contacted ThinkB, they
-                            were incredibly responsive and eager to understand
-                            my vision for the brand. Their team took the time to
-                            listen to my ideas and objectives, and they provided
-                            valuable insights and recommendations to enhance the
-                            branding strategy.
-
-                          </p>
-                          <div class="testimonial-meta">
-                            <div>
-                              <h5>Vyshak Pillai</h5>
-                              <span>CEO - Sakra Hospital</span>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="swiper-slide testimonial-item">
-                          <p class="testimonial-text">
-
-                            As a business owner aiming for a unique brand, I
-                            chose thinkB Creative Agency for logo and indoor
-                            branding. They went above and beyond, grasping my
-                            brand's essence thoroughly. They researched my
-                            industry and competitors, ensuring their designs met
-                            my needs precisely.What truly sets thinkB apart is
-                            their unwavering commitment to excellence and client
-                            satisfaction. Throughout the project, they
-                            maintained open lines of communication, keeping me
-                            informed and involved every step of the way.
-
-                          </p>
-                          <div class="testimonial-meta">
-                            <div>
-                              <h5>Muhammed Ashiq</h5>
-                              <span>Founder, StartupX</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Navigation -->
-                      <div class="swiper-button-prev"></div>
-                      <div class="swiper-button-next"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- ================================
-              AWARDS AREA END
-          ================================ -->
-
-
-          <!-- client area start  -->
-          <div class="client-area has_fade_anim">
-            <div class="container">
-              <div class="client-area-inner section-spacing-top">
-                <div class="client-area-text">
-                  <h2 class="text">We worked with largest
-                    global brands</h2>
-                </div>
-                <div class="clients-wrapper-box">
-                  <div class="clients-wrapper">
-                    <div class="client-box">
-                      <img class="show-light" src="assets/images/client/1.jpg" alt="client image">
-                      <img class="show-dark" src="images/img-s-1-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/images/client/2.webp" alt="client image">
-                      <img class="show-dark" src="images/img-s-2-light_1.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/images/client/3.jpg" alt="client image">
-                      <img class="show-dark" src="images/img-s-3-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/images/client/4.jpg" alt="client image">
-                      <img class="show-dark" src="images/img-s-4-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/images/client/5.webp" alt="client image">
-                      <img class="show-dark" src="images/img-s-5-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/images/client/6.webp" alt="client image">
-                      <img class="show-dark" src="images/img-s-6-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/images/client/7.webp" alt="client image">
-                      <img class="show-dark" src="images/img-s-7-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/images/client/8.webp" alt="client image">
-                      <img class="show-dark" src="images/img-s-8-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/images/client/9.webp" alt="client image">
-                      <img class="show-dark" src="images/img-s-9-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/images/client/10.png" alt="client image">
-                      <img class="show-dark" src="images/img-s-10-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/images/client/11.webp" alt="client image">
-                      <img class="show-dark" src="images/img-s-11-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/images/client/12.webp" alt="client image">
-                      <img class="show-dark" src="images/img-s-12-light.webp" alt="client image">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- client area end  -->
-
-          <!-- blog area start  -->
-          <section class="blog-area">
-            <div class="container">
-              <div class="blog-area-inner section-spacing">
-                <div class="section-header">
-                  <div class="section-title-wrapper">
-                    <div class="title-wrapper">
-                      <h2 class="section-title has_fade_anim fz___60">Latest Blogs</h2>
-                    </div>
-                  </div>
-                  <div class="btn-wrapper has_fade_anim" data-delay="0.30" data-fade-from="right">
-                    <a href="blogs.html" class="wc-btn wc-btn-underline btn-text-flip"> <span
-                        data-text="Read all post">Read all blogs</span></a>
-                  </div>
-                </div>
-                <div class="blog-wrapper-box">
-                  <div class="blog-wrapper">
-                    <div class="has_fade_anim" data-fade-from="bottom" data-delay="0.15">
-                      <a href="blog-details.html">
-                        <article class="blog">
-                          <div class="thumb">
-                            <img src="images/img-s-11_1.webp" alt="blog image">
-                          </div>
-                          <div class="content-wrapper">
-                            <div class="content">
-                              <h2 class="title">A simple guide to retrieval auto generated read content models</h2>
-                              <div class="meta">
-                                <span class="tag">Branding</span>
-                                <span class="date has-left-line">14 Jan 2024</span>
-                              </div>
-                            </div>
-                          </div>
-                        </article>
-                      </a>
-                    </div>
-                    <div class="has_fade_anim" data-fade-from="bottom" data-delay="0.30">
-                      <a href="blog-details.html">
-                        <article class="blog">
-                          <div class="thumb">
-                            <img src="images/img-s-1_2.webp" alt="blog image">
-                          </div>
-                          <div class="content-wrapper">
-                            <div class="content">
-                              <h2 class="title">The complex but awesome CSS border-image property
-                                for web design</h2>
-                              <div class="meta">
-                                <span class="tag">Design</span>
-                                <span class="date has-left-line">10 Jan 2024</span>
-                              </div>
-                            </div>
-                          </div>
-                        </article>
-                      </a>
-                    </div>
-                    <div class="has_fade_anim" data-fade-from="bottom" data-delay="0.45">
-                      <a href="blog-details.html">
-                        <article class="blog">
-                          <div class="thumb">
-                            <img src="images/img-s-2_2.webp" alt="blog image">
-                          </div>
-                          <div class="content-wrapper">
-                            <div class="content">
-                              <h2 class="title">Refining your mobile onboarding experience using visual analytics</h2>
-                              <div class="meta">
-                                <span class="tag">Development</span>
-                                <span class="date has-left-line">5 Jan 2024</span>
-                              </div>
-                            </div>
-                          </div>
-                        </article>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- blog area end  -->
-
-          <!-- cta area start  -->
-          <section class="cta-area">
-            <div class="container">
-              <div class="cta-area-inner section-spacing">
-                <div class="section-content">
-                  <div class="section-title-wrapper">
-                    <div class="title-wrapper">
-                      <h2 class="section-title has_fade_anim">Let’s start your <br>
-                        journey with thinkB</h2>
-                    </div>
-                  </div>
-                  <div class="btn-wrapper has_fade_anim">
-                    <a href="contact.html" class="wc-btn wc-btn-primary btn-text-flip"> <span
-                        data-text="Get in Touch">Get in Touch</span></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- cta area end  -->
-
-        </main>
-
-        <!-- footer area start  -->
-        <footer class="footer-area">
-          <div class="container">
-            <div class="footer-area-inner">
-              <div class="footer-widget-wrapper">
-                <div class="footer-logo">
-                  <a href="#"><img src="../assets/images/white-logo.svg" alt="site-logo"></a>
-                </div>
-
-                <p class="ft__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis tempora
-                  neque, quidem explicabo pariatur rem sed sint. Excepturi, adipisci facilis.</p>
-
-                <ul class="social-links">
-                  <li><a target="_blank" href="https://www.instagram.com/thinkb.agency?igsh=c2F4bWo2ZWJyYWU2"><i
-                        class="fa-brands fa-instagram"></i></a></li>
-                  <li><a target="_blank" href="https://www.linkedin.com/company/thinkb-creative-agency"><i
-                        class="fa-brands fa-linkedin"></i></a></li>
-                  <li><a target="_blank" href="https://www.youtube.com/@thinkBCreativeAgency"><i
-                        class="fa-brands fa-youtube"></i></a></li>
-                  <li><a target="_blank" href="https://www.facebook.com/thinkbcreativeagency"><i
-                        class="fa-brands fa-facebook-f"></i></a></li>
-                </ul>
-              </div>
-              <div class="footer-widget-wrapper">
-                <h2 class="title">Quick Links</h2>
-                <ul class="footer-nav-list">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Our Services</a></li>
-                  <li><a href="#">Our Portfolio</a></li>
-                  <li><a href="#">Gallery</a></li>
-                  <li><a href="#">Latest Blogs</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">Terms & Conditions</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                </ul>
-              </div>
-              <div class="footer-widget-wrapper">
-                <h2 class="title">Our Services</h2>
-                <ul class="footer-nav-list">
-                  <li><a href="services/corporate-branding.html">Corporate Branding</a></li>
-                  <li><a href="#">Web Development</a></li>
-                  <li><a href="#">Social Media</a></li>
-                  <li><a href="services/search-engine-optimization.html">SEO</a></li>
-                  <li><a href="services/google-ads.html">Google Ads</a></li>
-                  <li><a href="#">Packaging Design</a></li>
-                  <li><a href="services/videography.html">Videography</a></li>
-                  <li><a href="services/photography.html">Photography</a></li>
- 
-                </ul>
-              </div>
-
-              <div class="footer-widget-wrapper">
-                <h2 class="title">Contact Us</h2>
-                <ul class="footer-nav-list">
-                  <li><a class="location" target="_blank"
-                      href="https://maps.app.goo.gl/tskFehNswqjTKTps7"> 204, 2nd Cross Rd, East of NGEF Layout, Kasturi
-                      Nagar, Bengaluru, Karnataka 560043</a></li>
-                  <li><a href="tel:+919966992122">+91 996699 2122</a></li>
-                                        <li><a href="tel:+918880988009">+91 888098 8009</a></li>
-                  <li><a target="_blank" href="mailto:hello@thinkb.agency">hello@thinkb.agency</a></li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-          <div class="copyright-area">
-            <div class="container">
-              <div class="copyright-area-inner">
-                <div class="copyright-text">
-                  <p class="text">© <script>document.write(new Date().getFullYear())</script> <a href="https://thinkb.agency" target="_blank">thinkB Creative Agency. </a>All
-                    Rights Reserved
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
-        <!-- footer area end  -->
-
-      </div>
-    </div>
-  </div>
-
-  <!-- All JS files -->
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/swiper-bundle.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <script src="js/counter.js"></script>
-  <script src="js/progressbar.js"></script>
-  <script src="js/ScrollSmoother.min.js"></script>
-  <script src="js/ScrollToPlugin.min.js"></script>
-  <script src="js/SplitText.min.js"></script>
-  <script src="js/jquery.meanmenu.min.js"></script>
-  <script src="js/backToTop.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/error-handling.js"></script>
-  <script src="js/offcanvas.js"></script>
-
-  <script>
-    // testimonial_active
-    if ('.testimonial-active') {
-      var testimonial_slider_active = new Swiper(".testimonial-active", {
-        slidesPerView: 1,
-        loop: false,
-        autoplay: false,
-        spaceBetween: 60,
-        speed: 3000,
-        pagination: {
-          el: '.testimonial-pagination',
-          type: 'bullets',
-          clickable: true,
-        },
-      });
-    }
-  </script>
-
-  <script>
-    const swiper = new Swiper(".Service_slider", {
-      slidesPerView: 1, // ✅ Default for mobile
-      spaceBetween: 25,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        576: { slidesPerView: 2 },
-        300: { slidesPerView: 1.2 },
-        992: { slidesPerView: 3 },
-        1200: { slidesPerView: 4 },
-      },
-    });
-  </script>
-
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const testimonialSwiper = new Swiper('.testimonial-carousel', {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 30,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
-      speed: 800,
-    });
-
-    // Optional: Play button interaction
-    document.querySelector('.play-btn').addEventListener('click', () => {
-      alert('🎥 Here you can open your modal or embed a video player.');
-    });
-  </script>
+</div>
+
+<script>
+  const canvas = document.getElementById("captchaCanvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = 120;
+canvas.height = 45;
+
+let captchaCode = "";
+
+function randomChar() {
+  const chars =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+  return chars.charAt(Math.floor(Math.random() * chars.length));
+}
+
+function generateCaptcha() {
+  captchaCode = "";
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Background
+  ctx.fillStyle = "#f2f2f2";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // Noise lines
+  for (let i = 0; i < 4; i++) {
+    ctx.strokeStyle = `rgb(${Math.random()*150},${Math.random()*150},${Math.random()*150})`;
+    ctx.beginPath();
+    ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
+    ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
+    ctx.stroke();
+  }
+
+  // Characters
+  for (let i = 0; i < 6; i++) {
+    const char = randomChar();
+    captchaCode += char;
+
+    ctx.save();
+    ctx.font = "22px Arial";
+    ctx.fillStyle = "#000";
+    ctx.translate(20 + i * 15, 30);
+    ctx.rotate((Math.random() - 0.5) * 0.5);
+    ctx.fillText(char, 0, 0);
+    ctx.restore();
+  }
+}
+
+// Initial captcha
+generateCaptcha();
+
+// Reload captcha
+document.getElementById("reloadCaptcha").addEventListener("click", generateCaptcha);
+
+// Form validation
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  const userInput = document.getElementById("captchaInput").value.trim();
+
+  if (userInput !== captchaCode) {
+    alert("Captcha does not match. Please try again.");
+    generateCaptcha();
+    e.preventDefault();
+  }
+});
+
+</script>
 
 </body>
-
-
 </html>

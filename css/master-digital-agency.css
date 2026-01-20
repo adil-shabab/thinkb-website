@@ -14065,8 +14065,9 @@ section {
 @media screen and (max-width: 500px) {
 
     .client__btn img {
-        width: 30px;
-        height: 30px;
+        width: 24px !important;
+        height: 24px !important;
+        padding-bottom: 2px !important;
     }
 
     .client__btn p {
