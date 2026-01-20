@@ -113,7 +113,7 @@
         position: relative;
     }
 
-    .about__section .flex___box .bx__about p{
+    .about__section .flex___box .bx__about p {
         margin-top: 0px;
     }
 
@@ -215,6 +215,29 @@
 
 }
 
+@media screen and (min-width: 2600px) and (max-width: 4000px) {
+    .elementor-1234 .elementor-element.elementor-element-c71dcc0 .magnetic_hero .hero__images {
+        max-height: unset !important;
+        height: unset !important;
+        margin-top: 730px !important;
+    }
+}
+
+@media screen and (min-width: 2000px) and (max-width: 2600px) {
+    .elementor-1234 .elementor-element.elementor-element-c71dcc0 .magnetic_hero .hero__images {
+        max-height: unset !important;
+        height: unset !important;
+        margin-top: 540px !important;
+    }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 2000px) {
+    .elementor-1234 .elementor-element.elementor-element-c71dcc0 .magnetic_hero .hero__images {
+        max-height: unset !important;
+        height: unset !important;
+        margin-top: 420px !important;
+    }
+}
 
 
 
