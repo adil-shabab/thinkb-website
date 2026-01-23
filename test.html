@@ -1,270 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Form</title>
   <style>
     * {
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-body {
-  margin: 0;
-  background: #111;
-}
+    body {
+      margin: 0;
+      background: #111;
+    }
 
-.overlay {
-  min-height: 100vh;
-  background: linear-gradient(#8a8a8a, #2b2b2b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
+    .overlay {
+      min-height: 100vh;
+      background: linear-gradient(#8a8a8a, #2b2b2b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
 
-.form-container {
-  width: 100%;
-  max-width: 900px;
-  background: rgba(0,0,0,0.45);
-  border-radius: 14px;
-  padding: 40px;
-  color: #fff;
-  position: relative;
-}
+    .form-container {
+      width: 100%;
+      max-width: 900px;
+      background: rgba(0, 0, 0, 0.45);
+      border-radius: 14px;
+      padding: 40px;
+      color: #fff;
+      position: relative;
+    }
 
-.close-btn {
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  font-size: 26px;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
+    .close-btn {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      font-size: 26px;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
 
-h2 {
-  text-align: center;
-  margin-bottom: 8px;
-}
+    h2 {
+      text-align: center;
+      margin-bottom: 8px;
+    }
 
-p {
-  text-align: center;
-  opacity: 0.9;
-  margin-bottom: 30px;
-}
+    p {
+      text-align: center;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
 
-.form-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-}
+    .form-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
 
-.form-grid input,
-.form-grid select,
-.form-grid textarea {
-  flex: 1 1 calc(50% - 9px);
-  padding: 14px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 8px;
-  color: #fff;
-  outline: none;
-}
+    .form-grid input,
+    .form-grid select,
+    .form-grid textarea {
+      flex: 1 1 calc(50% - 9px);
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: #fff;
+      outline: none;
+    }
 
-textarea {
-  flex: 1 1 100%;
-  min-height: 90px;
-  resize: none;
-}
+    textarea {
+      flex: 1 1 100%;
+      min-height: 90px;
+      resize: none;
+    }
 
-input::placeholder,
-textarea::placeholder {
-  color: #ddd;
-}
+    input::placeholder,
+    textarea::placeholder {
+      color: #ddd;
+    }
 
-.phone-field {
-  display: flex;
-  align-items: center;
-  flex: 1 1 calc(50% - 9px);
-  background: rgba(255,255,255,0.1);
-  border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.2);
-}
+    .phone-field {
+      display: flex;
+      align-items: center;
+      flex: 1 1 calc(50% - 9px);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
 
-.country-code {
-  padding: 0 12px;
-  white-space: nowrap;
-}
+    .country-code {
+      padding: 0 12px;
+      white-space: nowrap;
+    }
 
-.phone-field input {
-  border: none;
-  background: transparent;
-  padding: 14px;
-  flex: 1;
-}
+    .phone-field input {
+      border: none;
+      background: transparent;
+      padding: 14px;
+      flex: 1;
+    }
 
-.captcha-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex: 1 1 100%;
-}
+    .captcha-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1 1 100%;
+    }
 
-canvas {
-  background: #fff;
-  border-radius: 6px;
-}
+    .captcha-container{
+      margin-top: 22px;
+    }
 
-#reloadCaptcha {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: #fff;
-}
+    canvas {
+      background: #fff;
+      border-radius: 6px;
+    }
 
-.submit-btn {
-  display: block;
-  margin: 30px auto 0;
-  padding: 14px 36px;
-  background: #f5c400;
-  color: #000;
-  border: none;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-}
+    #reloadCaptcha {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #fff;
+    }
 
-.submit-btn:hover {
-  background: #ffcf28;
-}
+    .submit-btn {
+      display: block;
+      margin: 30px auto 0;
+      padding: 14px 36px;
+      background: #f5c400;
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .form-grid input,
-  .form-grid select,
-  .phone-field {
-    flex: 1 1 100%;
-  }
-}
+    .submit-btn:hover {
+      background: #ffcf28;
+    }
 
+    /* Responsive */
+    @media (max-width: 768px) {
+
+      .form-grid input,
+      .form-grid select,
+      .phone-field {
+        flex: 1 1 100%;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-<div class="overlay">
-  <div class="form-container">
-    <button class="close-btn">&times;</button>
+  <div class="overlay">
+    <div class="form-container">
+      <button class="close-btn">&times;</button>
 
-    <h2>Like what you see?</h2>
-    <p>Drop in your details and let’s work on<br>your brand together</p>
+      <h2>Like what you see?</h2>
+      <p>Drop in your details and let’s work on<br>your brand together</p>
 
-    <form id="contactForm">
-      <div class="form-grid">
-        <input type="text" placeholder="Full Name*" required>
-        <input type="text" placeholder="Designation*" required>
+      <form id="contactForm">
+        <div class="form-grid">
+          <input type="text" placeholder="Full Name*" required>
+          <input type="text" placeholder="Designation*" required>
 
-        <input type="email" placeholder="Email Id*" required>
+          <input type="email" placeholder="Email Id*" required>
 
-        <div class="phone-field">
-          <span class="country-code">🇮🇳 +91</span>
-          <input type="tel" placeholder="Phone Number*" required>
+          <div class="phone-field">
+            <span class="country-code">🇮🇳 +91</span>
+            <input type="tel" placeholder="Phone Number*" required>
+          </div>
+
+          <input type="text" placeholder="Company*" required>
+
+          <select required>
+            <option value="">Looking for*</option>
+            <option>Branding</option>
+            <option>Website</option>
+            <option>Marketing</option>
+            <option>Consultation</option>
+          </select>
+
+          <!-- <input type="text" placeholder="Industry"> -->
+
+          <textarea placeholder="Message/Comment"></textarea>
+
+          <div class="captcha-container">
+            <div class="captcha-box">
+              <canvas id="captchaCanvas"></canvas>
+              <button type="button" id="reloadCaptcha">↻</button>
+              <input type="text" id="captchaInput" placeholder="Enter captcha code" required>
+            </div>
+          </div>
+          <button type="submit" class="submit-btn">Submit now</button>
         </div>
 
-        <input type="text" placeholder="Company*" required>
-
-        <select required>
-          <option value="">Looking for*</option>
-          <option>Branding</option>
-          <option>Website</option>
-          <option>Marketing</option>
-          <option>Consultation</option>
-        </select>
-
-        <input type="text" placeholder="Industry">
-
-        <textarea placeholder="Message/Comment"></textarea>
-
-        <div class="captcha-box">
-          <canvas id="captchaCanvas"></canvas>
-          <button type="button" id="reloadCaptcha">↻</button>
-          <input type="text" id="captchaInput" placeholder="Enter captcha code" required>
-        </div>
-      </div>
-
-      <button type="submit" class="submit-btn">Submit now</button>
-    </form>
+      </form>
+    </div>
   </div>
-</div>
 
-<script>
-  const canvas = document.getElementById("captchaCanvas");
-const ctx = canvas.getContext("2d");
+  <script>
+    const canvas = document.getElementById("captchaCanvas");
+    const ctx = canvas.getContext("2d");
 
-canvas.width = 120;
-canvas.height = 45;
+    canvas.width = 120;
+    canvas.height = 45;
 
-let captchaCode = "";
+    let captchaCode = "";
 
-function randomChar() {
-  const chars =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
-  return chars.charAt(Math.floor(Math.random() * chars.length));
-}
+    function randomChar() {
+      const chars =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+      return chars.charAt(Math.floor(Math.random() * chars.length));
+    }
 
-function generateCaptcha() {
-  captchaCode = "";
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+    function generateCaptcha() {
+      captchaCode = "";
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Background
-  ctx.fillStyle = "#f2f2f2";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Background
+      ctx.fillStyle = "#f2f2f2";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // Noise lines
-  for (let i = 0; i < 4; i++) {
-    ctx.strokeStyle = `rgb(${Math.random()*150},${Math.random()*150},${Math.random()*150})`;
-    ctx.beginPath();
-    ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
-    ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
-    ctx.stroke();
-  }
+      // Noise lines
+      for (let i = 0; i < 4; i++) {
+        ctx.strokeStyle = `rgb(${Math.random() * 150},${Math.random() * 150},${Math.random() * 150})`;
+        ctx.beginPath();
+        ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
+        ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
+        ctx.stroke();
+      }
 
-  // Characters
-  for (let i = 0; i < 6; i++) {
-    const char = randomChar();
-    captchaCode += char;
+      // Characters
+      for (let i = 0; i < 6; i++) {
+        const char = randomChar();
+        captchaCode += char;
 
-    ctx.save();
-    ctx.font = "22px Arial";
-    ctx.fillStyle = "#000";
-    ctx.translate(20 + i * 15, 30);
-    ctx.rotate((Math.random() - 0.5) * 0.5);
-    ctx.fillText(char, 0, 0);
-    ctx.restore();
-  }
-}
+        ctx.save();
+        ctx.font = "22px Arial";
+        ctx.fillStyle = "#000";
+        ctx.translate(20 + i * 15, 30);
+        ctx.rotate((Math.random() - 0.5) * 0.5);
+        ctx.fillText(char, 0, 0);
+        ctx.restore();
+      }
+    }
 
-// Initial captcha
-generateCaptcha();
-
-// Reload captcha
-document.getElementById("reloadCaptcha").addEventListener("click", generateCaptcha);
-
-// Form validation
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  const userInput = document.getElementById("captchaInput").value.trim();
-
-  if (userInput !== captchaCode) {
-    alert("Captcha does not match. Please try again.");
+    // Initial captcha
     generateCaptcha();
-    e.preventDefault();
-  }
-});
 
-</script>
+    // Reload captcha
+    document.getElementById("reloadCaptcha").addEventListener("click", generateCaptcha);
+
+    // Form validation
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      const userInput = document.getElementById("captchaInput").value.trim();
+
+      if (userInput !== captchaCode) {
+        alert("Captcha does not match. Please try again.");
+        generateCaptcha();
+        e.preventDefault();
+      }
+    });
+
+  </script>
 
 </body>
+
 </html>
