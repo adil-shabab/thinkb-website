@@ -12257,6 +12257,12 @@ section {
     bottom: 0px;
 }
 
+@media screen and (max-width: 900px) {
+        .service-area .section-title {
+        margin-bottom: 15px;
+    }
+}
+
 
 
 @media screen and (max-width: 500px) {
@@ -12380,6 +12386,69 @@ section {
     height: 400px;
     object-fit: cover;
     border-radius: 15px;
+}
+
+@media screen and (max-width: 1400px) {
+.portfolio__section_detail .bx__p img {
+    width: 100%;
+    height: 325px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+}
+
+@media screen and (max-width: 1200px) {
+.portfolio__section_detail .bx__p img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+}
+
+@media screen and (max-width: 995px) {
+.portfolio__section_detail .bx__p img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+}
+
+@media screen and (max-width: 767px) {
+.portfolio__section_detail .bx__p img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+}
+
+@media screen and (max-width: 500px) {
+.portfolio__section_detail .bx__p img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+}
+
+@media screen and (max-width: 380px) {
+.portfolio__section_detail .bx__p img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+}
+
+@media screen and (max-width: 350px) {
+.portfolio__section_detail .bx__p img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    border-radius: 15px;
+}
 }
 
 .nuvotec__portfolio__section_detail {
