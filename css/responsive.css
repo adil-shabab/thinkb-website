@@ -337,3 +337,9 @@
         margin-top: -560px !important;
     }
 }
+
+@media screen and (min-width: 790px) and (max-width: 900px) {
+    .elementor-1234 .elementor-element.elementor-element-c71dcc0 .magnetic_hero .hero__images {
+        margin-top: -339px !important;
+    }
+}
