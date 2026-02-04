@@ -667,12 +667,13 @@
 
 <body class="font-heading-recoleta-medium">
 
- 
+
 
 
   <!-- Cursor Animation -->
-  <div class="cursor1"></div>
-   <!-- <div class="cursor2"></div> -->
+  <div class="cursor1" style="opacity: 0.3;"></div>
+
+  <!-- <div class="cursor2"></div> -->
 
   <!-- Sroll to top -->
   <div class="progress-wrap">
@@ -725,10 +726,10 @@
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
             <li>
-  <a href="gallery.html"> 
-    @<span style="text-transform: lowercase;">think</span><span style="text-transform: uppercase;">b</span>
-  </a>
-</li>
+              <a href="gallery.html">
+                @<span style="text-transform: lowercase;">think</span><span style="text-transform: uppercase;">b</span>
+              </a>
+            </li>
             <li><a href="blogs.html">Blogs</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
@@ -771,10 +772,11 @@
               </li>
 
               <li>
-  <a href="gallery.html"> 
-    @<span style="text-transform: lowercase;">think</span><span style="text-transform: uppercase;">b</span>
-  </a>
-</li>
+                <a href="gallery.html">
+                  @<span style="text-transform: lowercase;">think</span><span
+                    style="text-transform: uppercase;">b</span>
+                </a>
+              </li>
               <li><a href="blogs.html">Blogs</a></li>
             </ul>
           </nav>
@@ -808,7 +810,11 @@
                   <div class="contact__banner__content">
                     <h2 style="font-size: 148px;padding-top: 65px;">Let's talk</h2>
                     <div>
-                      <p style="margin-left: 10px;">Great design doesn’t start with visuals, it starts with listening. Tell us your idea, your goal, or even a spark of inspiration, and we’ll shape it into a creative experience that truly resonates.Through branding, visuals, and digital design, we work with you to craft stories that engage, inspire, and leave a lasting impression. Let’s build something meaningful together.</p>
+                      <p style="margin-left: 10px;">Great design doesn’t start with visuals, it starts with listening.
+                        Tell us your idea, your goal, or even a spark of inspiration, and we’ll shape it into a creative
+                        experience that truly resonates.Through branding, visuals, and digital design, we work with you
+                        to craft stories that engage, inspire, and leave a lasting impression. Let’s build something
+                        meaningful together.</p>
                     </div>
                   </div>
                   <div class="contact__video__container">
@@ -834,31 +840,31 @@
               <div class="contact____form"
                 style="position: absolute; top: 34%; transform: translateY(-50%); z-index: 1000;">
                 <h3>Get in touch</h3>
-                <form>
-                  <input type="text" placeholder="Full Name" required />
-                  <input type="text" placeholder="Designation" required />
-                  <input type="email" placeholder="Email ID" required />
-                  <input type="text" placeholder="Phone Number" required />
-                  <input type="text" placeholder="Company" required />
-                  <!-- <label for="industry" style="font-size:13px;color:#555;">Looking for Industry</label> -->
+                <form id="contact_form">
+                  <input type="text" name="from_name" placeholder="Full Name" required />
+                  <input type="text" name="designation" placeholder="Designation" required />
+                  <input type="email" name="from_email" placeholder="Email ID" required />
+                  <input type="text" name="phone_number" placeholder="Phone Number" required />
+                  <input type="text" name="company_name" placeholder="Company" required />
                   <div class="dropdown">
                     <div class="dropdown-toggle" id="dropdownToggle">
                       <span id="dropdownSelected">Looking for</span>
                       <i class="fa-solid fa-chevron-down" id="dropdownIcon"></i>
                     </div>
                     <div class="dropdown-menu" id="dropdownMenu">
-                      <label><input type="checkbox" value="Web Designing"> Web Designing</label>
-                      <label><input type="checkbox" value="Branding"> Branding</label>
-                      <label><input type="checkbox" value="UI/UX Designing"> UI/UX Designing</label>
-                      <label><input type="checkbox" value="Digital Marketing"> Digital Marketing</label>
-                      <label><input type="checkbox" value="Graphic Design"> Graphic Design</label>
+                      <label><input name="requirement" type="checkbox" value="Web Designing"> Web Designing</label>
+                      <label><input name="requirement" type="checkbox" value="Branding"> Branding</label>
+                      <label><input name="requirement" type="checkbox" value="UI/UX Designing"> UI/UX Designing</label>
+                      <label><input name="requirement" type="checkbox" value="Digital Marketing"> Digital
+                        Marketing</label>
+                      <label><input name="requirement" type="checkbox" value="Graphic Design"> Graphic Design</label>
                     </div>
                   </div>
 
 
                   <div class="selected-items" id="selectedItems"></div>
-                  <textarea placeholder="Message / Comment" rows="3"></textarea>
-                  <button type="submit">SEND MESSAGE →</button>
+                  <textarea name="message" placeholder="Message / Comment" rows="3"></textarea>
+                  <button id="submit_btn" type="submit">SEND MESSAGE →</button>
                 </form>
               </div>
 
@@ -921,10 +927,11 @@
                   <li><a href="services.html">Our Services</a></li>
                   <li><a href="portfolio.html">Our Portfolio</a></li>
                   <li>
-  <a href="gallery.html"> 
-    @<span style="text-transform: lowercase;">think</span><span style="text-transform: uppercase;">b</span>
-  </a>
-</li>
+                    <a href="gallery.html">
+                      @<span style="text-transform: lowercase;">think</span><span
+                        style="text-transform: uppercase;">b</span>
+                    </a>
+                  </li>
                   <li><a href="blogs.html">Blogs</a></li>
                   <li><a href="contact.html">Contact Us</a></li>
                   <li><a href="terms-and-condition.html">Terms & Condition</a></li>
@@ -951,7 +958,7 @@
                       Cross Rd, East of NGEF Layout, Kasturi
                       Nagar, Bengaluru, Karnataka 560043</a></li>
                   <li><a href="tel:+919966992122">+91 996699 2122</a></li>
-                                        <li><a href="mailto:hello@thinkb.agency">+91 888098 8009</a></li>
+                  <li><a href="mailto:hello@thinkb.agency">+91 888098 8009</a></li>
                   <li><a href="mailto:hello@thinkb.agency">hello@thinkb.agency</a></li>
                 </ul>
               </div>
@@ -962,7 +969,9 @@
             <div class="container">
               <div class="copyright-area-inner">
                 <div class="copyright-text">
-                  <p class="text">© <script>document.write(new Date().getFullYear())</script> <a href="https://thinkb.agency" target="_blank">thinkB Creative Agency. </a>All
+                  <p class="text">©
+                    <script>document.write(new Date().getFullYear())</script> <a href="https://thinkb.agency"
+                      target="_blank">thinkB Creative Agency. </a>All
                     Rights Reserved
                   </p>
                 </div>
@@ -993,6 +1002,59 @@
   <script src="js/main.js"></script>
   <script src="js/error-handling.js"></script>
   <script src="js/offcanvas.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    // Initialize EmailJS
+    (function () {
+      emailjs.init("mqJ0AN9GGQJebXC6I");
+    })();
+
+    const form = document.getElementById("contact_form");
+    const submitBtn = document.getElementById("submit_btn");
+    const originalBtnText = submitBtn.innerHTML;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Disable button + change text
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = "Sending...";
+
+      emailjs.sendForm("service_za5lqht", "template_uwbqls5", this).then(
+        function () {
+          Swal.fire({
+            icon: "success",
+            title: "Message Sent!",
+            text: "Thank you for contacting us. We'll get back to you soon.",
+            confirmButtonColor: "#3085d6",
+          });
+
+          form.reset();
+
+          // Restore button
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        },
+        function (error) {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Failed to send message. Please try again later.",
+            confirmButtonColor: "#d33",
+          });
+
+          // Restore button even on error
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
+      );
+    });
+  </script>
+
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
