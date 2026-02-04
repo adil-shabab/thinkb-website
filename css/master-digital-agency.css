@@ -10097,7 +10097,7 @@ section {
     padding: 0 10px 0 50px;
 
     background-color: #db303e;
-    color: #000;
+    color: white;
 
     border: none;
     border-radius: 70px;
@@ -10126,12 +10126,15 @@ section {
 
 .mil-button img {
     transition: transform 0.25s ease;
+      filter: brightness(0) invert(1);
+
 }
 
 /* Optional hover effect */
 .mil-button:hover {
     background-color: #f13544;
     transform: scale(1.02);
+    color: white;
 }
 
 
