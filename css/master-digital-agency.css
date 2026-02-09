@@ -6363,6 +6363,7 @@ section {
     transition: transform 0.5s;
     transform-origin: center top;
     backface-visibility: hidden;
+    color: white;
 }
 
 .btn-text-flip:hover span {
@@ -13424,7 +13425,6 @@ section {
     width: 32%;
 }
 
-.first_gallery_section .flex__box_gallery_second .third__bx {}
 
 .first_gallery_section .flex__box_gallery_second .third__bx img {
     width: 100%;
@@ -13484,6 +13484,18 @@ section {
     font-size: 18px;
 }
 
+
+@media (max-width: 1400px) {
+
+    .first_gallery_section .flex__box_gallery_first .first__bx .txt_first_content p {
+    font-size: 15px;
+}
+
+
+    .first_gallery_section .flex__box_gallery_third .fifth__bx .txt_first_content p {
+    font-size: 15px;
+}
+}
 
 
 .gallery____photos {
