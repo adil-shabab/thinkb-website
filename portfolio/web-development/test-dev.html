@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[Project Name] — Case Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300;1,600&family=Outfit:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* ─────────────────────────────────────
+   TOKENS — change these per project
+───────────────────────────────────── */
+        :root {
+            --accent: #1a1a1a;
+            /* swap per project e.g. #2563eb for blue */
+            --accent-pale: #f2f2f0;
+            /* very light tint of accent */
+            --black: #111110;
+            --white: #ffffff;
+            --off-white: #f8f7f5;
+            --gray-100: #f2f1ef;
+            --gray-300: #d6d4cf;
+            --gray-500: #9a9690;
+            --gray-700: #5a5751;
+            --text: #1a1917;
+            --serif: 'Fraunces', Georgia, serif;
+            --sans: 'Outfit', sans-serif;
+            --radius: 16px;
+            --radius-sm: 8px;
+        }
+
+        /* ─── Reset ─── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--white);
+            color: var(--text);
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ─── Scroll reveal ─── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        .d1 {
+            transition-delay: 0.1s;
+        }
+
+        .d2 {
+            transition-delay: 0.2s;
+        }
+
+        .d3 {
+            transition-delay: 0.3s;
+        }
+
+        /* ─── Progress bar ─── */
+        #progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background: var(--accent);
+            width: 0%;
+            z-index: 9999;
+            transition: width 0.08s linear;
+        }
+
+        /* ─── Layout helpers ─── */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .container-sm {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        /* ─── Typography ─── */
+        .label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gray-500);
+            margin-bottom: 20px;
+        }
+
+        .label-accent {
+            color: var(--accent);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--serif);
+            font-weight: 300;
+            line-height: 1.1;
+        }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: var(--gray-300);
+            border: none;
+        }
+
+        /* ══════════════════════════════════════
+   01. HERO
+══════════════════════════════════════ */
+        .hero {
+            padding: 120px 0 80px;
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        .hero-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 64px;
+        }
+
+        .hero-breadcrumb {
+            font-size: 13px;
+            color: var(--gray-500);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-breadcrumb a {
+            color: var(--gray-500);
+        }
+
+        .hero-breadcrumb a:hover {
+            color: var(--text);
+        }
+
+        .hero-breadcrumb span {
+            color: var(--gray-300);
+        }
+
+        .hero-tag {
+            font-size: 12px;
+            font-weight: 400;
+            color: var(--gray-700);
+            border: 1px solid var(--gray-300);
+            border-radius: 100px;
+            padding: 5px 14px;
+        }
+
+        .hero-title {
+            font-size: clamp(52px, 8vw, 108px);
+            font-weight: 300;
+            font-style: italic;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+            color: var(--black);
+            margin-bottom: 40px;
+        }
+
+        .hero-bottom {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: end;
+        }
+
+        .hero-desc {
+            font-size: 18px;
+            font-weight: 300;
+            color: var(--gray-700);
+            line-height: 1.75;
+        }
+
+        .hero-meta-row {
+            display: flex;
+            gap: 40px;
+            justify-content: flex-end;
+        }
+
+        .hero-meta-item {}
+
+        .hero-meta-label {
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gray-500);
+            margin-bottom: 4px;
+        }
+
+        .hero-meta-value {
+            font-size: 15px;
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        /* Hero image — full width */
+        .hero-image {
+            width: 100%;
+            aspect-ratio: 16/7;
+            background: var(--gray-100);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image-placeholder {
+            text-align: center;
+        }
+
+        .hero-image-placeholder p {
+            font-size: 13px;
+            color: var(--gray-500);
+            margin-top: 10px;
+        }
+
+
+        /* ══════════════════════════════════════
+   02. OVERVIEW STRIP
+══════════════════════════════════════ */
+        .overview {
+            padding: 0;
+            background: var(--off-white);
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .overview-cell {
+            padding: 36px 32px;
+            border-right: 1px solid var(--gray-300);
+        }
+
+        .overview-cell:last-child {
+            border-right: none;
+        }
+
+        .overview-cell-label {
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gray-500);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .overview-cell-value {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 4px;
+        }
+
+        .tag {
+            font-size: 10px;
+            padding: 3px 10px;
+            border-radius: 100px;
+            background: var(--white);
+            border: 1px solid var(--gray-300);
+            color: var(--gray-700);
+        }
+
+        .live-link {
+            color: var(--accent);
+            font-size: 14px;
+        }
+
+        .live-link:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ══════════════════════════════════════
+   03. THE BRIEF
+══════════════════════════════════════ */
+        .brief {
+            background: var(--white);
+        }
+
+        .brief-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .brief-quote {
+            font-family: var(--serif);
+            font-style: italic;
+            font-weight: 300;
+            font-size: clamp(24px, 3vw, 36px);
+            line-height: 1.3;
+            color: var(--black);
+            margin-bottom: 32px;
+            padding-left: 24px;
+            border-left: 1.5px solid var(--accent);
+        }
+
+        .brief-body {
+            font-size: 16px;
+            font-weight: 300;
+            color: var(--gray-700);
+            line-height: 1.85;
+            margin-bottom: 16px;
+        }
+
+        .challenge-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .challenge-item {
+            background: var(--off-white);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--gray-100);
+            padding: 24px;
+        }
+
+        .challenge-item-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .challenge-item-desc {
+            font-size: 13px;
+            color: var(--gray-500);
+            line-height: 1.65;
+        }
+
+        .challenge-num {
+            font-family: var(--serif);
+            font-size: 11px;
+            color: var(--gray-300);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+
+        /* ══════════════════════════════════════
+   04. PROCESS
+══════════════════════════════════════ */
+        .process {
+            background: var(--black);
+            padding: 100px 0;
+        }
+
+        .process-header {
+            margin-bottom: 72px;
+        }
+
+        .process-label {
+            color: var(--gray-500) !important;
+        }
+
+        .process-title {
+            font-family: var(--serif);
+            font-size: clamp(36px, 5vw, 64px);
+            font-weight: 300;
+            font-style: italic;
+            color: var(--white);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: #2a2a28;
+        }
+
+        .process-step {
+            background: var(--black);
+            padding: 40px 32px;
+        }
+
+        .process-step:hover {
+            background: #161614;
+        }
+
+        .step-index {
+            font-family: var(--serif);
+            font-size: 40px;
+            font-weight: 300;
+            color: #2a2a28;
+            margin-bottom: 24px;
+            line-height: 1;
+        }
+
+        .step-phase {
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gray-500);
+            margin-bottom: 10px;
+        }
+
+        .step-name {
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 300;
+            color: var(--white);
+            margin-bottom: 14px;
+            font-style: italic;
+        }
+
+        .step-desc {
+            font-size: 13px;
+            color: #6a6860;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .step-duration {
+            font-size: 12px;
+            color: #444240;
+        }
+
+        .step-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 14px;
+        }
+
+        .step-tool {
+            font-size: 10px;
+            padding: 3px 9px;
+            border-radius: 4px;
+            background: #1e1e1c;
+            color: #6a6860;
+            border: 1px solid #2a2a28;
+        }
+
+
+        /* ══════════════════════════════════════
+   05. DESIGN DECISIONS
+══════════════════════════════════════ */
+        .decisions {
+            background: var(--white);
+        }
+
+        .decision-row {
+            display: grid;
+            grid-template-columns: 56px 1fr;
+            gap: 48px;
+            padding: 56px 0;
+            border-top: 1px solid var(--gray-100);
+        }
+
+        .decision-row:last-child {
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .decision-num {
+            font-family: var(--serif);
+            font-weight: 300;
+            font-style: italic;
+            font-size: 20px;
+            color: var(--gray-300);
+            padding-top: 6px;
+        }
+
+        .decision-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        .decision-label-tag {
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gray-500);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .decision-heading {
+            font-family: var(--serif);
+            font-size: clamp(20px, 2.5vw, 28px);
+            font-weight: 300;
+            color: var(--black);
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+
+        .decision-body {
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--gray-700);
+            line-height: 1.8;
+        }
+
+        .decision-visual {
+            background: var(--gray-100);
+            border-radius: var(--radius);
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .decision-visual-placeholder {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .decision-visual-placeholder p {
+            font-size: 12px;
+            color: var(--gray-500);
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+
+
+        /* ══════════════════════════════════════
+   06. SHOWCASE
+══════════════════════════════════════ */
+        .showcase {
+            background: var(--off-white);
+            padding-bottom: 0;
+        }
+
+        .showcase-header {
+            margin-bottom: 60px;
+        }
+
+        .showcase-title {
+            font-family: var(--serif);
+            font-size: clamp(32px, 4vw, 52px);
+            font-weight: 300;
+            font-style: italic;
+            color: var(--black);
+        }
+
+        /* Browser mockup */
+        .browser {
+            background: var(--white);
+            border-radius: var(--radius) var(--radius) 0 0;
+            border: 1px solid var(--gray-300);
+            border-bottom: none;
+            overflow: hidden;
+            margin: 0 40px;
+        }
+
+        .browser-bar {
+            background: var(--gray-100);
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--gray-300);
+        }
+
+        .url-bar {
+            flex: 1;
+            background: var(--white);
+            border-radius: 6px;
+            padding: 5px 14px;
+            font-size: 12px;
+            color: var(--gray-500);
+            border: 1px solid var(--gray-300);
+            margin: 0 12px;
+        }
+
+        .browser-screen {
+            background: var(--gray-100);
+            min-height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .screen-placeholder {
+            text-align: center;
+        }
+
+        .screen-placeholder p {
+            font-size: 13px;
+            color: var(--gray-500);
+            margin-top: 8px;
+        }
+
+        /* Device row */
+        .device-row {
+            display: grid;
+            grid-template-columns: 1fr 260px;
+            gap: 20px;
+            padding: 20px 40px 0;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .tablet-frame {
+            background: var(--white);
+            border-radius: var(--radius);
+            border: 1px solid var(--gray-300);
+            overflow: hidden;
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .frame-placeholder {
+            text-align: center;
+        }
+
+        .frame-placeholder p {
+            font-size: 12px;
+            color: var(--gray-500);
+            margin-top: 6px;
+        }
+
+        .phone-frame {
+            background: var(--white);
+            border-radius: 28px;
+            border: 1px solid var(--gray-300);
+            overflow: hidden;
+            min-height: 320px;
+        }
+
+        .phone-notch {
+            width: 60px;
+            height: 16px;
+            background: var(--gray-100);
+            border-radius: 0 0 10px 10px;
+            margin: 0 auto;
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        .phone-content {
+            padding: 20px 16px;
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Gallery grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            padding: 20px 40px 100px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .gallery-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            border: 1px solid var(--gray-300);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-card.tall {
+            aspect-ratio: 3/4;
+            grid-row: span 1;
+        }
+
+        .gallery-card-inner {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .gallery-card-inner p {
+            font-size: 12px;
+            color: var(--gray-500);
+            margin-top: 6px;
+            line-height: 1.5;
+        }
+
+
+        /* ══════════════════════════════════════
+   07. RESULTS
+══════════════════════════════════════ */
+        .results {
+            background: var(--white);
+        }
+
+        .results-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .results-title {
+            font-family: var(--serif);
+            font-size: clamp(32px, 4vw, 52px);
+            font-weight: 300;
+            font-style: italic;
+            color: var(--black);
+            margin-bottom: 20px;
+        }
+
+        .results-body {
+            font-size: 16px;
+            font-weight: 300;
+            color: var(--gray-700);
+            line-height: 1.8;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .stat-card {
+            background: var(--off-white);
+            border-radius: var(--radius);
+            border: 1px solid var(--gray-100);
+            padding: 28px 24px;
+        }
+
+        .stat-number {
+            font-family: var(--serif);
+            font-size: 52px;
+            font-weight: 300;
+            color: var(--black);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-unit {
+            font-size: 28px;
+            color: var(--gray-500);
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--gray-500);
+            line-height: 1.5;
+        }
+
+        .stat-bar-track {
+            height: 2px;
+            background: var(--gray-300);
+            border-radius: 100px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .stat-bar-fill {
+            height: 2px;
+            background: var(--accent);
+            border-radius: 100px;
+            width: 0%;
+            transition: width 1.2s ease;
+        }
+
+        .award-row {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .award-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 18px;
+            border: 1px solid var(--gray-100);
+            border-radius: var(--radius-sm);
+            background: var(--off-white);
+        }
+
+        .award-icon {
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .award-text {
+            font-size: 13px;
+            color: var(--gray-700);
+        }
+
+        .award-text strong {
+            display: block;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 13px;
+        }
+
+
+        /* ══════════════════════════════════════
+   08. TESTIMONIAL
+══════════════════════════════════════ */
+        .testimonial {
+            background: var(--off-white);
+            border-top: 1px solid var(--gray-300);
+        }
+
+        .testimonial-inner {
+            max-width: 780px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .quote-icon {
+            font-family: var(--serif);
+            font-size: 80px;
+            font-weight: 300;
+            color: var(--gray-300);
+            line-height: 0.5;
+            display: block;
+            margin-bottom: 36px;
+        }
+
+        .quote-text {
+            font-family: var(--serif);
+            font-style: italic;
+            font-weight: 300;
+            font-size: clamp(20px, 2.8vw, 30px);
+            color: var(--black);
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+
+        .quote-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--gray-100);
+            border: 1px solid var(--gray-300);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--serif);
+            font-size: 16px;
+            color: var(--gray-500);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .author-name {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text);
+            text-align: left;
+        }
+
+        .author-role {
+            font-size: 13px;
+            color: var(--gray-500);
+            text-align: left;
+        }
+
+
+        /* ══════════════════════════════════════
+   09. NEXT PROJECT
+══════════════════════════════════════ */
+        .next {
+            background: var(--white);
+            border-top: 1px solid var(--gray-300);
+        }
+
+        .next-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            min-height: 400px;
+        }
+
+        .next-left {
+            padding: 80px 60px 80px 0;
+            border-right: 1px solid var(--gray-300);
+        }
+
+        .next-right {
+            padding: 80px 0 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .next-eyebrow {
+            margin-bottom: 12px;
+        }
+
+        .next-title {
+            font-family: var(--serif);
+            font-size: clamp(36px, 5vw, 64px);
+            font-weight: 300;
+            font-style: italic;
+            color: var(--black);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .next-body {
+            font-size: 16px;
+            font-weight: 300;
+            color: var(--gray-700);
+            line-height: 1.75;
+            margin-bottom: 40px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--black);
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 400;
+            padding: 14px 28px;
+            border-radius: 100px;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gray-700);
+            font-size: 14px;
+            font-weight: 400;
+            border-bottom: 1px solid var(--gray-300);
+            padding-bottom: 2px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .btn-ghost:hover {
+            color: var(--text);
+            border-color: var(--text);
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .next-project-card {
+            background: var(--off-white);
+            border-radius: var(--radius);
+            border: 1px solid var(--gray-100);
+            overflow: hidden;
+            cursor: pointer;
+            transition: border-color 0.2s;
+            text-decoration: none;
+            display: block;
+        }
+
+        .next-project-card:hover {
+            border-color: var(--gray-300);
+        }
+
+        .next-project-img {
+            background: var(--gray-100);
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .next-project-img p {
+            font-size: 12px;
+            color: var(--gray-500);
+        }
+
+        .next-project-info {
+            padding: 20px 24px;
+        }
+
+        .next-project-cat {
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gray-500);
+            margin-bottom: 6px;
+        }
+
+        .next-project-name {
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+
+        .next-project-arrow {
+            font-size: 13px;
+            color: var(--gray-500);
+        }
+
+        .progress-dots {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 24px;
+        }
+
+        .pdot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--gray-300);
+        }
+
+        .pdot.on {
+            background: var(--text);
+        }
+
+        .pdot-label {
+            font-size: 11px;
+            color: var(--gray-500);
+            margin-left: 4px;
+        }
+
+
+        /* ══════════════════════════════════════
+   PLACEHOLDER STYLES
+══════════════════════════════════════ */
+        .ph-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gray-300);
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-500);
+            font-size: 16px;
+        }
+
+        .ph-icon-sm {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--gray-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-500);
+            font-size: 12px;
+            margin: 0 auto 6px;
+        }
+
+        .ph-line {
+            height: 1px;
+            background: var(--gray-300);
+            border-radius: 100px;
+            margin: 6px auto;
+        }
+
+
+        /* ─── Responsive ─── */
+        @media (max-width: 920px) {
+            section {
+                padding: 72px 0;
+            }
+
+            .container,
+            .container-sm {
+                padding: 0 24px;
+            }
+
+            .hero-bottom,
+            .brief-layout,
+            .results-layout,
+            .next-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-meta-row {
+                justify-content: flex-start;
+            }
+
+            .next-left {
+                border-right: none;
+                padding-right: 0;
+            }
+
+            .next-right {
+                padding-left: 0;
+            }
+
+            .overview-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .overview-cell:nth-child(2) {
+                border-right: none;
+            }
+
+            .overview-cell:nth-child(4) {
+                border-right: none;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .decision-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .decision-visual {
+                display: none;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+                padding: 16px 24px 72px;
+            }
+
+            .device-row {
+                grid-template-columns: 1fr;
+                padding: 16px 24px 0;
+            }
+
+            .browser {
+                margin: 0 24px;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-title {
+                font-size: 48px;
+            }
+
+            .hero-top {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .decision-row {
+                grid-template-columns: 1fr;
+            }
+
+            .decision-num {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ─ Progress bar ─ -->
+    <div id="progress"></div>
+
+    <!-- ╔══════════════════════════════════════╗
+     ║  01 · HERO                          ║
+     ╚══════════════════════════════════════╝ -->
+    <section class="hero">
+        <div class="container">
+
+            <div class="hero-top reveal">
+                <nav class="hero-breadcrumb">
+                    <a href="#">Work</a>
+                    <span>/</span>
+                    <span>[Project Name]</span>
+                </nav>
+                <span class="hero-tag">[Category — e.g. E-Commerce]</span>
+            </div>
+
+            <h1 class="hero-title reveal">
+                <!-- Replace with client / project name. Use <em> for italic accent word -->
+                [Client<br><em>Name]</em>
+            </h1>
+
+            <div class="hero-bottom">
+                <p class="hero-desc reveal">
+                    <!-- 2–3 sentences: what you did and the core outcome -->
+                    [A short, punchy description of the project and what it achieved. Lead with the outcome, not the
+                    process. Keep it to 2–3 sentences max.]
+                </p>
+                <div class="hero-meta-row reveal d2">
+                    <div class="hero-meta-item">
+                        <p class="hero-meta-label">Client</p>
+                        <p class="hero-meta-value">[Client Name]</p>
+                    </div>
+                    <div class="hero-meta-item">
+                        <p class="hero-meta-label">Year</p>
+                        <p class="hero-meta-value">[20XX]</p>
+                    </div>
+                    <div class="hero-meta-item">
+                        <p class="hero-meta-label">Duration</p>
+                        <p class="hero-meta-value">[X Weeks]</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Full-width hero image -->
+        <div class="hero-image reveal" style="margin-top: 64px;">
+            <!-- Replace entire div content with: <img src="your-hero-image.jpg" alt="[Project Name] hero"> -->
+            <div class="hero-image-placeholder">
+                <div class="ph-icon">⬚</div>
+                <p>Replace with full-width project hero image (recommended 1600×700px)</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════╗
+     ║  02 · OVERVIEW STRIP                ║
+     ╚══════════════════════════════════════╝ -->
+    <div class="overview reveal">
+        <div class="overview-grid container">
+            <div class="overview-cell">
+                <span class="overview-cell-label">Client</span>
+                <span class="overview-cell-value">[Client Name]</span>
+            </div>
+            <div class="overview-cell">
+                <span class="overview-cell-label">Industry</span>
+                <span class="overview-cell-value">[Industry — e.g. Luxury Retail]</span>
+            </div>
+            <div class="overview-cell">
+                <span class="overview-cell-label">Timeline</span>
+                <span class="overview-cell-value">[Month – Month Year]</span>
+            </div>
+            <div class="overview-cell">
+                <span class="overview-cell-label">Live site</span>
+                <a href="#" class="live-link">[clientwebsite.com] ↗</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ╔══════════════════════════════════════╗
+     ║  03 · THE BRIEF                     ║
+     ╚══════════════════════════════════════╝ -->
+    <section class="brief">
+        <div class="container">
+            <div class="brief-layout">
+
+                <div class="reveal">
+                    <span class="label">The Brief</span>
+                    <blockquote class="brief-quote">
+                        <!-- A real or paraphrased quote from the client brief. Keep it to one sentence. -->
+                        "[The client's exact challenge in their own words — e.g. Our products are premium. Our website
+                        makes us look like we're not.]"
+                    </blockquote>
+                    <p class="brief-body">
+                        <!-- Paragraph 1: Context. Who is the client and what's their situation? -->
+                        [Describe the client — their business, their audience, and what they brought to you. Set the
+                        scene in 2–3 sentences.]
+                    </p>
+                    <p class="brief-body">
+                        <!-- Paragraph 2: The ask. What did they need from you? -->
+                        [Explain what they needed. Be specific — a redesign, a new brand, a faster checkout, a mobile
+                        experience. 2–3 sentences.]
+                    </p>
+                </div>
+
+                <div class="reveal d2">
+                    <span class="label">Key Challenges</span>
+                    <div class="challenge-list">
+
+                        <!-- Challenge 1 -->
+                        <div class="challenge-item">
+                            <span class="challenge-num">01</span>
+                            <p class="challenge-item-title">[Challenge title — e.g. Poor first impression]</p>
+                            <p class="challenge-item-desc">[One or two sentences describing the problem and why it
+                                mattered. Use a real stat if you have one.]</p>
+                        </div>
+
+                        <!-- Challenge 2 -->
+                        <div class="challenge-item">
+                            <span class="challenge-num">02</span>
+                            <p class="challenge-item-title">[Challenge title — e.g. Broken purchase path]</p>
+                            <p class="challenge-item-desc">[One or two sentences describing the problem and why it
+                                mattered. Use a real stat if you have one.]</p>
+                        </div>
+
+                        <!-- Challenge 3 -->
+                        <div class="challenge-item">
+                            <span class="challenge-num">03</span>
+                            <p class="challenge-item-title">[Challenge title — e.g. No mobile strategy]</p>
+                            <p class="challenge-item-desc">[One or two sentences describing the problem and why it
+                                mattered. Use a real stat if you have one.]</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════╗
+     ║  04 · PROCESS                       ║
+     ╚══════════════════════════════════════╝ -->
+    <section class="process">
+        <div class="container">
+            <div class="process-header reveal">
+                <span class="label process-label">Our Approach</span>
+                <h2 class="process-title">How we worked</h2>
+            </div>
+        </div>
+
+        <div class="process-grid reveal">
+
+            <!-- Step 1 -->
+            <div class="process-step">
+                <div class="step-index">01</div>
+                <p class="step-phase">Phase One</p>
+                <h3 class="step-name">[Phase name — e.g. Understand]</h3>
+                <p class="step-desc">[2–3 sentences on what you did in this phase. Research, audits, interviews,
+                    discovery workshops, etc.]</p>
+                <p class="step-duration">[X] days</p>
+                <div class="step-tools">
+                    <!-- Tools / software used in this phase -->
+                    <span class="step-tool">[Tool]</span>
+                    <span class="step-tool">[Tool]</span>
+                    <span class="step-tool">[Tool]</span>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-step">
+                <div class="step-index">02</div>
+                <p class="step-phase">Phase Two</p>
+                <h3 class="step-name">[Phase name — e.g. Imagine]</h3>
+                <p class="step-desc">[2–3 sentences on what you did in this phase. Wireframes, user flows, moodboards,
+                    architecture, etc.]</p>
+                <p class="step-duration">[X] days</p>
+                <div class="step-tools">
+                    <span class="step-tool">[Tool]</span>
+                    <span class="step-tool">[Tool]</span>
+                    <span class="step-tool">[Tool]</span>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-step">
+                <div class="step-index">03</div>
+                <p class="step-phase">Phase Three</p>
+                <h3 class="step-name">[Phase name — e.g. Build]</h3>
+                <p class="step-desc">[2–3 sentences on what you did in this phase. Design, development, animations,
+                    integrations, etc.]</p>
+                <p class="step-duration">[X] days</p>
+                <div class="step-tools">
+                    <span class="step-tool">[Tool]</span>
+                    <span class="step-tool">[Tool]</span>
+                    <span class="step-tool">[Tool]</span>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="process-step">
+                <div class="step-index">04</div>
+                <p class="step-phase">Phase Four</p>
+                <h3 class="step-name">[Phase name — e.g. Launch]</h3>
+                <p class="step-desc">[2–3 sentences on what you did in this phase. Testing, QA, SEO handoff, client
+                    training, monitoring, etc.]</p>
+                <p class="step-duration">[X] days</p>
+                <div class="step-tools">
+                    <span class="step-tool">[Tool]</span>
+                    <span class="step-tool">[Tool]</span>
+                    <span class="step-tool">[Tool]</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════╗
+     ║  05 · DESIGN DECISIONS              ║
+     ╚══════════════════════════════════════╝ -->
+    <section class="decisions">
+        <div class="container">
+
+            <div style="margin-bottom: 56px;" class="reveal">
+                <span class="label">Design Decisions</span>
+                <h2
+                    style="font-family: var(--serif); font-size: clamp(32px, 4vw, 52px); font-weight: 300; font-style: italic; color: var(--black); line-height: 1.1;">
+                    Why we made the<br>choices we made</h2>
+            </div>
+
+            <!-- Decision 1 -->
+            <div class="decision-row reveal">
+                <div class="decision-num">01</div>
+                <div class="decision-inner">
+                    <div>
+                        <span class="decision-label-tag">[Category — e.g. Typography]</span>
+                        <h3 class="decision-heading">[The decision stated as a sentence — e.g. We chose a serif over a
+                            modern sans-serif]</h3>
+                        <p class="decision-body">[Explain why — 3–4 sentences. What was the alternative? Why was this
+                            choice better for the client? What did it achieve?]</p>
+                    </div>
+                    <div class="decision-visual">
+                        <!-- Replace with screenshot, type specimen, colour swatches, or comparison image -->
+                        <div class="decision-visual-placeholder">
+                            <div class="ph-icon">⬚</div>
+                            <p>Screenshot, type specimen,<br>colour palette, or comparison</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decision 2 -->
+            <div class="decision-row reveal">
+                <div class="decision-num">02</div>
+                <div class="decision-inner">
+                    <div>
+                        <span class="decision-label-tag">[Category — e.g. Colour Strategy]</span>
+                        <h3 class="decision-heading">[The decision stated as a sentence]</h3>
+                        <p class="decision-body">[Explain why — 3–4 sentences. Mention what was rejected and why this
+                            approach served the client better.]</p>
+                    </div>
+                    <div class="decision-visual">
+                        <div class="decision-visual-placeholder">
+                            <div class="ph-icon">⬚</div>
+                            <p>Screenshot, type specimen,<br>colour palette, or comparison</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decision 3 -->
+            <div class="decision-row reveal">
+                <div class="decision-num">03</div>
+                <div class="decision-inner">
+                    <div>
+                        <span class="decision-label-tag">[Category — e.g. Navigation Structure]</span>
+                        <h3 class="decision-heading">[The decision stated as a sentence]</h3>
+                        <p class="decision-body">[Explain why — 3–4 sentences. Connect the decision back to the brief
+                            and the challenges you identified.]</p>
+                    </div>
+                    <div class="decision-visual">
+                        <div class="decision-visual-placeholder">
+                            <div class="ph-icon">⬚</div>
+                            <p>Screenshot, type specimen,<br>colour palette, or comparison</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════╗
+     ║  06 · SHOWCASE                      ║
+     ╚══════════════════════════════════════╝ -->
+    <section class="showcase">
+        <div class="container">
+            <div class="showcase-header reveal">
+                <span class="label">The Work</span>
+                <h2 class="showcase-title">See it in full</h2>
+            </div>
+        </div>
+
+        <!-- Desktop browser mockup -->
+        <div class="browser reveal">
+            <div class="browser-bar">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="url-bar">[clientwebsite.com]</div>
+            </div>
+            <div class="browser-screen">
+                <!-- Replace with: <img src="desktop-screenshot.jpg" alt="Desktop view"> -->
+                <div class="screen-placeholder">
+                    <div class="ph-icon">🖥</div>
+                    <p>Replace with full desktop screenshot (recommended 1280×720px)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tablet + Mobile side by side -->
+        <div class="device-row reveal">
+            <div class="tablet-frame">
+                <!-- Replace with: <img src="tablet-screenshot.jpg" alt="Tablet view"> -->
+                <div class="frame-placeholder">
+                    <div class="ph-icon-sm">⬚</div>
+                    <p>Tablet screenshot</p>
+                </div>
+            </div>
+            <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-content">
+                    <!-- Replace with: <img src="mobile-screenshot.jpg" alt="Mobile view"> -->
+                    <div class="frame-placeholder">
+                        <div class="ph-icon-sm">⬚</div>
+                        <p>Mobile screenshot</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detail gallery — 6 spots for feature/detail shots -->
+        <div class="gallery reveal">
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <div class="ph-icon-sm">⬚</div>
+                    <p>[Feature detail — e.g. Homepage hero animation]</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <div class="ph-icon-sm">⬚</div>
+                    <p>[Feature detail — e.g. Product page layout]</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <div class="ph-icon-sm">⬚</div>
+                    <p>[Feature detail — e.g. Navigation menu]</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <div class="ph-icon-sm">⬚</div>
+                    <p>[Feature detail — e.g. Checkout flow]</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <div class="ph-icon-sm">⬚</div>
+                    <p>[Feature detail — e.g. Footer design]</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <div class="ph-icon-sm">⬚</div>
+                    <p>[Feature detail — e.g. Mobile interaction]</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════╗
+     ║  07 · RESULTS                       ║
+     ╚══════════════════════════════════════╝ -->
+    <section class="results">
+        <div class="container">
+            <div class="results-layout">
+
+                <div class="reveal">
+                    <span class="label">The Impact</span>
+                    <h2 class="results-title">Numbers that tell the story</h2>
+                    <p class="results-body">
+                        <!-- 2–3 sentences summarising the overall result. Be specific if you can. -->
+                        [Summarise the overall impact — what changed for the client after launch? What did they gain?
+                        Keep it to 2–3 sentences and reference the numbers on the right.]
+                    </p>
+
+                    <!-- Optional: awards or press mentions -->
+                    <div class="award-row" style="margin-top: 28px;">
+                        <div class="award-item">
+                            <span class="award-icon">★</span>
+                            <div class="award-text">
+                                <strong>[Award or recognition — e.g. Awwwards Site of the Day]</strong>
+                                [Month Year]
+                            </div>
+                        </div>
+                        <div class="award-item">
+                            <span class="award-icon">◆</span>
+                            <div class="award-text">
+                                <strong>[Press mention — e.g. Featured in Brand New]</strong>
+                                [Month Year]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-grid reveal d2">
+
+                    <!-- Stat 1 -->
+                    <div class="stat-card">
+                        <div class="stat-number">[X]<span class="stat-unit">%</span></div>
+                        <p class="stat-label">[What this metric represents — e.g. increase in conversion rate]</p>
+                        <div class="stat-bar-track">
+                            <div class="stat-bar-fill" data-width="75%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="stat-card">
+                        <div class="stat-number">[X]<span class="stat-unit">×</span></div>
+                        <p class="stat-label">[What this metric represents — e.g. improvement in page load speed]</p>
+                        <div class="stat-bar-track">
+                            <div class="stat-bar-fill" data-width="60%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="stat-card">
+                        <div class="stat-number">[X]<span class="stat-unit">s</span></div>
+                        <p class="stat-label">[What this metric represents — e.g. average session duration, up from Xs]
+                        </p>
+                        <div class="stat-bar-track">
+                            <div class="stat-bar-fill" data-width="80%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div class="stat-card">
+                        <div class="stat-number">[X]<span class="stat-unit">%</span></div>
+                        <p class="stat-label">[What this metric represents — e.g. reduction in bounce rate]</p>
+                        <div class="stat-bar-track">
+                            <div class="stat-bar-fill" data-width="55%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════╗
+     ║  08 · TESTIMONIAL                   ║
+     ╚══════════════════════════════════════╝ -->
+    <section class="testimonial">
+        <div class="container">
+            <div class="testimonial-inner reveal">
+                <span class="quote-icon">"</span>
+                <p class="quote-text">
+                    <!-- The single best quote from the client. One or two sentences maximum. -->
+                    [The most powerful thing your client said about working with you. Pick one sentence that a
+                    prospective client would immediately connect with.]
+                </p>
+                <div class="quote-author">
+                    <div class="author-avatar">
+                        <!-- Replace with: <img src="client-photo.jpg" alt="[Name]"> -->
+                        [Initials]
+                    </div>
+                    <div>
+                        <p class="author-name">[Client Full Name]</p>
+                        <p class="author-role">[Job Title] — [Company Name]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════╗
+     ║  09 · NEXT PROJECT                  ║
+     ╚══════════════════════════════════════╝ -->
+    <section class="next">
+        <div class="container">
+            <div class="next-layout">
+
+                <div class="next-left reveal">
+                    <span class="label next-eyebrow">Ready to start?</span>
+                    <h2 class="next-title">Let's build<br><em>something great</em></h2>
+                    <p class="next-body">
+                        [1–2 lines inviting them to get in touch. Keep it light and confident — they've already seen
+                        your work.]
+                    </p>
+                    <div class="cta-group">
+                        <a href="#" class="btn-primary">Start a project →</a>
+                        <a href="#" class="btn-ghost">See all work ↗</a>
+                    </div>
+                    <div class="progress-dots">
+                        <!-- Fill dots to show current project position in portfolio. e.g. 3 of 7 = 3 dark dots -->
+                        <div class="pdot on"></div>
+                        <div class="pdot on"></div>
+                        <div class="pdot on"></div>
+                        <div class="pdot"></div>
+                        <div class="pdot"></div>
+                        <span class="pdot-label">[X] of [X] projects</span>
+                    </div>
+                </div>
+
+                <div class="next-right reveal d2">
+                    <span class="label">Next case study</span>
+                    <!-- Link to next project page -->
+                    <a href="[next-project-url]" class="next-project-card">
+                        <div class="next-project-img">
+                            <!-- Replace with: <img src="next-project-thumb.jpg" alt="[Next Project Name]"> -->
+                            <p>Next project thumbnail</p>
+                        </div>
+                        <div class="next-project-info">
+                            <p class="next-project-cat">[Category — e.g. Branding & Web]</p>
+                            <p class="next-project-name">[Next Project Name]</p>
+                            <p class="next-project-arrow">View case study →</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // Progress bar
+        window.addEventListener('scroll', () => {
+            const h = document.documentElement.scrollHeight - window.innerHeight;
+            document.getElementById('progress').style.width = (window.scrollY / h * 100) + '%';
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Stat bar animation
+        const bars = document.querySelectorAll('.stat-bar-fill');
+        const barObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    bars.forEach(b => { b.style.width = b.dataset.width || '70%'; });
+                    barObs.disconnect();
+                }
+            });
+        }, { threshold: 0.4 });
+        if (bars[0]) barObs.observe(bars[0].closest('.stat-grid'));
+    </script>
+
+</body>
+
+</html>

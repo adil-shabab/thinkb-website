@@ -8280,6 +8280,16 @@ section {
     overflow: hidden;
 }
 
+.offcanvas-3__area {
+  transform: none !important;
+  perspective: none !important;
+  transform-style: flat !important;
+}
+
+.offcanvas-3__menu ul li {
+  transform: none !important;
+}
+
 @media (max-height: 500px) {
     .offcanvas-3__area {
         padding: 40px;
@@ -8371,6 +8381,7 @@ section {
 
 .offcanvas-3__menu ul {
     position: relative;
+    top: 100px;
 }
 
 .offcanvas-3__menu ul:before {
@@ -10127,7 +10138,7 @@ section {
 
 .mil-button img {
     transition: transform 0.25s ease;
-      filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
 
 }
 
@@ -11107,7 +11118,7 @@ section {
 @media only screen and (max-width: 1199px) {
     .cta-area .section-content .section-title {
         max-width: 580px;
-                font-size: 56px;
+        font-size: 56px;
 
     }
 }
@@ -11115,7 +11126,7 @@ section {
 @media only screen and (max-width: 1000px) {
     .cta-area .section-content .section-title {
         max-width: 580px;
-                font-size: 52px;
+        font-size: 52px;
 
     }
 }
@@ -12262,7 +12273,7 @@ section {
 }
 
 @media screen and (max-width: 900px) {
-        .service-area .section-title {
+    .service-area .section-title {
         margin-bottom: 15px;
     }
 }
@@ -12272,6 +12283,21 @@ section {
 @media screen and (max-width: 500px) {
     .intro-area {
         padding-top: 95px;
+        padding-bottom: 10px;
+    }
+
+    .portfolio___section {
+        padding: 30px 0px;
+    }
+
+    .service-area {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .blog-area-inner {
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .intro-area .main-thumb img {
@@ -12393,66 +12419,66 @@ section {
 }
 
 @media screen and (max-width: 1400px) {
-.portfolio__section_detail .bx__p img {
-    width: 100%;
-    height: 325px;
-    object-fit: cover;
-    border-radius: 15px;
-}
+    .portfolio__section_detail .bx__p img {
+        width: 100%;
+        height: 325px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
-.portfolio__section_detail .bx__p img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 15px;
-}
+    .portfolio__section_detail .bx__p img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
 }
 
 @media screen and (max-width: 995px) {
-.portfolio__section_detail .bx__p img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
-}
+    .portfolio__section_detail .bx__p img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
 }
 
 @media screen and (max-width: 767px) {
-.portfolio__section_detail .bx__p img {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 15px;
-}
+    .portfolio__section_detail .bx__p img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
 }
 
 @media screen and (max-width: 500px) {
-.portfolio__section_detail .bx__p img {
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
-    border-radius: 15px;
-}
+    .portfolio__section_detail .bx__p img {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
 }
 
 @media screen and (max-width: 380px) {
-.portfolio__section_detail .bx__p img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 15px;
-}
+    .portfolio__section_detail .bx__p img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
 }
 
 @media screen and (max-width: 350px) {
-.portfolio__section_detail .bx__p img {
-    width: 100%;
-    height: 290px;
-    object-fit: cover;
-    border-radius: 15px;
-}
+    .portfolio__section_detail .bx__p img {
+        width: 100%;
+        height: 290px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
 }
 
 .nuvotec__portfolio__section_detail {
@@ -13488,13 +13514,13 @@ section {
 @media (max-width: 1400px) {
 
     .first_gallery_section .flex__box_gallery_first .first__bx .txt_first_content p {
-    font-size: 15px;
-}
+        font-size: 15px;
+    }
 
 
     .first_gallery_section .flex__box_gallery_third .fifth__bx .txt_first_content p {
-    font-size: 15px;
-}
+        font-size: 15px;
+    }
 }
 
 
@@ -13625,7 +13651,10 @@ section {
         flex-direction: column;
     }
 
-    .w-20,.w-30,.w-40,.w-60{
+    .w-20,
+    .w-30,
+    .w-40,
+    .w-60 {
         width: 100%;
     }
 }
@@ -13853,7 +13882,7 @@ section {
     }
 
     .about__section {
-        padding: 50px 0px;
+        padding: 30px 0px;
     }
 
     .about__section .flex___box .bx__about {
@@ -14431,12 +14460,12 @@ p {
 }
 
 @media (max-width: 1200px) and (min-width: 500px) {
-.objecives_section .container .row{
-    display: flex;
-    flex-direction: column;
-}
+    .objecives_section .container .row {
+        display: flex;
+        flex-direction: column;
+    }
 
-.objecives_section .container .row .col-md-4 {
+    .objecives_section .container .row .col-md-4 {
         flex: 0 0 auto;
         width: 100%;
     }
@@ -14447,9 +14476,9 @@ p {
     }
 
     .objecives_section h2 {
-    font-size: 60px;
-    margin-bottom: 40px;
-}
+        font-size: 60px;
+        margin-bottom: 40px;
+    }
 }
 
 
@@ -14488,7 +14517,7 @@ p {
         margin-bottom: 35px;
     }
 
-    .objecives_section p{
+    .objecives_section p {
         margin-bottom: 30px;
     }
 

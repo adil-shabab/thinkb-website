@@ -22,104 +22,124 @@ if (offcanvasBtn) {
 
 
 // offcanvas 3 js code -------------------------------------
+// set initial states once
+gsap.set(".offcanvas-3__area", {
+  x: "-100%",
+  opacity: 0,
+  visibility: "hidden",
+  rotateX: 0,
+  rotateY: 0,
+  clearProps: "transform"
+});
+
+gsap.set(".offcanvas-3__menu ul li", {
+  x: -30,
+  opacity: 0,
+  rotateX: 0
+});
+
+gsap.set(".offcanvas-3__meta, .offcanvas-3__social", {
+  x: -30,
+  opacity: 0
+});
+
+// offcanvas 3 Show -------------------------------------
 function showCanvas3() {
-  var canvas3 = gsap.timeline();
+  let canvas3 = gsap.timeline();
 
   canvas3.to(".offcanvas-3__area", {
-    left: 0,
+    x: 0,
     visibility: "visible",
-    duration: 0.8,
+    duration: 0.6,
     opacity: 1,
-    rotationY: 0,
-    perspective: 0,
+    ease: "power3.out"
   });
 
-  // Menu Item
   canvas3.to(
     ".offcanvas-3__menu ul li",
     {
       opacity: 1,
-      top: 0,
+      x: 0,
       stagger: 0.05,
-      duration: 1,
-      rotationX: 0,
+      duration: 0.5,
+      ease: "power3.out"
+    },
+    "-=0.3"
+  );
+
+  canvas3.to(
+    ".offcanvas-3__meta",
+    {
+      opacity: 1,
+      x: 0,
+      visibility: "visible",
+      duration: 0.4,
+      ease: "power3.out"
+    },
+    "-=0.35"
+  );
+
+  canvas3.to(
+    ".offcanvas-3__social",
+    {
+      opacity: 1,
+      x: 0,
+      visibility: "visible",
+      duration: 0.4,
+      ease: "power3.out"
+    },
+    "-=0.35"
+  );
+}
+
+// offcanvas 3 Hide -------------------------------------
+function hideCanvas3() {
+  let canvas3 = gsap.timeline();
+
+  canvas3.to(".offcanvas-3__menu ul li", {
+    opacity: 0,
+    x: -30,
+    stagger: 0.03,
+    duration: 0.25,
+    ease: "power2.in"
+  });
+
+  canvas3.to(
+    ".offcanvas-3__meta",
+    {
+      opacity: 0,
+      x: -30,
+      visibility: "hidden",
+      duration: 0.25,
+      ease: "power2.in"
+    },
+    "-=0.2"
+  );
+
+  canvas3.to(
+    ".offcanvas-3__social",
+    {
+      opacity: 0,
+      x: -30,
+      visibility: "hidden",
+      duration: 0.25,
+      ease: "power2.in"
+    },
+    "-=0.2"
+  );
+
+  canvas3.to(
+    ".offcanvas-3__area",
+    {
+      x: "-100%",
+      opacity: 0,
+      duration: 0.5,
+      ease: "power3.in"
     },
     "-=0.1"
   );
-  // Meta
-  canvas3.to(
-    ".offcanvas-3__meta",
-    {
-      top: 0,
-      visibility: "visible",
-      duration: 0.8,
-      opacity: 1,
-    },
-    "-=0.5"
-  );
 
-  // Social
-  canvas3.to(
-    ".offcanvas-3__social",
-    {
-      top: 0,
-      visibility: "visible",
-      duration: 0.8,
-      opacity: 1,
-    },
-    "-=0.5"
-  );
+  canvas3.set(".offcanvas-3__area", {
+    visibility: "hidden"
+  });
 }
-
-// offcanvas 3 Hide  -------------------------------------
-function hideCanvas3() {
-  var canvas3 = gsap.timeline();
-
-  canvas3.to(".offcanvas-3__area", {
-    duration: 0.8,
-    rotationY: -90,
-    opacity: 0,
-  });
-  canvas3.to(".offcanvas-3__area", {
-    visibility: "hidden",
-    duration: 0.1,
-    rotationY: 50,
-    left: 0,
-    rotationX: 0,
-  });
-
-  // Menu Item
-  canvas3.to(".offcanvas-3__menu ul li", {
-    opacity: 0,
-    top: -100,
-    stagger: 0.01,
-    duration: 0.1,
-    rotationX: 50,
-  });
-
-  // Meta
-  canvas3.to(
-    ".offcanvas-3__meta",
-    {
-      top: -30,
-      visibility: "hidden",
-      duration: 0.8,
-      opacity: 1,
-    },
-    "-=0.5"
-  );
-
-  // Social
-  canvas3.to(
-    ".offcanvas-3__social",
-    {
-      top: -30,
-      visibility: "hidden",
-      duration: 0.8,
-      opacity: 1,
-    },
-    "-=0.5"
-  );
-}
-
-
